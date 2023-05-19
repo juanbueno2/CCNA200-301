@@ -1,0 +1,37 @@
+#############
+# LABS ONLY #
+#############
+
+
+#1-#1.6 Configure and verify IPv4 addressing and subnetting  (LAB) 
+
+#2-Configure and verify VLANs (normal range) spanning multiple switches (LAB)
+#a Access ports (data and voice)
+#.b Default VLAN
+#c Connectivity 
+#2.2 Configure and verify interswitch connectivity
+#.a Trunk ports
+#b 802.1Q
+#2.2.c Native VLAN
+#2.3 Configure and verify Layer 2 discovery protocols (Cisco Discovery Protocol and LLDP)
+#2.4 Configure and verify (Layer 2/Layer 3) EtherChannel (LACP)
+#2.5 Describe the need for and basic operations of Rapid PVST+ Spanning Tree Protocol and
+identify basic operations
+#2.5.a Root port, root bridge (primary/secondary), and other port names
+#2.5.b Port states (forwarding/blocking)
+#2.5.c PortFast benefits
+#2.9 Configure the components of a wireless LAN access for client connectivity using GUI only 
+such as WLAN creation, security settings, QoS profiles, and advanc
+ed WLAN settings
+#4.1 Configure and verify inside source NAT using static and pools
+#4.2 Configure and verify NTP operating in a client and server mode
+#4.6 Configure and verify DHCP client and relay 
+#4.8 Configure network devices for remote access using SSH 
+#5.3 Configure device access control using local passwords 
+#5.6 Configure and verify access control lists  
+#5.7 Configure Layer 2 security features (DHCP snooping, dynamic ARP inspection, and port
+security) (LAB))
+#5.10 Configure WLAN using WPA2 PSK using the GUI
+
+
+
