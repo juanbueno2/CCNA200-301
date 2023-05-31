@@ -1,0 +1,3758 @@
+###########################
+# CABLING and COnnectors #
+###########################
+
+#SFP+ is the same size as SFP nbut only used on 10GB connection
+
+
+#10GB over fiver maximun distanse 400 Meter
+
+#Cisco devices have AutoMDIX so in case the wrong cable is conected it
+will adjust itself to make
+the link work
+
+
+#Most MAC-ADDRESS in a unic NIC represent anycast address frame sent to
+this single NIC are called
+Anycast
+
+
+
+
+##########
+# TCP/IP #
+##########
+
+
+
+#The Key diference Between TCP and UDP is that TCP Provides a wide
+Variety of services applications whereas UDP no
+
+#Layer 4 in TCP/IP or OSI model is considered the transport Layer
+
+# TCP provides Retransmission (Error Recovery) and Help to avoid
+Congestion (Flow Control) whereas UDP does not.
+
+#Voice Over IP does not need Error Recovery so they use UDP .
+
+#TCP use Error Recovery it consumes more bandwith UDP dont .
+
+#TCP and UDP use feature called Multiplexing
+
+#TCP establish and terminate connection between endpoint UDP dont.
+
+#TCP provides Reliability data transfer wich is also called or error
+Recovery
+
+#TCP implement flow control by using window UDP doesnt window means the
+receiver send a message to the sender telling how much data can receive
+if it can receive more it use slide window
+#######################
+# ROUTER   NOTES      #
+#######################
+
+#en
+#config t
+#int (int ID)
+#ip address (ip xxxx.xxx.xxx.xxx) (subnet mask xxx.xxx.xxx.xxx)
+#ip dhcp pool (Pool Name)
+#network (network id xxx.xxx.xxx.xxx) (subnet mask xxx.xxx.xxx.xxx)
+
+
+
+
+# > Usermode allows you to look around but not break or change anything
+
+# # priviledge Mode allows you to check and use powerfull commands even
+to reload the device
+
+# (config) Global configuration Mode allows you to Configure and Modify
+everything
+
+
+#Cisco router use Ram called DRAM as any computer to store info but if it
+loose power it will be lost
+
+#Cisco router use flash to store the OS when Route boots it gets the OS
+from there
+
+#Cisco also use NVRAM to store bootloader Files to get it from there when
+it boots
+
+
+
+#Subnet comes from subdivided network the subnet address can not be used
+as Host Address
+
+#Subnet address is something like 10.1.1.0
+
+#Broadcast address can not be used as host address , Broadcast address is
+example 10.1.1.255
+
+
+#Check on subnet Formula
+#Class A network stars from 0 to 126   Class be from 128 to 223 because
+127 subnet is reserved
+
+#Class C network stars from 223 up to 294 check on this for accuracy
+
+
+
+#When subnetting it can also be converted in bnary and Decimal Notation
+(DN) also CIDR can be used
+
+#CIDR can be used to do subneting
+
+
+#Cisco Routers Route packets when the interfece is up/up state
+
+#Cisco routers and switches besides A console Port it does have a
+auxiliary
+
+#The auxiliary Port in cisco devices is to connect a phone line and dial
+into the router
+
+#A computer terminal emulator isused when dialing through the Auxiliary
+Port
+
+#When A particular route match in the routing tebla in more than one
+destination the router will
+use the longest prefix
+
+
+#Router on stick when the router has limited interfaces subinterfaces
+cvan be used
+
+#Router do not negotiate trunking automaticaly so manually trunk link has
+to be configured
+
+#For Router on stick when using subinterfaces each logical subinterface
+is associated with a VLAN
+
+#when Troubleshooting Trunking between router and switch it has to be
+checked Manually
+
+#Devices dont know each other wich one is misconfigured
+
+
+
+
+#########
+# DHCP #
+#########
+
+#DHCP Relay can provide help when there is not DHCP server using the ip
+helper command
+#######################
+# Routing Protocals #
+#######################
+
+#When talking about routing protocols there 2 Groups of routing Protocols
+IGRP and EGRP
+
+#When router have diferent Routing Protocols and it needs to choose the
+best path it will use
+
+the lowest Metric
+
+#BGP is the only Routing Protocol used as EGRP
+
+#
+
+#################
+# OSPF PROTOCOL #
+#################
+
+#router OSPF (ID)
+#Network (Network ID xxx.xxx.xxx.xxx) (Subnet Mask xxx.xxx.xxx.xxx)
+#Ospf Operations LSA Link state advertidement Start to send Hello packets
+
+#LSDB Link state Datebase contains LSA Structures LSU Link states Updates
+contains LSA as weel
+
+#BDR Back up designated Router watch over DB designated router if the
+link fail BDR Takes over
+
+#Time that OSP      send information every 30 minutes
+
+#For Routers to become adjacent they use 2way
+
+#OSPF Passive interface when OSPF passive interface is configured it will
+continue adveritising the
+network but neighbor relationship is not formed
+
+#The way that OSPF choose a DR is using the Highes interface ID if there
+is a tight it will use
+the higuest router ID
+
+#A new DR is elected and also a new BDR routers ID can be influenced to
+be elected DR
+
+#The router to become neighbors will check certaing parameter to see if
+the neighbor router meets
+the criteria
+
+#For OSPF troubleshooting if the MTU is lower it wont form adjacency also
+if the network is different
+
+
+
+
+####################
+# RIP PROTOCOL     #
+####################
+
+#router rip (ID)
+#network (Network ID xxx.xxx.xxx.xxx) (Subnet Mask xxx.xxx.xxx.xxx)
+
+
+###################
+# IS-IS PROTOCOL #
+###################
+
+#router is-is (ID)
+#network (Network ID xxx.xxx.xxx.xxx) (Subnet Mask xxx.xxx.xxx.xxx)
+
+####################
+# BGP PROTOCOL     #
+####################
+
+#router bgp (ID)
+#network (network ID xxx.xxx.xxx.xxx) (subnet mask xxx.xxx.xxx.xxx)
+
+###################
+# STATIC ROUTE    #
+###################
+
+#ip route (xxx.xxx.xxx.xxx) (subnet   mask xxx.xxx.xxx.xxx)
+
+
+############
+#   ACL    #
+############
+
+#In general ACL works as packet filter ACL can be configured weather
+Packet can be filter or denied
+
+#ACL can be used for packet match for Quality of services
+
+#Matching Packets Means wich one should be allowed and discarded
+
+#ACL looks for header Field fields including Source and destination
+#ACLs use First-Match logic once a packet matches one line in the ACL ,
+the router takes action listed in the line of the ACL and stops looking
+further in the ACL
+
+#IOS allows standard ACLs to match a range of address using a tool called
+wildcard Mask
+
+
+#Wildcard mask can be used by substracting 255.255.255.255 from subnet
+mask
+
+#Tomatch a specific addrss List the Address , to match any and all
+address use the any word
+
+#To match only on the first one , two,or 3 octects use 0.255.255.255
+0.0.255.255 and 0.0.0.255
+
+#In an extended ACL access-list command all the matching parameters must
+match the packet for the packet to match the command
+
+#When configuring ACL place it as closed possible to Packet
+
+
+
+#################
+# STANDARD ACL #
+#################
+
+#allow or Deny
+#Extandard ACL start from 1 to 99
+
+
+
+###############
+#EXTENDED ACL #
+###############
+
+#more granular can add port and applications
+
+#Extended ACL start from 100 to 199
+
+#adicional ACL numbers from 100 to 199
+
+#Extended 2000 to 2699
+
+#Extended ACL have more robust improovement in matching Packets
+
+#############
+# NAMED ACL #
+#############
+
+#Will be Named ACL and Port
+
+#Improoved editing with sequence numbers
+######################
+#     TSHOOT         #
+######################
+
+#Ping command can always be used when problems like host A cannot
+comunicate with host B
+
+#Traceroute command use ICMP echo to locate the devices and MAP how far
+is it using TTL Packets
+
+
+
+
+#############
+#   NAT     #
+#############
+
+#NAT has 3 ways to be configured Static NAT Dynamic NAT and NAT overload
+
+
+#Static NAT allows to configure NAT a one to one maping
+
+#Dynamic NAT allows you to use a pool of addresses
+
+#NAT overload is PAT or Port Address Translation it allows with only one
+address to use 65000 Ports
+
+#When configuring NAT and it does the mapping cisco considers the private
+IP to Be inside Local address
+
+#When configuring NAT and it does the mapping cisco considers the
+registered address to be inside Global
+
+#Also Natting to the other side cisco consider The other side to be
+Outisde global and Outside Local
+
+
+
+
+###########
+# NTP     #
+###########
+
+#NTP have client and server the server use a external clock as stratum 1
+#####################
+#     SWITCH        #
+#####################
+
+
+#For Layer 2 Switch only managment interface can be assign iP Address it
+will forward packets based on Mac Address
+
+#For Layer 3 Switch IP address can be assigned to use interVLan Routing
+
+
+#Underlay is considered all of the bottom switches of the infrastructure
+overlay is considered
+
+tunneling on top of the overlay
+
+
+#Switches have MAC Adress table that are built base on the incoming
+frames they forwars trffic
+looking in the frame at the source Mac address and destination
+
+#Switch needs STP to avoid loops it block some ports in redundant link to
+avoid the ports Loop
+Forever
+
+# By default the switch Mac address table have aging time and the aging
+is every 300 seconds
+
+#The switch also remove Mac address when neones are coming even if the
+are alrteady in the CAM
+
+
+#The console can be secured so in that way noone is able to see the
+information that is in the
+
+switch
+
+#Telnet is not a good practiced to use only SSH
+
+
+#Bellow are the commands to remove MAC-ADDRESS
+
+#BY VLAN : clear macaddress-table vlan (VLANID)
+
+# BY INTERFACE : clear macaddress-table interface (interface-id
+
+#BY MAC ADDRESS : clear macaddress-table MAC (MACID)
+
+#Speed Switches autonegotiate speed of 10/100/1000 the speed can always
+be changed as well
+
+#It is a good Practice to leave the speed to autonegotiate automatically
+#Commands to changee speed are within global configuration Mode int (ID)
+then command Speed
+
+
+#VLAN : The server switch can configure standard VLAN from 1 to 1005
+
+#Port Security : Port security can be apply in 3 mode : shutdown ,
+restrict Protect
+
+#When Applying port security to etherchannel is better to apply to
+channel-group not to the individual interfaces
+
+#When the port in a switch goes to error disable because of a security
+violations the switch port stops sending and receivung frames
+
+#For voice Security can ber apply tambien restricting the port to allow
+only 2 mac address
+
+
+
+
+#en
+#config t
+#int (ID)
+#ip address (xxx.xxx.xxx.xxx) Subnet Mask (xxx.xxx.xxx.xxx)
+#ip dhcp pool (Name)
+#Network (xxx.xxx.xxx.xxx) Subnet Mask (xxx.xxx.xxx.xxx)
+
+
+#when getting ip address dynamically Port has to be changed to the
+following before
+
+#no switchport ip address DHCP
+
+
+
+#########
+# CDP #
+#########
+#CDP by default comes enabled in all cisco devices
+
+#CDP use messages to discover neighbors devices no authentication is need
+it
+
+
+
+
+############
+#   LLDP   #
+############
+#LLDP does not come enabled in cisco Devices it is a standard protocol
+
+#Also lld Defers from CDP it does have 3 commands the first one is LLDP
+transmit it will transmit packets
+
+#The second command is LLDP Receive it will receive message it can be
+disabled
+
+#The Second command will be LLDP run it will enabled LLDP
+
+
+################################
+#CONTROL PLANE AND DATA PLANE #
+################################
+
+#The data plane is the main purpose of the switch is were te information
+is stored
+
+#The control Plane controls the data and process it make changes
+
+
+
+
+################################################
+# ADDING IP FOR INTERVLAN ROUTING FOR L3 SWITCH#
+################################################
+
+#en
+#config t
+#int (ID)
+#ip address (xxx.xxx.xxx.xxx)subnet mask (xxx.xxx.xxx.xxx)
+#ip dhcp pool (pool name )
+#network ip address (xxx.xxx.xxx.xxx)subnet mask (xxx.xxx.xxx.xxx)
+
+
+##################
+# SPANNING TREE #
+#################
+
+#Spanning Tree will avoid loops there is diferent types of spanning tree
+
+#STP and RSPT
+
+#spanning-tree port fast will change the port from listening learning
+forwarding to forwarding states
+#Spanning Tree Treat Etherchanbnel as single link if 1 link fails there
+is not need to converge
+
+#######################
+# ETHERCHANNEL        #
+#######################
+
+# Ethechannel has to protocols pagp cisco propietary and lacp wich
+universal
+
+#PAGP Protocol to form adjacency they have to be one end of the link in
+auto and dynamic
+
+#LACP Protocol to form adjacency it has to be   in side of the link in
+active the other side of the link in passive
+
+#LACP Protocol can also be L3 both side of he link has tro be switched to
+no switchport and assigned IP address
+
+#Pagp is the cisco propiaretary protocol that can bundle up to 8 ports is
+limited to only that
+
+#LACP the open standard can bundle up to 16 ports with only 8 been used
+at the same time and the
+
+other 8 waiting
+
+#Do not use ON mode on one side of the switch it will prevent the
+etherchannel to form
+
+
+
+#################
+# GRE PROTOCOL #
+#################
+
+#GRE is a tunneling protocol that does not offer encryption but it can be
+used with IPSEC
+
+#IPSEC is a tunneling protoocl that offers encryption using headers and
+payload check more on this
+
+
+
+
+############
+#    VPN   #
+############
+
+#site to site vpn involved 2 concentrators were the vpns are conected
+beteween the 2 devices
+# client to site VPN is the application install in the clinet site to
+connect VPN to a remote site
+
+#
+
+
+
+
+###################
+# VIRTUALIZATION #
+###################
+
+#Type 2 hypervisor is hosted in the OS
+
+#Type 1 Hypervisor is installed in the Bare Metal
+
+
+
+
+#############
+#   VTP     #
+#############
+
+#VTP Vlan Trunking protocol we have 2 types
+
+# Type 1 is ISL Type 2 is 802.1q
+
+
+#default VLAN wich is the Native vlan is vlan1 by default everytrafic
+that is not tag will go over
+the Native vlan it is a best practice to change the Native VLAN to a
+different VLAN that is not 1
+
+# ISL Trunking is for devices that do not support 802.1 encapsulation
+
+
+#Server Vlan can configure edit and delete Vlans
+
+#Client Vlans cannot configure edit or remove VLANS
+
+
+
+
+#################
+#   WIRELESS    #
+#################
+
+#Review CASWAP tunneling and also encryption type
+#LAG is a link agregation tunneling for wireless betwwen the wireless
+controller and the switch
+
+#802.11 WLANS are always half Duplx because transmission beteeen stations
+use the same frequency or channel
+
+#To acchieve full dupplex one station has to trsnmit in one frequency
+while
+receive in another one
+
+#AP operates in infrastructure mode it means it offers the necesary
+Service
+
+
+#Before a device can participate it must advertise its capavilities and
+then be granted Permission to join the 802.11 stadar call this Basic Set
+Identifier (BSS)
+
+#AP is used as single point of contact for that the AP use a Unique
+BSSID
+
+#The AP to advertise use a unique SSID based on the AP Own Radio MAC
+Address
+
+#In Addition the AP advertise the wireless Network with A SSID
+
+#Membership with BSS is called Association
+
+#Wireless Device Must send a request to the AP and the AP can either
+Grant or deny
+
+
+#When an AP uses muiltiple SSIDs is trunking over the air
+
+#In a ESS wireless client can associate with ine AP while is phisically
+located near if the client later Move to a diferent location is called
+Roaming
+
+
+#802.11 stanadard allows 2 or more clients to comunicate with each other
+this is called as an ad hoc
+
+
+#A autonomous AP facilitate the Data to travel from wired to wireless
+autonomous AP has to be connected to the distribution switch so it can be
+truncated
+
+
+#A message integrity check (MIC)is a tool that can protect from data
+Tampering
+
+#WEB use RC4 to make every message and Data Private and hidden
+#The 802.11 Standard created EAP for authentication
+
+#With open and WEB authentication wireless client are authenticated at
+the AP
+
+
+#Suplicant the client device that is requesting to authenticate
+
+#Authenticator the network device that provides access to the network
+
+#AS Aunthentication Server device that takes user or client credential
+and permits.
+
+
+#Wireless Lan Controller becomes a middleman in the client authentication
+process
+
+#Leap was created to address weakness with WEB client has to provide
+username and password to authenticate
+
+#Eap-Fast was created by cisco creating Tunneling authentication
+Credential
+
+#When WEB was still vulnerable TKIP was created
+
+#With WPA and WPA2 Personal atacker can eavesdrop and decrypt the message
+
+#WAP3-personal avoid such an attack by strengthening the key exchange
+Through a Method call Smultaneus Authentication of equals (SAE)
+
+
+#Controller Distribbution Ports can be bundle as Link Agregation Group
+(LAG) such that they are bundle toguether to act as a single link
+
+#Even though that LAG acts as Traditional channel it does Not Support
+Link Agregation Protocol like LACP or PaGP
+
+
+#When Bundling The Controller Port always has to be configured as
+unconditional or always on Etherchannel
+
+
+#The Mangment interface is also used to terminate CAPWAP tunnels between
+the controller and its APs
+
+
+#Cisco controllers can support Maximun of 512 WLANs but only 16 of the
+can be actively configured on an AP
+
+
+#Every AP must Broadcast Beacon Mangment Frames at regular intervals to
+advertise the existence of BSS
+################
+# IPV6 ADDRESS #
+###############
+
+#IPV6 replaced ARP with a more general network discovery Protocol (NDP)
+#Its 128 bites long it can be simplified when having multiples 0 repeated
+it can be done only once review this
+
+# adce:0000:0000:2345:0000:0000
+#simplification adce::0:2345::0
+
+#Grobal anycast can be used just as public IPV4 but for IPV6 when using a
+Global anycast a prefix is
+
+assigned
+
+#Anycast address is reserved and is not used subnetting can also be done
+for IPV6
+
+
+#Be default router come with ipv4 enabled but not IPV6 to enable IPV6
+command Ipv6-unicast should
+be used
+
+#Also for Ipv6 if you configure it on the interface but do not enbal
+unicast it will act as a host
+
+#If you enable only Ipv6 Unicast routing but not c0onfigure any IP it
+will start broadcasting Packets
+only
+
+#Router can learn IPV6 information through DHCP or SLAAC
+
+#Unique Local address us eprefix FE80
+
+#OSPFV3 use FF02:5 and FF02:6 prefix for multicast host receiving
+Multicast Packet will discard it
+
+#Unique-link local is anycast
+
+#NDP use NS Network Solisitation and NA Network Advertisement for
+Discovery
+
+
+#When Using SLAAC the host Use NDP Message to learn the subnet
+
+#Before using NDP host use DAD Duplicate Address Detection to ensure
+no other Host uses the same IPV6 address before attempting to use it
+
+#With NDP the word Neighbor Means the device will be in the same Data
+Link
+#Router Solicitation (RS)Message are sent to all IPV6 Routeres
+
+#Local scope Multicast address FF02:1 so that message askes all routers
+to identify themself on the local link
+
+
+
+
+############################
+# AUTOMATION PROGRAMBILITY #
+###########################
+
+
+#automation and programability involved a more fast pace enviroment where
+you can use diferent tools
+
+to program configurations automatically
+
+#the tools bellow provide automation to configure all devices
+
+
+
+
+#JASON FORMAT
+#The JASON Format start and close with open brackets
+
+
+
+#XML FORMAT
+
+#XML format estart with the following arrows like HTML <example>
+
+
+
+
+#PYTHON
+#PUPPET
+#CHEFF
+#ANSIBLE
+#Ansible is a copmpilation of Python Modules
+
+
+
+
+#make one of them a topic
+#########################
+#    ARCHITECTURE       #
+#########################
+
+#spine leaf involve all core switches to be connected to the access
+switchs for failover and
+
+#space to grow
+
+#within the architecture there is tier 2 and tier 3 where you have the
+colapse architecture wich
+involve distribution and core switch
+
+#Tier 2 is the core and distribution switch in the same setup and then
+the access switch
+
+#Tier 3 in volve core switch then distribution switch and then access
+
+
+
+#there is also over the top architecture were involve all of the cabling
+coming above check on this
+
+
+
+#################
+#   Security    #
+#################
+
+
+#AAA Server Authentication Authorization Accounting
+
+#Autentication : Who is the user ?
+
+#Authorization : what is the user allowed to do ?
+
+#Accounting : What did the user do ?
+
+#Radius: A Standard-based protocol that combines authentication and
+authorization into a single resource Communications uses UDP port 1812
+and 1813
+
+#The Ultimate way to protect passwords in cisco IOS devices is to not
+store passwords in IOS devices That is for any function that can use it
+
+#When using enable password cisco store password in clear text cisco came
+with the solution with service password-encryption at global
+configuration command
+#Also the service password encryption does not protect the password so
+well neither it can be decrypted
+
+#IOS use MD5 that even if you know the formula of the end result it will
+be difucult to know the clear text
+
+#IOS now have both MD5 and sha256
+
+#Today username secret command is prefered over username password command
+
+#When accessing a router or a switch IOS use VTY line the VTY line can be
+filter WITH ACL by IP
+
+#To configure an outbound VTY ACL, use the accessclass ACL out comnmand
+
+#Traditional a IPS can sit in the Path Packet so it can redirect the
+packet and analise it later
+
+#The difference Between the firewall and IPS is that instead of appliying
+Rules Based on Ports the IPS check signatures
+
+
+#A next genration firewall that looks at the application instead of
+relying on the TCP and UDP port numbers cisco perform their deep packets
+inspeccion using a featured called Application Visibillity and control
+(AVC)
+
+#Advanced Malware Protection : NGFW platforms run multiple security
+services ,not just as a platform to run a separate service blocking file
+transfer that would install malware
+
+
+#URL filtering this features examines the URL in each web request ,
+categorizes the URL traffic based on rules , The Cisco Talos security
+group monitors and creates reputation scores for each domain Known in the
+internet
+
+
+#NGIPS: The Cisco NGFW products can also run their NGIPS feature along
+with the firewall
+
+#NGIPS perform traditional IPS features like using exploits signatures to
+compare packet flows
+
+
+
+##################
+# DHCP SNOOPING #
+##################
+
+
+#DHCP nooping inspect packets if the packets is coming at the highg speed
+it will be considered attack it will take the interface to error disable
+#DHCP snooping can be configured at the interface level to be trusted or
+untrusted
+
+#DHCP can also be configured at a VLAN level
+
+
+
+########
+# QOS #
+########
+
+#Quality of service is a tool that manage Bandwith manage delays and
+jitter and a porcentege packet lost for each class
+
+#QOS refers this option as per hop behavior (PHB)Rather than store and
+forwarding this action can delay forward or even change the header field
+
+
+#Routers tipically sits at wan edge so basicaclly LAN networks are faster
+than wan networks so what the routers do when packets arrives on that
+interface delay the packet forward the packets ? actually what it does it
+puts the packets in queue until the interface is avaialble
+
+
+#QOS is a tool that apply some treatment to the packet as they pass
+thorugh de device
+
+#QOS also decides what packets is sent over the link next for quality
+
+#Delay is the time between the packets are sent this is called a one way
+delay
+
+#Round trip delay is considered as one way delay plus the receiver
+
+#Jitter is refered to the variation of one way delay
+
+#One way delay is 300 miliseconds
+
+#The term classification refers to the process of matching
+  the fields in a message to make a choice to take some
+  QoS action.
+
+#ACLs can have the
+  purpose (action) of choosing which packets to discard.
+  QoS tools perform classification (matching of header
+  fields) to decide which packets to take certain QoS
+  actions against. Those actions include the other types of
+  QoS tools discussed in this chapter, such as queuing,
+
+
+# QUEUING
+  All networking devices use queues. Network devices
+  receive messages, make a forwarding decision, and then
+    send the messageâ€”but sometimes the outgoing
+    interface is busy. So, the device keeps the outgoing
+    message in a queue, waiting for the outgoing interface
+    to be availableâ€”simple enough.
+
+
+#    Round-Robin Scheduling
+    (Prioritization)
+    One scheduling algorithm used by Cisco routers and
+    switches uses round-robin logic. In its most basic form,
+    round robin cycles through the queues in order, taking
+    turns with each queue. In each cycle, the scheduler
+    either takes one message or takes a number of bytes
+    from each queue by taking enough messages to total
+    that number of bytes. Take some messages from queue
+    1, move on and take some from queue 2, then take some
+    from queue 3, and so on, starting back at queue 1 after
+    finishing a complete pass through the queues.
+
+    Round-robin scheduling also includes the concept of
+    weighting (generally called weighted round robin).
+    Basically, the scheduler takes a different number of
+    packets (or bytes) from each queue, giving more
+    preference to one queue over another
+
+
+#r example, routers use a popular tool called Class-
+  Based Weighted Fair Queuing (CBWFQ) to guarantee a
+  minimum amount of bandwidth to each class. That is,
+  each class receives at least the amount of bandwidth
+  configured during times of congestion, but maybe more.
+  Internally, CBWFQ uses a weighted round-robin
+  scheduling algorithm, while letting the network
+  engineer define the weightings as a percentage of link
+  bandwidth.
+
+
+#
+
+
+    Low Latency Queuing
+    Earlier in the chapter, the section titled â€œVoice and
+    Video Applicationsâ€ discussed the reasons why voice and
+    video, particularly interactive voice and video like phone
+    calls and videoconferencing, need low latency (low
+    delay), low jitter, and low loss. Unfortunately, a roundrobin
+    scheduler does not provide low enough delay,
+    jitter, or loss. The solution: add Low Latency Queuing
+    (LLQ) to the scheduler.
+
+
+
+# Both policing and shaping monitor the bit rate of the
+  combined messages that flow through a device. Once
+  enabled, the policer or shaper notes each packet that
+  passes and measures the number of bits per second over
+  time. Both attempt to keep the bit rate at or below the
+  configured speed, but by using two different actions:
+  policers discard packets, and shapers hold packets in
+  queues to delay the packets.
+
+
+
+#Policing
+  Focus on the traffic rate versus the configured policing
+  rate for a moment, and the policing action of discarding
+  messages. Those concepts sit at the core of what the
+  policing function does.
+
+  A shaperâ€™s time interval refers   to its internal logic and
+  how a shaper averages, over time,   sending at a particular
+  rate. A shaper basically sends as   fast as it can and then
+  waits; sends and waits; sends and   waits.
+
+
+
+# TCP Windowing Basics
+  TCP uses a flow control mechanism called windowing.
+  Each TCP receiver grants a window to the sender. The
+  window, which is a number, defines the number of bytes
+  the sender can send over the TCP connection before
+  receiving a TCP acknowledgment for at least some of
+  those bytes. More exactly, the window size is the
+  number of unacknowledged bytes that the sender can
+  send before the sender must simply stop and wait.
+
+
+
+
+# Congestion Avoidance Tools
+  Congestion avoidance tools attempt to avoid the
+  congestion, primarily through using TCPâ€™s own
+  windowing mechanisms. These tools discard some TCP
+  segments before the queues fill, hoping that enough
+  TCP connections will slow down, reducing congestion,
+  and avoiding a much worse problem: the effects of many
+  more packets being dropped due to tail drop. The
+  strategy is simple: discard some now in hopes that the
+  device discards far fewer in the long term.
+
+
+
+
+###########
+# FHRPS #
+##########
+#    First Hop is a reference to the default router being
+    the first router, or first router hop, through which a
+    packet must pass.
+
+
+#HSRP Concepts
+  HSRP operates with an active/standby model (also more
+  generally called active/passive). HSRP allows two (or
+  more) routers to cooperate, all being willing to act as the
+  default router. However, at any one time, only one
+  router actively supports the end-user traffic. The packets
+  sent by hosts to their default router flow to that one
+  active router. Then the other routers, with an HSRP
+  standby state, sit there patiently waiting to take over
+  should the active HSRP router have a problem.
+
+
+
+
+# The HSRP active router implements a virtual IP address
+  and matching virtual MAC address. This virtual IP
+  address exists as part of the HSRP configuration, which
+  is an additional configuration item compared to the
+  usual ip address interface subcommand. This virtual
+  IP address is in the same subnet as the interface IP
+  address, but it is a different IP address. The router then
+  automatically creates the virtual MAC address. All the
+  cooperating HSRP routers know these virtual addresses,
+  but only the HSRP active router uses these addresses at
+  any one point in time.
+
+
+
+#SNMP
+
+#Securing SNMP
+  SNMP supports a few security mechanisms, depending
+  in part on the particular version. This section works
+  through the options.
+  First, one strong method to secure SNMP is to use ACLs
+  to limit SNMP messages to those from known servers
+  only. SNMP agents on Cisco routers and switches
+  support SNMP messages that flow in both IPv4 and IPv6
+  packets. The SNMP agent can configure an IPv4 ACL to
+  filter incoming SNMP messages that arrive in IPv4
+  packets and an IPv6 ACL to filter SNMP messages that
+  arrive in IPv6 packets.
+
+#SNMPv1 defines both a read-only community and a
+  read-write community. The read-only (RO) community
+  allows Get messages, and the read-write (RW)
+  community allows both reads and writes (Gets and
+  Sets).
+# SNMPv3 arrived with much celebration among network
+  administrators. Finally, security had arrived with the
+  powerful network management protocol.
+  # CH14
+  Chapter 14. WAN
+  Architecture
+
+
+  This chapter now turns our attention to WAN topics for
+  a deeper look at three branches of WAN technology. As
+  usual for this bookâ€™s discussion of WAN services, the
+  service is viewed mostly from the perspective of the
+  enterprise, as the customer of some WAN service
+  provider (SP). That means the discussion focuses on
+  what the enterprise receives from the service, rather
+  than how the service provider implements the service
+  inside its network.
+
+
+  This chapter begins with a discussion of Metro Ethernet,
+  a technology that defines how to use Ethernet links
+  between a customer site and the SP. The second section
+  then examines MPLS VPNs, even though MPLS VPNs
+  came before Metro Ethernet historically. The chapter
+  introduces Metro Ethernet first because the many
+  similarities between using Ethernet in the LAN and
+  using Ethernet in the WAN make this topic easier to
+  learn.
+
+  METRO ETHERNET
+  Metro Ethernet (MetroE) includes a variety of WAN
+  services with some common features. Each MetroE
+  service uses Ethernet physical links to connect the
+  customerâ€™s device to the service providerâ€™s device.
+  Second, the service is a Layer 2 service in that the WAN
+  provider forwards Ethernet frames from one customer
+  device to another.
+
+  Although the main concept makes a Metro Ethernet
+  service act like a big LAN switch, there are many
+  options, and you should understand the basics of each.
+  Additionally, many customers connect to a Metro
+  Ethernet service with either routers or Layer 3 switches,
+  which brings up some Layer 3 issues with IP addressing
+  and routing protocols. This section closes with a
+  discussion of the Layer 3 issues.
+
+
+  Metro Ethernet Physical Design and
+  Topology
+
+
+  From an enterprise perspective, to use a Metro Ethernet
+  service, each site needs to connect to the service with (at
+  least) one Ethernet link. There is no need to connect
+  each enterprise router to each other enterprise router
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  directly with a physical link
+
+  From the SP perspective, the SP needs to build a
+  network to create the Metro Ethernet service. To keep
+  costs lower the SP puts a device (typically an Ethernet
+  switch) physically near to as many customer sites as
+  possible, in an SP facility called a point of presence
+  (PoP). Those SP switches need to be near enough to
+  many customer locations so that some Ethernet
+  standard supports the distance from the SPâ€™s PoP to
+  each customer site.
+
+  the physical
+  link between the customer and the SP is called an access
+  link or, when using Ethernet specifically, an Ethernet
+  access link. Everything that happens on that link falls
+  within the definition of the user network interface, or
+  UNI. Breaking down the term UNI, the word network
+  refers to the SPâ€™s network, while the SPâ€™s customer (the
+  enterprise) is known as the user of the network.
+
+
+  Ethernet WAN Services and
+  Topologies
+  Beyond adding a physical Ethernet connection from
+  each site into the SPâ€™s Metro Ethernet WAN service, the
+  enterprise must choose between several possible
+  variations of MetroE services. Those variations use
+  different topologies that meet different customer needs.
+
+
+  You might see the term Virtual Private Wire Service
+  (VPWS) used for what MEF defines as E-Line
+  service, and Virtual Private LAN Service (VPLS)
+  used for what MEF defines as E-LAN service You
+
+  might also see the term Ethernet over MPLS
+  (EoMPLS). All these terms refer to cases in which
+  the SP uses MPLS internally to create what the
+  customer sees as an Ethernet WAN service.
+
+  Ethernet Line Service (Point-to-Point)
+  The Ethernet Line Service, or E-Line, is the simplest of
+  the Metro Ethernet services. The customer connects two
+  sites with access links. Then the MetroE service allows
+  the two customer devices to send Ethernet frames to
+  each other
+
+  As with all MetroE services, the promise made by the
+  service is to deliver Ethernet frames across the service,
+  as if the two customer routers had a rather long
+  crossover cable connected between them. In fact, the ELine
+  service is the same Ethernet WAN service you have
+  already seen in many examples
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  The routers would use physical Ethernet interfaces.
+  The routers would configure IP addresses in the same subnet as each
+  other.
+  Their routing protocols would become neighbors and exchange
+  routes.
+
+  Historically, enterprise engineers
+  place routers at the edge of a WAN, in part because that
+  device connected to both the WAN and the LAN, and the
+  LAN and WAN used different types of physical
+  interfaces and different data-link protocols. As a result
+  of how routing works, routers served as the perfect
+  device to sit at the edge between LAN and WAN (called
+  the WAN edge). With MetroE, the LAN and WAN are
+  both Ethernet, so an Ethernet switch becomes an
+  option.
+
+
+  Ethernet LAN Service (Full Mesh)
+  Imagine an enterprise needs to connect several sites to a
+  WAN, and the goal is to allow every site to send frames
+  directly to every other site. You could do that with ELines,
+  but you would need possibly lots of E-Lines. For
+  instance, to connect three sites with E-Lines so that
+  each site could send frames directly to each other, you
+  only need three E-Lines. But with four, five, and six
+  sites, you would need 6, 10, and 15 E-Lines, respectively.
+
+
+
+
+  One E-LAN service allows all devices connected to that
+  service to send Ethernet frames directly to every other
+  device, just as if the Ethernet WAN service were one big
+  Ethernet switch.
+
+
+
+  An E-LAN service connects the sites in a full mesh. The
+  term full mesh refers to a design that, for a set of
+  devices, creates a direct communication path for each
+  pair. In contrast, a partial mesh refers to a design in
+  which only some of the pairs can communicate directly.
+  The Ethernet Tree service (E-Tree), as discussed in the
+  next topic, creates a partial mesh design.
+
+  Ethernet Tree Service (Hub and Spoke)
+  The Ethernet Tree service (E-Tree) creates a WAN
+  topology in which the central site device can send
+  Ethernet frames directly to each remote (leaf) site, but
+  the remote (leaf) sites can send only to the central site.
+  With an E-Tree, the central site serves as the root of a
+  tree and each remote site as one of the leaves. The
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  topology goes by many names: partial mesh, hub and
+  spoke, and point-to-multipoint. Regardless of the term
+  you use, an E-Tree service creates a service that works
+  well for designs with a central site plus many remote
+  sites.
+
+
+  Layer 3 Design with E-Line Service
+  Every E-Line uses a point-to-point topology. As a result,
+  the two routers on the ends of an E-Line need to be in
+  the same subnet. Similarly, when an enterprise uses
+  multiple E-Lines, each should be in a different subnet.
+
+
+  Layer 3 Design with E-LAN Service
+  If you connected four routers to one LAN switch, all in
+  the same VLAN, what would you expect for the IP
+  addresses on those routers? And if all four routers used
+  the same routing protocol, which would become
+  neighbors? Typically, with four routers connected to the
+  same switch, on the same VLAN, using the same routing
+  protocol, normally all four routers would have IP
+  addresses in the same subnet, and all would become
+  neighbors.
+
+
+
+  MPLS creates a WAN service that routes IP packets
+  between customer sites. The enterprise deploys routers
+  and switches as usual. The SP then creates its own IP
+  network, spanning a large geographic area. The
+  customer can then connect to the MPLS network, with a
+  link from each site, with the SP routing IP packets from
+  one customer site to the other.
+
+
+  However, an SP cannot just build a large IP network and
+  connect all its customers to that same IP network
+  because of some issues that arise to support multiple
+  customers at the same time. For instance, many
+  customers will use the same private IP network (for
+  instance, network 10.0.0.0), so the SPâ€™s IP network
+  would learn large numbers of routes to overlapping
+  subnets.
+
+
+  To overcome this and other issues, the SP builds its IP
+  network to also use Multiprotocol Label Switching
+  (MPLS), in particular MPLS VPNs. MPLS VPNs allow
+  the SP to build one large MPLS network, which also
+  creates a private IP-based WAN for each of its
+  customers. With MPLS VPNs, the SP can separate the
+  routes learned from one customer from the routes
+  learned for the next customer; consequently, the SP can
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  support each customer while preventing packets from
+  leaking from one customer to the next.
+
+
+  To give you a little insight as to why MPLS is not just an
+  IP network with routers, internally, the devices in an
+  MPLS network use label switchingâ€”hence, the name
+  MPLS. The routers on the edge of the MPLS network
+  add and remove an MPLS header to packets as they
+  enter and exit the MPLS network. The devices inside the
+  MPLS network then use the label field inside that MPLS
+  header when forwarding data across the MPLS network.
+  The choices of the labels to use, along with other related
+  logic, allow the MPLS VPN to create separate VPNs to
+  keep different customersâ€™ traffic separate.
+
+
+  While MPLS VPNs provide a Layer 3 service to
+  customers, MPLS itself is sometimes called a Layer
+  2.5 protocol because it adds the MPLS header
+  between the data-link header (Layer 2) and the IP
+  header (Layer 3).
+
+
+  Will use a routing protocol to build routing protocol neighbor
+  relationships with customer routers
+  Will learn customer subnets/routes with those routing protocols
+  Will advertise a customerâ€™s routes with a routing protocol so that all
+  routers that customer connects to the MPLS VPN can learn all routes
+  as advertised through the MPLS VPN network
+  Will make decisions about MPLS VPN forwarding, including what
+  MPLS labels to add and remove, based on the customerâ€™s IP address
+  space and customer IP routes
+
+
+
+  As an aside, MPLS VPNs create a private network by
+  keeping customer data separate, but not by encrypting
+  the data. Some VPN services encrypt the data, expecting
+  that attackers might be able to receive copies of the
+  packets. With MPLS, even though the packets for two
+  customers may pass through the same devices and links
+  inside the MPLS network, MPLS logic can keep the
+  packets separate for each customer.
+
+
+  MPLS VPN Physical Design and
+  Topology
+  MetroE provides a Layer 2 service by forwarding Layer 2
+  Ethernet frames. To do that, the SP often uses Ethernet
+  switches at the edge of its network. Those switches are
+  configured to do more than what you learn about
+  Ethernet LAN switches for CCNA, but a LAN switchâ€™s
+  most fundamental job is to forward an Ethernet frame,
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  so it makes sense for MetroE to use an Ethernet switch
+  at the edge of the SPâ€™s MetroE network.
+
+
+  MPLS provides a Layer 3 service in that it promises to
+  forward Layer 3 packets (IPv4 and IPv6). To support
+  that service, MPLS SPs typically use routers at the edge
+  of the MPLS networks because routers provide the
+  function of forwarding Layer 3 packets.
+
+
+  MPLS and Quality of Service
+  MPLS stands apart from other WAN services as the first
+  WAN service for which the SP provided effective Quality
+  of Service (QoS) features.
+
+
+  IP networks can and often do forward voice traffic in IP
+  packets, called Voice over IP (VoIP). If a WAN service
+  does not provide QoS, that means that the WAN service
+  does not treat one packet any differently than any other
+  packet. With QoS, the SPâ€™s network can treat packets
+  differently, giving some packets (like VoIP) better
+  treatment. For a voice call to sound good, each voice
+  packet must have low loss (that is, few packets are
+  discarded); low one-way delay through the network; and
+  low variation in delay (called jitter). Without QoS, a
+  voice call over an IP network will not sound good.
+
+
+  Layer 3 with MPLS VPN
+  Because MetroE provides a Layer 2 service, the SP has
+  no need to understand anything about the customerâ€™s
+  Layer 3 design. The SP knows nothing about the
+  customerâ€™s IP addressing plan and has no need to
+  participate with routing protocols.
+
+
+  A CE router does become neighbors with the PE router on the other
+  end of the access link.
+  A CE router does not become neighbors with other CE routers.
+  The MPLS network does advertise the customerâ€™s routes between the
+  various PE routers so that the CE routers can learn all customer
+  routes through their PE-CE routing protocol neighbor relationship.
+
+
+  To advertise the customer routes between the PE
+  routers, the PE routers use another routing protocol
+  along with a process called route redistribution. Route
+  redistribution happens inside one router, taking routes
+  from one routing protocol process and injecting them
+  into another. MPLS does route redistribution in the PE
+  routers between the routing protocol used by the
+  customer and a variation of BGP called Multiprotocol
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  BGP (MPBGP). (Redistribution is needed when the PECE
+  routing protocol is not BGP.)
+
+
+  MPBGP can advertise routes from multiple customers
+  while keeping the routes logically separated.
+
+  At the end of the process, for all single enterprises, all
+  the routers can learn routes to all the subnets reachable
+  over the MPLS VPN WAN. WAN routes on the CE
+  routers refer to the neighboring PE router as the nexthop
+  router. Each CE router becomes a routing protocol
+  neighbor with the SPâ€™s PE router on the other end of the
+  access link. Plus, MPLS provides the flexibility to use
+  whatever type of physical access link makes sense for
+  the location at each site, while still connecting to the
+  same MPLS network.
+
+
+
+  INTERNET VPNS
+  To build the Internet, Internet service providers (ISP)
+  need links to other ISPs as well as links to the ISPsâ€™
+  customers. The Internet core connects ISPs to each
+  other using a variety of highspeed technologies.
+  Additionally, Internet access links connect an ISP to
+  each customer, again with a wide variety of
+  technologies. The combination of ISP networks and
+  customer networks that connect to the ISPs together
+  create the worldwide Internet.
+
+
+  Internet Access
+  Private WAN technology may be used to access an ISPâ€™s
+  network, including the Ethernet WAN and MPLS
+  technologies discussed earlier in this chapter.
+
+
+  Digital Subscriber Line
+  In the consumer Internet access space, one big speed
+  breakthrough happened with the introduction of the
+  digital subscriber line (DSL). It represented a big
+  technological breakthrough in terms of raw speed in
+  comparison to some older technologies, such as analog
+  modems. These faster speeds available through DSL
+  also changed how people could use the Internet because
+  many of todayâ€™s common applications would be
+  unusable with the earlier Internet access technologies
+  (analog modems and Integrated Services Digital
+  Network, or ISDN).
+
+
+  The mobile phone radio towers also have cabling and
+  equipment, including routers. The mobile provider
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  builds its own IP network, much like an ISP builds out
+  an IP network. The customer IP packets pass through
+  the IP router at the tower into the mobile providerâ€™s IP
+  network and then out to the Internet.
+
+
+  Mobile phones use radio waves to communicate
+  through a nearby mobile phone tower. The phone has a
+  small radio antenna, and the provider has a much larger
+  antenna sitting at the top of a tower somewhere within
+  miles of you and your phone. Phones, tablet computers,
+  laptops, and even routers (with the correct interface
+  cards) can communicate through to the Internet using
+  this technology,
+
+
+  Internet VPN Fundamentals
+  Private WANs have some wonderful security features.
+  In particular, the customers who send data through the
+  WAN have good reason to believe that no attackers saw
+  the data in transit or even changed the data to cause
+
+
+  VPNs try to provide the same secure features as a
+  private WAN while sending data over a network that is
+  open to other parties (such as the Internet). Compared
+  to a private WAN, the Internet does not provide for a
+  secure environment that protects the privacy of an
+  enterpriseâ€™s data. Internet VPNs can provide important
+  security features, such as the following:
+  Confidentiality (privacy): Preventing anyone in the middle of the
+  Internet (man in the middle) from being able to read the data
+  Authentication: Verifying that the sender of the VPN packet is a
+  legitimate device and not a device used by an attacker
+  Data integrity: Verifying that the packet was not changed as the
+  packet transited the Internet
+  Anti-replay: Preventing a man in the middle from copying and
+  later replaying the packets sent by a legitimate user, for the purpose
+  of appearing to be a legitimate user
+
+
+  To accomplish these goals, two devices near the edge of
+  the Internet create a VPN, sometimes called a VPN
+  tunnel. These devices add headers to the original packet,
+  with these headers including fields that allow the VPN
+  devices to make the traffic secure. The VPN devices also
+  encrypt the original IP packet, meaning that the original
+  packetâ€™s contents are undecipherable to anyone who
+  happens to see a copy of the packet as it traverses the
+  Internet.
+
+  firewall. In this case, the VPN is called a site-to-site VPN
+  because it connects two sites of a company.
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  Site-to-Site VPNs with IPsec
+  A site-to-site VPN provides VPN services for the devices
+  at two sites with a single VPN tunnel. For instance, if
+  each site has dozens of devices that need to
+  communicate between sites, the various devices do not
+  have to act to create the VPN. Instead, the network
+  engineers configure devices such as routers and
+  firewalls
+
+  to create one VPN
+  tunnel. The tunnel endpoints create the tunnel and
+  leave it up and operating all the time, so that when any
+  device at either site decides to send data, the VPN is
+  available. All the devices at each site can communicate
+  using the VPN, receiving all the benefits of the VPN,
+  without requiring each device to create a VPN for
+  themselves.
+
+  While IPsec and GRE (or other) tunnels work well for
+  site-to-site VPNs, remote access VPNs often use the
+  Transport Layer Security (TLS) protocol to create a
+  secure VPN session.
+
+
+  The Cisco AnyConnect Secure Mobility
+  Client (or AnyConnect Client for short) is software that
+  sits on a userâ€™s PC and uses TLS to create one end of a
+  VPN remote-access tunnel. As a result, all the packets
+  sent to the other end of the tunnel are encrypted, not
+  just those sent over a single HTTP connection in a web
+  browser.
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH14.txt[6/9/2021 11:27:38 AM]
+  # CH15
+
+  Virtualizaton
+
+  Today, most companies instead create a virtualized data
+  center. That means the company purchases server
+  hardware, installs it in racks, and then treats all the
+  CPU, RAM, and so on as capacity in the data center.
+  Then, each OS instance is decoupled from the hardware
+  and is therefore virtual (in contrast to physical). Each
+  piece of hardware that we would formerly have thought
+  of as a server runs multiple instances of an OS at the
+  same time, with each virtual OS instance called a virtual
+  machine, or VM.
+
+
+  A single physical host (server) often has more
+  processing power than you need for one OS. Thinking
+  about processors for a moment, modern server CPUs
+  have multiple cores (processors) in a single CPU chip.
+
+  Each core may also be able to run multiple threads with
+  a feature called multithreading. So, when you read
+  about a particular Intel processor with 8 cores and
+  multithreading (typically two threads per core), that one
+  CPU chip can execute 16 different programs
+  concurrently. The hypervisor (introduced shortly) can
+  then treat each available thread as a virtual CPU (vCPU)
+  and give each VM a number of vCPUs, with 16 available
+  in this example.
+
+  To make server virtualization work, each physical server
+  (called a host in the server virtualization world) uses a
+  hypervisor. The hypervisor manages and allocates the
+  host hardware (CPU, RAM, etc.) to each VM based on
+  the settings for the VM. Each VM runs as if it is running
+  on a self-contained physical server, with a specific
+  number of virtual CPUs and NICs and a set amount of
+  RAM and storage. For instance, if one VM happens to be
+  configured to use four CPUs, with 8 GB of RAM, the
+  hypervisor allocates the specific parts of the CPU and
+  RAM that the VM actually uses.
+
+  Networking with Virtual Switches on
+  a Virtualized Host
+  Server virtualization tools provide a wide variety of
+  options for how to connect VMs to networks. This book
+  does not attempt to discuss them all, but it can help to
+  get some of the basics down before thinking more about
+  cloud computing.
+  First, what does a physical server include for networking
+  functions? Typically it has one or more NICs, maybe as
+  slow as 1 Gbps, often 10 Gbps today, and maybe as fast
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  as 40 Gbps.
+  Next, think about the VMs. Normally, an OS has one
+  NIC, maybe more. To make the OS work as normal, each
+  VM has (at least) one NIC, but for a VM, it is a virtual
+  NIC. (For instance, in VMwareâ€™s virtualization systems,
+  the VMâ€™s virtual NIC goes by the name vNIC.)
+
+
+  The vSwitch uses the same
+  networking features you now know from your CCNA
+  studies; in fact, one big motivation to use a vSwitch
+  from Cisco is to use the same networking features, with
+  the same configuration, as in the rest of the network. In
+  particular:
+
+  Ports connected to VMs: The vSwitch can configure a port so
+  that the VM will be in its own VLAN, or share the same VLAN with
+  other VMs, or even use VLAN trunking to the VM itself.
+  Ports connected to physical NICs: The vSwitch uses the
+  physical NICs in the server hardware so that the switch is adjacent to
+  the external physical LAN switch. The vSwitch can (and likely does)
+  use VLAN trunking.
+  Automated configuration: The configuration can be easily done
+  from within the same virtualization software that controls the VMs.
+  That programmability allows the virtualization software to move
+  VMs between hosts (servers) and reprogram the vSwitches so that
+  the VM has the same networking capabilities no matter where the
+  VM is running.
+
+  The Physical Data Center Network
+  To pull these ideas together, next consider what
+  happens with the physical network in a virtualized data
+
+  Workflow with a Virtualized Data
+  Center
+  So far, the first part of this chapter has described
+  background information important to the upcoming
+  discussions of cloud computing. Server virtualization
+  has been a great improvement to the operations of many
+  data centers, but virtualization alone does not create a
+  cloud computing environment. Continuing the
+  discussion of these fundamental technologies before
+  discussing cloud computing, consider this example of a
+  workflow through a virtualized (not cloud-based) data
+  center.
+  Some of the IT staff, call them server or virtualization
+  engineers or administrators, order and install new hosts
+  (servers). They gather requirements, plan for the
+  required capacity, shop for hardware, order it, and
+  install the hardware. They play the role of long-time
+  server administrators and engineers, but now they work
+  with the virtualization tools as well.
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  Summarizing some of the key points about a virtualized
+  data center made so far, which enable cloud computing:
+  The OS is decoupled from the hardware on which it runs, so that the
+  OS, as a VM, can run on any server in a data center that has enough
+  resources to run the VM.
+  The virtualization software can automatically start and move the VM
+  between servers in the data center.
+  Data center networking includes virtual switches and virtual NICs
+  within each host (server).
+  Data center networking can be programmed by the virtualization
+  software, allowing new VMs to be configured, started, moved as
+  needed, and stopped, with the networking details configured
+  automatically.
+
+
+  CLOUD COMPUTING SERVICES
+  Cloud computing is an approach to offering IT services.
+  Cloud computing makes use of products such as the
+  virtualization products but also uses products built
+  specifically to enable cloud features.
+
+  To get a broader sense of what it means for a service to
+  be a cloud service, examine this list of five criteria for a
+  cloud computing service. The list is derived from the
+  definition of cloud computing as put forth by the US
+  National Institute of Standards and Technology (NIST):
+
+  On-demand self-service: The IT consumer
+  chooses when to start and stop using the service,
+  without any direct interaction with the provider of
+  the service.
+
+  Broad network access: The service must be
+  available from many types of devices and over many
+  types of networks (including the Internet).
+
+  Resource pooling: The provider creates a pool of
+  resources (rather than dedicating specific servers for
+  use only by certain consumers) and dynamically
+  allocates resources from that pool for each new
+  request from a consumer.
+
+  Rapid elasticity: To the consumer, the resource
+  pool appears to be unlimited (that is, it expands
+  quickly, so it is called elastic), and the requests for
+  new service are filled quickly.
+
+  Measured service: The provider can measure the
+  usage and report that usage to the consumer, both for
+  transparency and for billing.
+
+  The world of cloud computing has long used the
+  terms private cloud and public cloud. In more
+  recent years, you may also find references that
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  instead use a different pair of terms for the same
+  ideas, with on-premise meaning private cloud, and
+  cloud meaning public cloud. Note that the one
+  CCNA 200-301 exam topic that mentions cloud
+  happens to use the newer pair of terms.
+
+
+  Public Cloud
+  With a private cloud, the cloud provider and the cloud
+  consumer are part of the same company. With public
+  cloud, the reverse is true: a public cloud provider offers
+  services, selling those services to consumers in other
+  companies. In fact, if you think of Internet service
+  providers and WAN service providers selling Internet
+  and WAN services to many enterprises, the same
+  general idea works here with public cloud providers
+  selling their services to many enterprises.
+
+  The workflow in public cloud happens somewhat like
+  private cloud when you start from the point of a
+  consumer asking for some service (like a new VM).
+
+  Cloud and the â€œAs a Serviceâ€ Model
+  So what do you get with cloud computing? So far, this
+  chapter has just shown a VM as a service. With cloud
+  computing, there are a variety of services, and three
+  stand out as the most common seen in the market
+  today.
+
+  First, a quick word about some upcoming terminology.
+  The cloud computing world works on a services model.
+  Instead of buying (consuming) hardware, buying or
+  licensing software, installing it yourself, and so on, the
+  consumer receives some service from the provider. But
+  that idea, receiving a service, is more abstract than the
+  idea of buying a server and installing a particular
+  software package. So with cloud computing, instead of
+  keeping the discussion so generic, the industry uses a
+  variety of terms that end in â€œas a Service.â€ And each â€œ-
+  aaSâ€ term has a different meaning.
+
+
+  Infrastructure as a Service
+  Infrastructure as a Service (IaaS) may be the easiest of
+  the cloud computing services to understand for most
+  people. For perspective, think about any time you have
+  shopped for a computer. You thought about the OS to
+  run (the latest Microsoft OS, or Linux, or macOS if
+  shopping for a Mac).
+
+
+  CPU and its speed, how much RAM the computer had,
+  the size of the disk drive, and so on.
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  In the virtualization and cloud world, starting a VM
+  is often called spinning up a VM or instantiating a
+  VM.
+
+  The provider also gives the consumer details about the
+  VM so the consumer can connect to the OSâ€™s user
+  interface, install more software, and customize settings.
+  For example, imagine that the consumer wants to run a
+  particular application on the server. If that customer
+  wanted to use Microsoft Exchange as an email server,
+  she would then need to connect to the VM and install
+  Exchange.
+
+  Software as a Service
+  With Software as a Service (SaaS), the consumer
+  receives a service with working software. The cloud
+  provider may use VMs, possibly many VMs, to create the
+  service, but those are hidden from the consumer. The
+  cloud provider licenses, installs, and supports whatever
+  software is required. The cloud provider then monitors
+  performance of the application. However, the consumer
+  chooses to use the application, signs up for the service,
+  and starts using the applicationâ€”no further installation
+  work required.
+
+
+  (Development) Platform as a Service
+  Platform as a Service (PaaS) is a development platform,
+  prebuilt as a service. A PaaS service is like IaaS in some
+  ways. Both supply the consumer with one or more VMs,
+  with a configurable amount of CPU, RAM, and other
+  resources.
+
+
+  The key difference between PaaS and IaaS is that PaaS
+  includes many more software tools beyond the basic OS.
+  Those tools are useful to a software developer during
+  the software development process. Once the
+  development process is complete, and the application
+  has been rolled out in production, those tools are not
+  needed on the servers running the application. So the
+  development tools are particular to the work done when
+  developing.
+
+
+  A PaaS offering includes a set of development tools, and
+  each PaaS offering has a different combination of tools.
+  PaaS VMs often include an integrated development
+  environment (IDE), which is a set of related tools that
+  enables the developer to write and test code easily. PaaS
+  VMs include continuous integration tools that allow the
+  developer to update code and have that code
+  automatically tested and integrated into a larger
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  This final major section of the chapter focuses on WAN
+  options for public cloud, and the pros and cons of each.
+
+  This section ignores private cloud for the most part,
+  because using a private cloudâ€”which is internal to an
+  enterpriseâ€”has much less of an impact on an enterprise
+  WAN compared to public cloud. With public cloud, the
+  cloud services exist on the other side of some WAN
+  connection as compared to the consumer of the services,
+  so network engineers must think about how to best
+  build a WAN when using public cloud services.
+
+
+  Enterprise WAN Connections to
+  Public Cloud
+  Using the Internet to communicate between the
+  enterprise and a public cloud provider is easy and
+  convenient. However, it also has some negatives. This
+  first section describes the basics and points out the
+  issues, which then leads to some of the reasons why
+  using other WAN connections may be preferred.
+
+
+  Accessing Public Cloud Services Using the Internet
+  Imagine an enterprise that operates its network without
+  cloud. All the applications it uses to run its business run
+  on servers in a data center inside the enterprise. The OS
+  instances where those applications run can be hosted
+  directly on physical servers or on VMs in a virtualized
+  data center, but all the servers exist somewhere inside
+  the enterprise.
+
+
+  Pros and Cons with Connecting to Public Cloud with
+  Internet
+  Using the Internet to connect from the enterprise to the
+  public cloud has several advantages. The most obvious
+  advantage is that all companies and cloud providers
+  already have Internet connections, so getting started
+  using public cloud services is easy. Using the Internet
+  works particularly well with SaaS services and a
+  distributed workforce. For instance, maybe your sales
+  division uses a SaaS customer contact app. Often,
+  salespeople do not sit inside the enterprise network
+  most of the work day.
+
+
+  Internet and use a VPN to connect to the enterprise. For
+  apps hosted on the public cloud, with this user base, it
+  makes perfect sense to use the Internet.
+
+
+  While that was just one example, the following list
+  summarizes some good reasons to use the Internet as
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  the WAN connection to a public cloud service:
+
+  Agility: An enterprise can get started using public
+  cloud without having to wait to order a private WAN
+  connection to the cloud provider because cloud
+  providers support Internet connectivity.
+
+
+  Migration: An enterprise can switch its workload
+  from one cloud provider to another more easily
+  because cloud providers all connect to the Internet.
+
+  Distributed users: The enterpriseâ€™s users are
+  distributed and connect to the Internet with their
+  devices (as in the sales SaaS app example).
+
+
+  Security: The Internet is less secure than private
+  WAN connections in that a â€œman in the middleâ€ can
+  attempt to read the contents of data that passes
+  to/from the public cloud.
+
+
+  Capacity: Moving an internal application to the
+  public cloud increases network traffic, so the
+  question of whether the enterpriseâ€™s Internet links
+  can handle the additional load needs to be
+  considered.
+
+  Quality of Service (QoS): The Internet does not
+  provide QoS, whereas private WANs can. Using the
+  Internet may result in a worse user experience than
+  desired because of higher delay (latency), jitter, and
+  packet loss.
+
+  No WAN SLA: ISPs typically will not provide a
+  service-level agreement (SLA) for WAN performance
+  and availability to all destinations of a network. WAN
+  service providers are much more likely to offer
+  performance and availability SLAs.
+
+  Private WAN and Internet VPN Access to Public
+  Cloud
+
+  The NIST definition for cloud computing lists broad
+  network access as one of the five main criteria. In the
+  case of public cloud, that often means supporting a
+  variety of WAN connections, including the most
+  common enterprise WAN technologies. Basically, an
+  enterprise can connect to a public cloud provider with
+  WAN technologies discussed in this book.
+
+  To make a private Multiprotocol Label Switching
+  (MPLS) VPN or Ethernet WAN connection, the
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  enterprise needs to work with the cloud provider and
+  the WAN provider. Because cloud providers connect to
+  many customers with private WAN connections, they
+  often have published set instructions to follow. In the
+  most basic form, with MPLS, the enterprise and the
+  cloud provider connect to the same MPLS provider, with
+  the MPLS provider connecting the enterprise and cloud
+  sites. The same basic process happens with Ethernet
+  WAN services, with one or more Ethernet Virtual
+  Connections (EVCs) created between the public WAN
+  and the enterprise.
+
+
+  Often, the server/virtualization engineers will
+  dictate whether the WAN connection needs to
+  support Layer 2 or Layer 3 connectivity, depending
+  on other factors
+
+  Pros and Cons of Connecting to Cloud with Private
+  WANs
+  Private WANs overcome some of the issues of using the
+  Internet without VPN, so working through those issues,
+  consider some of the different WAN options.
+  First, considering the issue of security, all the private
+  options, including adding a VPN to the existing Internet
+  connection, improve security significantly. An Internet
+  VPN would encrypt the data to keep it private. Private
+  WAN connections with MPLS and Ethernet have
+  traditionally been considered secure without encryption,
+  but companies are sometimes encrypting data sent over
+  private WAN connections as well to make the network
+  more secure.
+
+  Intercloud Exchanges
+  Public cloud computing also introduces a whole new
+  level of competition because a cloud consumer can
+  move his workload from one cloud provider to another.
+  Moving the workload takes some effort, for a variety of
+  reasons beyond the scope of this book. (Suffice it to say
+  that most cloud providers differ in the detail of how they
+  implement services.) But enterprises can and do migrate
+  their workload from one cloud provider to another,
+  choosing a new company for a variety of reasons,
+  including looking for a less expensive cloud provider.
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH15.txt[6/9/2021 11:27:38 AM]
+  # CH16
+
+  Chapter 16. Introduction to
+  Controller-Based
+  Networking
+
+
+  The 2010s have seen the introduction of a new network
+  operational model: Software Defined Networking
+  (SDN). SDN makes use of a controller that centralizes
+  some network functions. The controller also creates
+  many new capabilities to operate networks differently;
+  in particular, controllers enable programs to
+  automatically configure and operate networks through
+  power application programming interfaces (APIs).
+
+
+  With traditional networking, the network engineer
+  configured the various devices and changes requiring a
+  long timeframe to plan and implement changes. With
+  controller-based networking and SDN, network
+  engineers and operators can implement changes more
+  quickly, with better consistency, and often with better
+  operational practices.
+
+
+  Network programmability and Software Defined
+  Networking (SDN) take those ideas, analyze the pieces,
+  find ways to improve them for todayâ€™s needs, and
+  reassemble those ideas into a new way of making
+  networks work. At the end of that rearrangement, the
+  devices in the network still forward messages, but the
+  how and why have changed.
+
+  This first major section explains the most central
+  concepts of SDN and network programmability. It starts
+  by breaking down some of the components of what
+  exists in traditional networking devices. Then this
+  section explains how some centralized controller
+  software, called a controller, creates an architecture for
+  easier programmatic control of a network.
+
+  The Data, Control, and Management
+  Planes
+
+  The Data Plane
+  The term data plane refers to the tasks that a
+  networking device does to forward a message. In other
+  words, anything to do with receiving data, processing it,
+  and forwarding that same dataâ€”whether you call the
+  data a frame, a packet, or, more generically, a messageâ€”
+  is part of the data plane.
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  Now broaden your thinking for a moment and try to
+  think of everything a router or switch might do when
+  receiving, processing, and forwarding a message. Of
+  course, the forwarding decision is part of the logic; in
+  fact, the data plane is often called the forwarding plane.
+  But think beyond matching the destination address to a
+  table.
+
+  For perspective, the following list details some of
+  the more common actions that a networking device does
+  that fit into the data plane:
+
+  De-encapsulating and re-encapsulating a packet in a data-link
+  frame (routers, Layer 3 switches)
+  Adding or removing an 802.1Q trunking header (routers and
+  switches)
+  Matching an Ethernet frameâ€™s destination Media Access Control
+  (MAC) address to the MAC address table (Layer 2 switches)
+  Matching an IP packetâ€™s destination IP address to the IP routing
+  table (routers, Layer 3 switches)
+
+  Encrypting the data and adding a new IP header (for virtual private
+  network [VPN] processing)
+  Changing the source or destination IP address (for Network Address
+  Translation [NAT] processing)
+  Discarding a message due to a filter (access control lists [ACLs], port
+  security)
+
+  All the items in the list make up the data plane, because
+  the data plane includes all actions done per message.
+
+
+  The Control Plane
+  Next, take a moment to ponder the kinds of information
+  that the data plane needs to know beforehand so that it
+  can work properly. For instance, routers need IP routes
+  in a routing table before the data plane can forward
+  packets. Layer 2 switches need entries in a MAC address
+  table before they can forward Ethernet frames out the
+  one best port to reach the destination. Switches must
+  use Spanning Tree Protocol (STP) to limit which
+  interfaces can be used for forwarding so that the data
+  plane works well and does not loop frames forever.
+
+  From one perspective, the information supplied to the
+  data plane controls what the data plane does. For
+  instance, a router needs a route that matches a packetâ€™s
+  destination address for the router to know how to route
+  (forward) the packet. When a routerâ€™s data plane tries to
+  match the routing table and finds no matching route,
+  the router discards the packet. And what controls the
+  contents of the routing table? Various control plane
+  processes.
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  The term control plane refers to any action that controls
+  the data plane. Most of these actions have to do with
+  creating the tables used by the data plane, tables like the
+  IP routing table, an IP Address Resolution Protocol
+  (ARP) table, a switch MAC address table, and so on. By
+  adding to, removing, and changing entries to the tables
+  used by the data plane, the control plane processes
+  control what the data plane does. You already know
+  about many control plane protocolsâ€”for instance, all
+  the IP routing protocols.
+
+  Traditional networks use both a distributed data plane
+  and a distributed control plane. In other words, each
+  device has a data plane and a control plane, and the
+  network distributes those functions into each individual
+  device
+
+  Without the protocols and activities of the control plane,
+  the data plane of traditional networking devices would
+  not function well. Routers would be mostly useless
+  without routes learned by a routing protocol. Without
+  learning MAC table entries, a switch could still forward
+  unicasts by flooding them, but doing that for all frames
+  would create much more load on the local-area network
+  (LAN) compared to normal switch operations. So the
+  data plane must rely on the control plane to provide
+  useful information.
+
+  The Management Plane
+
+  The control plane performs overhead tasks that directly
+  impact the behavior of the data plane. The management
+  plane performs overhead work as well, but that work
+  does not directly impact the data plane. Instead, the
+  management plane includes protocols that allow
+  network engineers to manage the devices.
+
+  Telnet and Secure Shell (SSH) are two of the most
+  obvious management plane protocols. To emphasize the
+  difference with control plane protocols, think about two
+  routers: one configured to allow Telnet and SSH into the
+  router and one that does not. Both could still be running
+  a routing protocol and routing packets, whether or not
+  they support Telnet and SSH.
+
+
+  Cisco Switch Data Plane Internals
+
+  To better understand SDN and network
+  programmability, it helps to think about the internals of
+  switches. This next topic does just that.
+  From the very first days of devices called LAN switches,
+  switches had to use specialized hardware to forward
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  frames, because of the large number of frames per
+  second (fps) required. To get a sense for the volume of
+  frames a switch must be able to forward, consider the
+  minimum frame size of an Ethernet frame, the number
+  of ports on a switch, and the speeds of the ports; even
+  low-end switches need to be able to forward millions of
+  frames per second.
+
+  First, the switching logic occurs not in the CPU with
+  software, but in an application-specific integrated
+  circuit (ASIC). An ASIC is a chip built for specific
+  purposes, such as for message processing in a
+  networking device.
+
+  Second, the ASIC needs to perform table lookup in the
+  MAC address table, so for fast table lookup, the switch
+  uses a specialized type of memory to store the
+  equivalent of the MAC address table: ternary contentaddressable
+  memory (TCAM). TCAM memory does not
+  require the ASIC to execute loops through an algorithm
+  to search the table. Instead, the ASIC can feed the fields
+  to be matched, like a MAC address value, into the
+  TCAM, and the TCAM returns the matching table entry,
+  without a need to run a search algorithm.
+
+  Controllers and Software-Defined
+  Architecture
+  New approaches to networking emerged in the 2010s,
+  approaches that change where some of the control plane
+  functions occur. Many of those approaches move parts
+  of the control plane work into software that runs as a
+  centralized application called a controller. This next
+  topic looks at controller concepts, and the interfaces to
+  the devices that sit below the controller and to any
+  programs that use the controller.
+
+  The term Software Defined Networking (SDN)
+  became common in the 2010s to refer to the types of
+  controller-based networks described in the next few
+  pages. More often today you might see terms like
+  software-defined architecture or controller-based
+  networking.
+
+  Controllers and Centralized Control
+  Most traditional control plane processes use a
+  distributed architecture. For example, each router runs
+  its own OSPF routing protocol process. To do their work,
+  those distributed control plane processes use messages
+  to communicate with each other, like OSPF protocol
+  messages between routers. As a result, traditional
+  networks are said to use a distributed control plane
+
+  A controller, or SDN controller, centralizes the control
+  of the networking devices. The degree of control, and
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  the type of control, varies widely. For instance, the
+  controller can perform all control plane functions,
+  replacing the devicesâ€™ distributed control plane.
+  Alternately, the controller can simply be aware of the
+  ongoing work of the distributed data, control, and
+  management planes on the devices, without changing
+  how those operate. And the list goes on, with many
+  variations.
+
+  Several different options exist for the SBI. The overall
+  goal is network programmability, so the interface moves
+  away from being only a protocol. An SBI often includes a
+  protocol, so that the controller and devices can
+  communicate, but it often includes an application
+  programming interface (API). An API is a method for
+  one application (program) to exchange data with
+  another application.
+
+  Rearranging the words to describe
+  the idea, an API is an interface to an application
+  program. Programs process data, so an API lets two
+  programs exchange data. While a protocol exists as a
+  document, often from a standards body, an API often
+  exists as usable codeâ€”functions, variables, and data
+  structuresâ€”that can be used by one program to
+  communicate and copy structured data between the
+  programs across a network.
+
+  So, back to the term SBI: it is an interface between a
+  program (the controller) and a program (on the
+  networking device) that lets the two programs
+  communicate, with one goal being to allow the
+  controller to program the data plane forwarding tables
+  of the networking device.
+
+  The Northbound Interface
+
+  A controllerâ€™s northbound interface (NBI) opens the
+  controller so its data and functions can be used by other
+  programs, enabling network programmability, with
+  much quicker development. Programs can pull
+  information from the controller, using the controllerâ€™s
+  APIs. The NBIs also enable programs to use the
+  controllerâ€™s capabilities to program flows into the
+  devices using the controllerâ€™s SBIs.
+
+  Before leaving the topic of NBIs, let me close with a
+  brief explanation of a REST API as used for a controller.
+  REST (Representational State Transfer) describes a type
+  of API that allows applications to sit on different hosts,
+  using HTTP messages to transfer data over the API.
+
+  Most REST APIs will
+  ask for and receive structured data. That is, instead of
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  receiving data that is a web page, like a web browser
+  would receive, the response holds variable names and
+  their values, in a format that can be easily used by a
+  program. The common formats for data used for
+  network programmability are JavaScript Object
+  Notation (JSON) and eXtensible Markup Language
+  (XML)
+
+  Software Defined Architecture
+  Summary
+
+  SDN and network programmability introduce a new way
+  to build networks. The networking devices still exist and
+  still forward data, but the control plane functions and
+  locations can change dramatically. The centralized
+  controller acts as the focal point, so that at least some of
+  the control plane functions move from a distributed
+  model to a centralized model.
+
+  However, the world of network programmability and
+  SDN includes a wide array of options and solutions.
+  Some options pull most control plane functions into the
+  controller, whereas others pull only some of those
+  functions into the controller. The next section takes a
+  look at three different options, each of which takes a
+  different approach to network programmability and the
+  degree of centralized control.
+
+  EXAMPLES OF NETWORK
+  PROGRAMMABILITY AND SDN
+  This second of three major sections of the chapter
+  introduces three different SDN and network
+  programmability solutions available from Cisco. Others
+  exist as well. These three were chosen because they give
+  a wide range of comparison points:
+  OpenDaylight Controller
+  Cisco Application Centric Infrastructure (ACI)
+  Cisco APIC Enterprise Module (APIC-EM)
+
+  OpenDaylight and OpenFlow
+
+  One common form of SDN comes from the Open
+  Networking Foundation (ONF) and is billed as Open
+  SDN. The ONF (www.opennetworking.org) acts as a
+  consortium of users (operators) and vendors to help
+  establish SDN in the marketplace. Part of that work
+  defines protocols, SBIs, NBIs, and anything that helps
+  people implement their vision of SDN.
+
+  In the OpenFlow model, applications may use any APIs
+  (NBIs) supported on the controller platform to dictate
+  what kinds of forwarding table entries are placed into
+  the devices; however, it calls for OpenFlow as the SBI
+  protocol. Additionally, the networking devices need to
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  be switches that support OpenFlow.
+
+  The OpenDaylight Controller
+  First, if you were to look back at the history of
+  OpenFlow, you could find information on dozens of
+  different SDN controllers that support the OpenFlow
+  SDN model. Some were more research oriented, during
+  the years in which SDN was being developed and was
+  more of an experimental idea. As time passed, more and
+  more vendors began building their own controllers. And
+  those controllers often had many similar features,
+  because they were trying to accomplish many of the
+  same goals. As you might expect, some consolidation
+  eventually needed to happen.
+
+  OpenDaylight SDN controller
+
+
+  (www.opendaylight.org) was born. OpenDaylight (ODL)
+  began as a separate project but now exists as a project
+  managed by the Linux Foundation.
+
+  Cisco Application Centric
+  Infrastructure (ACI)
+
+  Interestingly, many SDN offerings began with research
+  that discarded many of the old networking paradigms in
+  an attempt to create something new and better. For
+  instance, OpenFlow came to be from the Stanford
+  University Clean Slate research project that had
+  researchers reimagining (among other things) device
+  architectures. Cisco took a similar research path, but
+  Ciscoâ€™s work happened to arise from different groups,
+  each focused on different parts of the network: data
+  center, campus, and WAN. That research resulted in
+  Ciscoâ€™s current SDN offerings of ACI in the data center,
+  Software-Defined Access (SDA) in the enterprise
+  campus, and Software-Defined WAN (SD-WAN) in the
+  enterprise WAN.
+
+  When reimagining networking for the data center, the
+  designers of SCI focused on the applications that run in
+  a data center and what they need. As a result, they built
+  networking concepts around application architectures.
+  Cisco made the network infrastructure become
+  application centric, hence the name of the Cisco data
+  center SDN solution: Application Centric
+  Infrastructure, or ACI.
+
+  ACI Physical Design: Spine and Leaf
+  The Cisco ACI uses a specific physical switch topology
+  called spine and leaf. While the other parts of a network
+  might need to allow for many different physical
+  topologies, the data center could be made standard and
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  consistent. But what particular standard and consistent
+  topology? Cisco decided on the spine and leaf design,
+  also called a Clos network after one of its creators.
+
+  ACI Operating Model with Intent-Based Networking
+  The model that Cisco defines for ACI uses a concept of
+  endpoints and policies. The endpoints are the VMs,
+  containers, or even traditional servers with the OS
+  running directly on the hardware. ACI then uses several
+  constructs as implemented via the Application Policy
+  Infrastructure Controller (APIC), the software that
+  serves as the centralized controller for ACI.
+
+
+  APIC-EM Basics
+
+  APIC-EM assumes the use of the same traditional
+  switches and routers with their familiar distributed data
+  and control planes. Cisco rejected the idea that its initial
+  enterprise-wide SDN (network programmability)
+  solution could begin by requiring customers to replace
+  all hardware. Instead, Cisco looked for ways to add the
+  benefits of network programmability with a centralized
+  controller while keeping the same traditional switches
+  and routers in place. That approach could certainly
+  change over time (and it has), but Cisco APIC-EM does
+
+  First, the wording in all three exam topics can be
+  reduced to â€œcompare and contrast.â€ Two use the word
+  compare. The other uses a longer phrase â€œexplain how
+  automation impactsâ€¦,â€ which asks us to compare what
+  was before to what happens now that automation has
+  been added to the network.
+
+  Configuration management refers to any feature that
+  changes device configuration, with automated
+  configuration management doing so with software
+  (program) control. For instance, Ciscoâ€™s ACI uses the
+  APIC controller. You do not configure the devices
+  directly, but the APIC pushes configuration down to the
+  ACI switches that it builds based on its interpretation of
+  the policies configured by the engineer. With ACI, the
+  configuration management occurs as a part of the
+  overall system. Other configuration management tools
+  can be more focused on automating traditional
+  configuration processes, with tools like
+  NETCONF/RESTCONF, Ansible, Puppet, and Chef
+
+  How Automation Impacts Network
+  Management
+
+
+  This chapter introduces many of the features that
+  enable automation in SDNs, but so far it has not made
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  any overt statements about how automation impacts
+  network management. This next topic works through a
+  couple of examples that show the power of automation
+  as enabled through controller-based networks.
+  First, centralized controllers formalize and define data
+  models for the configuration and operational data about
+  networks. We humans might be comfortable with
+  visually scanning the output of show commands to find
+  the tidbit of information we need. Programs need to be
+  able to identify the specific fact. To build a controllerbased
+  network with APIs, all the data about the network
+  needs to be defined in a data model so programs can use
+  that data via API calls.
+
+  Before using controllers,
+  automation scripts often had to begin by processing the
+  text output of a show command, but with controllers
+  and the data models behind the APIs, the data can be
+  readily available to any automation script or vendor
+  application through a northbound API.
+
+  Northbound APIs and their underlying data models make it much
+  easier to automate functions versus traditional networks.
+  The robust data created by controllers makes it possible to automate
+  functions that were not easily automated without controllers.
+  The new reimagined software defined networks that use new
+  operational models simplify operations, with automation resulting in
+  more consistent configuration and less errors.
+  Centralized collection of operational data at controllers allows the
+  application of modern data analytics to networking operational
+
+  data, providing actionable insights that were likely not noticeable
+  with the former model.
+  Time required to complete projects is reduced.
+  New operational models use external inputs, like considering timeof-
+  day, day-of-week, and network load.
+
+  Comparing Traditional Networks with
+  Controller-Based Networks
+
+  The network engineer does not need to think about every command
+  on every device.
+  The controller configures the devices with consistent and streamlined
+  settings.
+  The result: faster and more consistent changes with fewer issues.
+
+  Instead of configuring each port
+
+  with an access VLAN, or making it a trunk, adding
+  routing protocol configuration, and possibly updating IP
+  ACLs, all you had to do was create some endpoint
+  groups (EPGs) and policies. In that case, the
+  orchestration software that started the VMs could
+  automatically create the EPGs and policies. The new
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  paradigm of intent-based networking was enabled
+  through the controller-based architecture. Then the
+  automation features enabled by the controllerâ€™s
+  northbound APIs allowed third-party applications to
+  automatically configure the network to support the
+  necessary changes.
+
+  Some of the advantages include the following:
+
+  Uses new and improved operational models that allow the
+  configuration of the network rather than per-device configuration
+  Enables automation through northbound APIs that provide robust
+  methods and model-driven data
+  Configures the network devices through southbound APIs, resulting
+  in more consistent device configuration, fewer errors, and less time
+  spent troubleshooting the network
+  Enables a DevOps approach to networks
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH16.txt[6/9/2021 11:27:39 AM]
+  # CH17
+
+
+  Cisco Software-
+  Defined Access (SDA)
+
+  SDA FABRIC, UNDERLAY, AND OVERLAY
+  Cisco Software-Defined Access (SDA) creates an entirely
+  new way to build campus LANs as compared with the
+  traditional methods of networking discussed in most
+  chapters of this book. In the mid 2010s, Cisco set about
+  to reimagine campus networking, with SDA as the
+  result.
+
+  Architecturally, the southbound side of the controller
+  contains the fabric, underlay, and overlay. By design in
+  SDN implementations, most of the interesting new
+  capabilities occur on the northbound side, which are
+  examined in the second half of this chapter. This first
+  half of the chapter examines the details south of the
+  controllerâ€”namely, the fabric, underlay network, and
+  overlay network.
+
+  Overlay: The mechanisms to create VXLAN tunnels
+  between SDA switches, which are then used to
+  transport traffic from one fabric endpoint to another
+  over the fabric.
+  Underlay: The network of devices and connections
+  (cables and wireless) to provide IP connectivity to all
+  nodes in the fabric, with a goal to support the
+  dynamic discovery of all SDA devices and endpoints
+  as a part of the process to create overlay VXLAN
+  tunnels.
+  Fabric: The combination of overlay and underlay,
+  which together provide all features to deliver data
+  across the network with the desired features and
+  attributes.
+
+
+  In less formal terms, the underlay exists as multilayer
+  switches and their links, with IP connectivityâ€”but for a
+  special purpose. The underlay supports some new
+  concepts with a tunneling method called VXLAN. Traffic
+  sent by the endpoint devices flows through VXLAN
+  tunnels in the overlayâ€”a completely different process
+  than traditional LAN switching and IP routing.
+
+
+  The SDA Underlay
+  With SDA, the underlay exists to provide connectivity
+  between the nodes in the SDA environment for the
+  purpose of supporting VXLAN tunnels in the overlay
+  network. To do that, the underlay includes the switches,
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH17.txt[6/9/2021 11:27:40 AM]
+  routers, cables, and wireless links used to create the
+  physical network.
+
+
+  It also includes the configuration and
+  operation of the underlay so it can support the work of
+  the overlay network.
+
+
+  Using Existing Gear for the SDA Underlay
+  To build an SDA underlay network, companies have two
+  basic choices. They can use their existing campus
+  network and add new configuration to create an
+  underlay network, while still supporting their existing
+  production traffic with traditional routing and
+  switching. Alternately, the company can purchase some
+  new switches and build the SDA network without
+  concern for harming existing traffic, and migrate
+  endpoints to the new SDA network over time.
+
+  SDA can be added into an existing campus LAN, but
+  doing so has some risks and restrictions. First and
+  foremost, you have to be careful not to disrupt the
+  current network while adding the new SDA features to
+  the network. The issues include
+
+  Because of the possibility of harming the existing production
+  configuration, DNA Center should not be used to configure the
+  underlay if the devices are currently used in production. (DNA
+  Center will be used to configure the underlay with deployments that
+  use all new hardware.)
+  The existing hardware must be from the SDA compatibility list, with
+  different models supported depending on their different SDA roles
+  (see a link at www.cisco.com/go/sda).
+  The device software levels must meet the requirements, based on
+  their roles, as detailed in that same compatibility list.
+
+
+  The SDA underlay configuration requires you to think
+  about and choose the different SDA roles filled by each
+  device before you can decide which devices to use and
+  which minimum software levels each requires. If you
+  look for the hardware compatibility list linked from
+  www.cisco.com/go/sda, you will see different lists of
+  supported hardware and software depending on the
+  roles. These roles include
+
+  Fabric edge node: A switch that connects to
+  endpoint devices (similar to traditional access
+  Switch
+
+
+  Fabric border node: A switch that connects to
+  devices outside SDAâ€™s control, for example, switches
+
+file:///Z|/Cisco/NOTES/VOL%202/CH17.txt[6/9/2021 11:27:40 AM]
+  that connect to the WAN routers or to an ACI data
+  center
+
+
+  Fabric control node: A switch that performs
+  special control plane functions for the underlay
+  (LISP), requiring more CPU and memory
+
+
+
+  Using New Gear for the SDA Underlay
+  When buying new hardware for the SDA fabricâ€”that is,
+  a greenfield designâ€”you remove many of the challengesthat exist when deploying SDA on existing gear. You can
+  simply order compatible hardware and software. Once it
+  arrives, DNA Center can then configure all the underlay
+  features automatically.
+
+
+  At the same time, the usual campus LAN design
+  decisions still need to be made. Enterprises use SDA as a
+  better way to build and operate a campus network, but
+  SDA is still a campus network. It needs to provide access
+  and connectivity to all types of user devices. When
+  planning a greenfield SDA design, plan to use SDAcompatible
+  hardware, but also think about these
+  traditional LAN design points:
+  The number of ports needed in switches in each wiring closet
+  The port speeds required
+  The benefit of a switch stack in each wiring closet
+  The cable length and types of cabling already installed
+  The need for power (PoE/PoE+)
+  The power available in each new switch versus the PoE power
+  requirements
+
+  As far as the topology, traditional campus design does
+  tell us how to connect devices, but SDA does not have to
+  follow those traditional rules. To review, traditional
+  campus LAN Layer 2 design (as discussed back in
+  Chapter 13) tells us to connect each access switch to two
+  different distribution layer switches, but not to other
+  access layer switch
+
+  access layer switch acts as a Layer 2 switch, with a VLAN
+  limited to those three switches.
+
+  The distribution layer switchesâ€”
+  Layer 3 switchesâ€”act as the default gateway used by
+  hosts and often implement HSRP for better availability.
+  The design uses more than one uplink from the access
+  to distribution layer switches, with Layer 2
+  EtherChannels, to allow balancing in addition to
+  redundancy. And STP/RSTP manages the small amount
+  of Layer 2 redundancy in the campus, preventing loops
+  by blocking on some ports.
+
+file:///Z|/Cisco/NOTES/VOL%202/CH17.txt[6/9/2021 11:27:40 AM]
+  In comparison, a greenfield SDA fabric uses a routed
+  access layer design. Routed access layer designs have
+  been around long before SDA, but SDA makes good use
+  of the design, and it works very well for the underlay
+  with its goal to support VXLAN tunnels in the overlay
+  network. A routed access layer design simply means that
+  all the LAN switches are Layer 3 switches, with routing
+  enabled, so all the links between switches operate as
+  Layer 3 links.
+
+
+  With a greenfield SDA deploymentâ€”that is, all new gear
+  that you can allow to be configured by DNA Centerâ€”
+  DNA Center will configure the devicesâ€™ underlay
+  configuration to use a routed access layer. Because DNA
+  Center knows it can configure the switches without
+  concern of harming a production network, it chooses the
+  best underlay configuration to support SDA. That best
+  configuration happens to use a design called a routed
+  access layer design, which has these features:
+
+  All switches act as Layer 3 switches.
+  The switches use the IS-IS routing protocol.
+  All links between switches (single links, EtherChannels) are routed
+  Layer 3 links (not Layer 2 links).
+  As a result, STP/RSTP is not needed, with the routing protocol
+  instead choosing which links to use based on the IP routing tables.
+  The equivalent of a traditional access layer switchâ€”an SDA edge
+  nodeâ€”acts as the default gateway for the endpoint devices, rather
+  than distribution switches.
+
+
+  DNA Center configures the underlay with consistent
+  settings for each instance of DNA across an
+  enterprise. This convention simplifies operation as
+  an enterprise completes a migration to SDA.
+
+  The SDA Overlay
+  When you first think of the SDA overlay, think of this
+  kind of sequence. First, an endpoint sends a frame that
+  will be delivered across the SDA network. The first SDA
+  node to receive the frame encapsulates the frame in a
+  new messageâ€”using a tunneling specification called
+  VXLANâ€”and forwards the frame into the fabric. Once
+  the ingress node has encapsulated the original frame in
+  VXLAN, the other SDA nodes forward the frame based
+  on the VXLAN tunnel details. The last SDA node
+  removes the VXLAN details, leaving the original frame,
+  and forwards the original frame on toward the
+  destination endpoint.
+
+
+  VXLAN Tunnels in the Overlay (Data Plane)
+
+file:///Z|/Cisco/NOTES/VOL%202/CH17.txt[6/9/2021 11:27:40 AM]
+  SDA has many additional needs beyond the simple
+  message deliveryâ€”needs that let it provide improved
+  functions. To that end, SDA does not only route IP
+  packets or switch Ethernet frames. Instead, it
+  encapsulates incoming data link frames in a tunneling
+  technology for delivery across the SDA network, with
+  these goals in mind:
+  The VXLAN tunneling (the encapsulation and de-encapsulation)
+  must be performed by the ASIC on each switch so that there is no
+  performance penalty. (That is one reason for the SDA hardware
+  compatibility list: the switches must have ASICs that can perform the
+  work.)
+  The VXLAN encapsulation must supply header fields that SDA
+  needs for its features, so the tunneling protocol should be flexible
+  and extensible, while still being supported by the switch ASICs.
+  The tunneling encapsulation needs to encapsulate the entire data
+  link frame instead of encapsulating the IP packet. That allows SDA
+  to support Layer 2 forwarding features as well as Layer 3 forwarding
+  features.
+
+  To achieve those goals, when creating SDA, Cisco chose
+  the Virtual Extensible LAN (VXLAN) protocol to create
+  the tunnels used by SDA. When an SDA endpoint (for
+  example, an end-user computer) sends a data link frame
+  into an SDA edge node, the ingress edge node
+  encapsulates the frame and sends it across a VXLAN
+  tunnel to the egress edge node,
+
+  LISP for Overlay Discovery and Location (Control
+  Plane)
+  Ignore SDA for a moment, and think about traditional
+  Layer 2 switching and Layer 3 routing. How do their
+  control planes work? In other words, how do these
+  devices discover the possible destinations in the
+  network, store those destinations, so that the data plane
+  has all the data it needs when making a forwarding
+  decision? To summarize:
+  Traditional Layer 2 switches learn possible destinations by examining
+  the source MAC addresses of incoming frames, storing those MAC
+  addresses as possible future destinations in the switchâ€™s MAC address
+  table. When new frames arrive, the Layer 2 switch data plane then
+  attempts to match the Ethernet frameâ€™s destination MAC address to
+  an entry in its MAC address table.
+  Traditional Layer 3 routers learn destination IP subnets using
+  routing protocols, storing routes to reach each subnet in their
+  routing tables. When new packets arrive, the Layer 3 data plane
+  attempts to match the IP packetâ€™s destination IP address to some
+  entry in the IP routing table.
+
+  Nodes in the SDA network do not do these same control
+  plane actions to support endpoint traffic. Just to provide
+  a glimpse into the process for the purposes of CCNA,
+  consider this sequence, which describes one scenario:
+
+file:///Z|/Cisco/NOTES/VOL%202/CH17.txt[6/9/2021 11:27:40 AM]
+  Fabric edge nodesâ€”SDA nodes that connect to the edge of the SDA
+  fabricâ€”learn the location of possible endpoints using traditional
+  means, based on their MAC address, individual IP address, and by
+  subnet, identifying each endpoint with an endpoint identifier (EID).
+  The fabric edge nodes register the fact that the node can reach a
+  given endpoint (EID) into a database called the LISP map server.
+  The LISP map server keeps the list of endpoint identifiers (EIDs) and
+  matching routing locators (RLOCs) (which identify the fabric edge
+
+
+  node that can reach the EID).
+  In the future, when the fabric data plane needs to forward a
+  message, it will look for and find the destination in the LISP map
+  serverâ€™s database.
+
+  DNA CENTER AND SDA OPERATION
+  Cisco DNA Center (www.cisco.com/go/dnacenter) has
+  two notable roles:
+  As the controller in a network that uses Cisco SDA
+  As a network management platform for traditional (non-SDA)
+  network devices, with an expectation that one day DNA Center may
+  become Ciscoâ€™s primary enterprise network management platform
+  The first role as SDA network controller gets most of the
+  attention and is the topic of discussion in this second of
+  the three major sections of this chapter. SDA and DNA
+  Center go together, work closely together, and any
+  serious use of SDA requires the use of DNA Center. At
+  the same time, DNA Center can manage traditional
+  network devices; the final major section of the chapter
+  works through some comparisons.
+
+
+  Cisco DNA Center
+  Cisco DNA Center exists as a software application that
+  Cisco delivers pre-installed on a Cisco DNA Center
+  appliance. The software follows the same general
+
+  interface.
+
+
+  Cisco DNA Center supports several southbound APIs so
+  that the controller can communicate with the devices it
+  manages. You can think of these as two categories:
+  Protocols to support traditional networking devices/software
+  versions: Telnet, SSH, SNMP
+  Protocols to support more recent networking devices/software
+  versions: NETCONF, RESTCONF
+  Cisco DNA Center needs the older protocols to be able to
+  support the vast array of older Cisco devices and OS
+  versions. Over time, Cisco has been adding support for
+  NETCONF and RESTCONF to their more current
+  hardware and software.
+
+  Issues with Traditional IP-Based Security
+
+file:///Z|/Cisco/NOTES/VOL%202/CH17.txt[6/9/2021 11:27:40 AM]
+  SDA and Cisco DNA achieve this particular feature by
+  tying security to groups of users, called scalable groups,
+  with each group assigned a scalable group tag (SGT).
+  Then the engineer configures a grid that identifies
+  which SGTs can send packets to which other SGTs. For
+  instance, the grid might include SGTs for an employee
+  group, the Internet (for the Enterpriseâ€™s WAN routers
+  that lead to the Internet), partner employees, and
+  guests.
+
+
+  Compare traditional campus device management
+  with Cisco DNA Center enabled device management
+
+  Both PI and DNA Center can perform a
+  discover process to find all the devices in the network
+  and then build topology maps to show the devices.
+  (Interestingly, DNA Center can work with PI, using the
+  data discovered by PI rather than performing the
+  discovery work again.)
+
+  I encourage you to take some time to use and watch
+  some videos about Cisco DNA Center. The â€œChapter
+  Reviewâ€ section for this chapter on the companion
+  website lists some links for good videos. Also, start at
+  https://developer.cisco.com and look for Cisco DNA
+  Center sandbox labs to find a place to experiment with
+  Cisco DNA Center.
+
+  DNA Center Differences with
+  Traditional Management
+  In a broad sense, there are several fundamental
+  differences between Cisco DNA Center and traditional
+  network management platforms like Cisco PI. The
+  largest difference: Cisco DNA Center supports SDA,
+  whereas other management apps do not. At the same
+  time, given its long history, as of the time this chapter
+  was written, Cisco PI still had some traditional
+  management features not found in Cisco DNA Center.
+  So think of PI as comprehensive to traditional device
+  management, with Cisco DNA Center having many of
+  those features, while focusing on future features like
+  SDA support.
+
+  Cisco hopes to continue to update Cisco DNA
+  Centerâ€™s traditional network management features
+  to be equivalent compared to Cisco PI, to the point
+  at which DNA Center could replace PI.
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH17.txt[6/9/2021 11:27:40 AM]
+  # CH18
+
+
+  Chapter 18. Understanding
+  REST and JSON
+
+  To automate and program networks, some automation
+  software does several tasks. The software analyzes data
+  in the form of variables, makes decisions based on that
+  analysis, and then may take action to change the
+  configuration of network devices or report facts about
+  the state of the network.
+  The different automation functions reside on different
+  devices: the network engineerâ€™s device, a server, a
+  controller, and the various network devices themselves.
+  For these related automation processes to work well, all
+  these software components need useful well-defined
+  conventions to allow easy communication between
+  software components.
+
+  This section discusses application programming interfaces
+  (APIs), specifically APIs that follow a style called
+  REpresentational State Transfer (REST). APIs of any
+  kind create a way for software applications to
+  communicate, while RESTful APIs (APIs that use REST
+  conventions) follow a particular set of software rules.
+  Many APIs used in network automation today use
+  REST-based APIs.
+
+  The second half of the chapter focuses on the
+  conventions and standards for the data variables
+  exchanged over APIs, with a focus on one: JavaScript
+  Object Notation (JSON). If REST provides one standard
+  method of how two automation programs should
+  communicate over a network, JSON then defines how to
+  communicate the variables used by a program: the
+  variable names, their values, and the data structures of
+  those variables.
+
+  REST-BASED APIS
+  Applications use application programming interfaces
+  (APIs) to communicate. To do so, one program can learn
+  the variables and data structures used by another
+  program, making logic choices based on those values,
+  changing the values of those variables, creating new
+  variables, and deleting variables. APIs allow programs
+  running on different computers to work cooperatively,
+  exchanging data to achieve some goal.
+
+  In an API software world, some applications create an
+  API, with many other applications using (consuming)
+  the API. Software developers add APIs to their software
+  so other application software can make use of the first
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  applicationâ€™s features.
+
+  When writing an application, the developer will write
+  some code, but often the developer may do a lot of work
+  by looking for APIs that can provide the data and
+  functions, reducing the amount of new code that must
+  be written. As a result, much of modern software
+  development centers on understanding and learning
+  new APIs, along with the available libraries (prebuilt
+  software that can be used to accomplish tasks rather
+  than writing the equivalent from scratch).
+
+
+  Several types of APIs exist, each with a different set of
+  conventions to meet a different set of needs. The CCNA
+  blueprint mentions one type of APIâ€”REpresentational
+  State Transfer (REST)â€”because of its popularity as a
+  type of API in networking automation applications. This
+
+  first major section of the chapter takes a closer look at
+  REST-based APIs.
+
+
+
+  REST-Based (RESTful) APIs
+  REST APIs follow a set of foundational rules about what
+  makes a REST API and what does not. First, from a
+  literal perspective, REST APIs include the six attributes
+
+
+  defined a few decades back by its creator, Roy Fielding.
+  (You can find a good summary at https://restfulapi.net).
+  Those six attributes are
+  Client/server architecture
+  Stateless operation
+  Clear statement of cacheable/uncacheable
+  Uniform interface
+  Layered
+  Code-on-demand
+
+
+  Client/Server Architecture
+  Like many applications, REST applications use a
+  client/server architectural model. First, an application
+  developer creates a REST API, and that application,
+  when executing, acts as a REST server. Any other
+  application can make a REST API call (the REST client)
+  by executing some code that causes a request to flow
+  from the client to the server.
+
+
+  1. The REST client on the left executes a REST API call, which generates
+  a message sent to the REST server.
+  2. The REST server on the right has API code that considers the request
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  and decides how to reply.
+
+  3. The REST server sends back the reply message with the appropriate
+  data variables in the reply message.
+
+  Stateless Operation
+  The stateless attribute of REST APIs means that REST
+  does not record and use information about one API
+  exchange for the purpose of how subsequent API
+  exchanges are processed. In other words, each API
+  request and reply does not use any other past history
+  considered when processing the request.
+
+
+  For comparison, the TCP protocol uses a stateful
+  approach, whereas UDP uses stateless operation. A TCP
+  connection requires the endpoints to initialize variables
+  on each end, with those variables updating over time,
+  and with those variables being used for subsequent TCP
+  messages. For instance, TCP uses sequence numbers
+  and acknowledgment numbers to manage the flow of
+  data in a TCP connection.
+
+
+  Cacheable (or Not)
+  To appreciate what is meant by cacheable, consider what
+  happens when you browse a website. When your
+  browser loads a new web page, the page itself contains a
+  variety of objects (text, images, videos, audio). Some
+  objects seldom change, so it would be better to
+  download the object once and not download it again; in
+  that case, the server marks that object as cacheable. For
+  instance, a logo or other image shown on many pages of
+  a website would almost never change and would likely
+  be cacheable. However, the product list returned in your
+  most recent search of the website would not be
+  cacheable because the server would want to update and
+  supply a new list each time you request the page.
+
+
+  REST APIs require that any resource requested via an
+  API call have a clear method by which to mark the
+  resource as cacheable or not. The goals remain the
+  same: improve performance by retrieving resources less
+  often (cacheable). Note that cacheable resources are
+  marked with a timeframe so that the client knows when
+  to ask for a new copy of the resource again.
+
+  Background: Data and Variables
+  To appreciate a few of the upcoming topics, it helps to
+  have a basic idea about how programming languages use
+  variables. Anyone who has done even a small amount of
+  programming should have enough background, but for
+  those who have not written programs before, this next
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  topic gives you enough background about data and
+  variables inside programs to understand the next topic.
+
+  Simple Variables
+  Applications all process data with the same general
+  actions, starting with some kind of input. The program
+  needs data to process, so the input process reads files,
+  sends database queries to a database server, or makes
+  API calls to retrieve data from another applicationâ€™s API.
+  The goal: gather the data that the program needs to
+  process to do its work.
+
+  Programs then process data by making comparisons,
+  making decisions, creating new variables, and
+  performing mathematical formulas to analyze the data.
+  All that logic uses variables. For instance, a program
+  might process data with the following logic:
+  If the routerâ€™s G0/0 interface has a configuration
+  setting of switchport mode dynamic auto, then
+  gather more data to ensure that interface currently
+  operates as a trunk rather than as an access port.
+
+
+
+  List and Dictionary Variables
+  While simple variables have many great uses, programs
+  need variables with more complex data structures. In
+  programming, a data structure defines a related set of
+  variables and values. For instance, Python uses list
+  variables so that one variable name is assigned a value
+  that is a list of values rather than a single value. You
+  could imagine that a network automation program
+  might want to have lists, such as a list of devices being
+  managed, a list of interfaces on a device, or list of
+  configuration settings on an interface.
+
+  REST APIs and HTTP
+  APIs exist to allow two programs to exchange data.
+  Some APIs may be designed as an interface between
+  programs running on the same computer, so the
+  communication between programs happens within a
+  single operating system. Many APIs need to be available
+  to programs that run on other computers, so the API
+  must define the type of networking protocols supported
+  by the APIâ€”and many REST-based APIs use the HTTP
+  protocol.
+
+  The creators of REST-based APIs often choose HTTP
+  because HTTPâ€™s logic matches some of the concepts
+  defined more generally for REST APIs. HTTP uses the
+  same principles as REST: it operates with a client/server
+  model; it uses a stateless operational model; and it
+  includes headers that clearly mark objects as cacheable
+  or not cacheable. It also includes verbsâ€”words that
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  dictate the desired action for a pair HTTP Request and
+  Replyâ€”which matches how applications like to work.
+
+  This section breaks down the fundamentals of some
+  programming terminology, how that matches HTTP
+  verbs, and how REST APIs make use of Uniform
+  Resource Identifiers (URIs) to specify the data desired
+  from a RESTful API call.
+
+
+  Software CRUD Actions and HTTP Verbs
+  The software industry uses a memorable acronymâ€”
+  CRUDâ€”for the four primary actions performed by an
+  application. Those actions are.
+
+  Create: Allows the client to create some new
+  instances of variables and data structures at the
+  server and initialize their values as kept at the server
+  Read: Allows the client to retrieve (read) the current
+  value of variables that exist at the server, storing a
+  copy of the variables, structures, and values at the
+  client
+  Update: Allows the client to change (update) the
+  value of variables that exist at the server
+  Delete: Allows the client to delete from the server
+  different instances of data variables
+
+
+  HTTP uses verbs that mirror CRUD actions. HTTP
+  defines the concept of an HTTP request and reply, with
+  the client sending a request and with the server
+  answering back with a reply. Each request/reply lists an
+  action verb in the HTTP request header, which defines
+  the HTTP action. The HTTP messages also include a
+  URI, which identifies the resource being manipulated
+  for this request.
+
+
+  Using URIs with HTTP to Specify the Resource
+  In addition to using HTTP verbs to perform the CRUD
+  functions for an application, REST uses URIs to identify
+  what resource the HTTP request acts on. For REST APIs,
+  the resource can be any one of the many resources
+  defined by the API. Each resource contains a set of
+  related variables, defined by the API and identified by a
+  URI.
+
+  Example of REST API Call to DNA
+  Center
+  To pull some of the REST API concepts together, the
+  next few pages work through a few sample API calls
+  using a software application called an API development
+  environment tool.
+  For a bit of development perspective, when working to
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  automate some part of your network operation tasks,
+  you would eventually use a program that made API
+  calls. However, early in the process of developing an
+  application, you might first focus on the data available
+  from the API and ignore all the programming details at
+  first. API development environments let you focus on
+  the API calls. Later, that same tool can typically generate
+  correct code that you can copy into your program to
+  make the API calls.
+
+  The examples in this section use an app named
+  Postman. Postman can be downloaded for free
+  (www.postman.co) and used as shown in this section.
+  Note that Cisco DevNet makes extensive use of Postman
+  in its many labs and examples.
+
+
+  DATA SERIALIZATION AND JSON
+  In your journey to become a modern network engineer
+  with network automation skills, you will learn to
+  understand several data serialization languages. Each
+  data serialization language provides methods of using
+  text to describe variables, with a goal of being able to
+  send that text over a network or to store that text in a
+  file. Data serialization languages give us a way to
+  represent variables with text rather than in the internal
+  representation used by any particular programming
+  language.
+
+
+  Each data serialization language enables API servers to
+  return data so that the API client can replicate the same
+  variable names as well as data structures as found on
+  the API server. To describe the data structures, the data
+  serialization languages include special characters and
+  conventions that communicate ideas about list
+  variables, dictionary variables, and other more complex
+  data structures.
+
+  Data Serialization Languages
+  You will hear about and eventually use several data
+  serialization and data modeling languages the more you
+  learn about network automation. While the current
+  CCNA blueprint mentions only JSON, learning a few
+  facts about some of the alternatives can be helpful to
+  add a little context to your new knowledge of JSON.
+  These different data serialization languages exist to
+  meet different needs that have arisen over the years.
+  This next short section highlights four such languages.
+
+  The terms data serialization language and data
+  modeling language should be considered equivalent
+  for the purposes of this section.
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  JSON
+  JavaScript Object Notation attempts to strike a balance
+  between human and machine readability. Armed with a
+  few JSON rules, most humans can read JSON data,
+  move past simply guessing at what it means, and
+  confidently interpret the data structures defined by the
+  JSON data. At the same time, JSON data makes it easy
+  for programs to convert JSON text into variables,
+
+  XML
+
+  Back in the 1990s, when web browsers and the World
+  Wide Web (WWW) were first created, web pages
+  primarily used Hypertext Markup Language (HTML) to
+  define web pages. As a markup language, HTML defined
+  how to add the text or a web page to a file and then add
+  â€œmarkupâ€â€”additional text to denote formatting details
+  for the text that should be displayed. For instance, the
+  markup included codes for headings, font types, sizes,
+  colors, hyperlinks, and so on.
+  The eXtensible Markup Language (XML) came later to
+  make some improvements for earlier markup languages.
+  In particular, over time web pages became more and
+  more dynamic, and to make the pages dynamic, the files
+  needed to store variables whose values could be changed
+  and replaced over time by the web server. To define
+  variables to be substituted into a web page, the world
+  needed a markup language that could define data
+  variables. XML defines a markup language that has
+  many features to define variables, values, and data
+  structures.
+
+  YAML
+  YAML Ainâ€™t Markup Language (YAML) has a clever
+  recursive name, but the name does tell us something.
+  YAML does not attempt to define markup details (while
+  XML does). Instead, YAML focuses on the data model
+  (structure) details. YAML also strives to be clean and
+  simple: of the data serialization/modeling languages
+  listed here, YAML is easily the easiest to read for anyone
+  new to data models.
+
+  Interpreting JSON Key:Value Pairs
+  First, consider these rules about key:value pairs in
+  JSON, which you can think of as individual variable
+  names and their values:
+  Key:Value Pair: Each and every colon identifies one key:value
+  pair, with the key before the colon and the value after the colon.
+  Key: Text, inside double quotes, before the colon, used as the name
+  that references a value.
+  Value: The item after the colon that represents the value of the key,
+  which can be
+  Text: Listed in double quotes.
+  Numeric: Listed without quotes.
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  Array: A special value (more details later).
+  Object: A special value (more details later)
+  Multiple Pairs: When listing multiple key:value pairs, separate the
+  pairs with a comma at the end of each pair (except the last pair).
+
+  As an approach, just find each colon, and look for the
+  quoted string just before each colon. Those are the keys
+  (â€œ1stbestâ€, â€œ2ndbestâ€, and â€œ3rdbestâ€.) Then look to the
+  right of each colon to find their matching values. You
+  can know all three values are text values because JSON
+  lists the values within double quotes.
+  As for other special characters, note the commas and the
+  curly brackets. The first two key:value pairs end with a
+  comma, meaning that another key:value pair should
+  follow. The curly brackets that begin and end the JSON
+  data denote a single JSON object (one pair of curly
+  brackets, so one object). JSON files, and JSON data
+  exchanged over an API, exist first as a JSON object, with
+  an opening (left) and closing (right) curly bracket as
+  shown.
+
+  Interpreting JSON Objects and Arrays
+
+  To communicate data structures beyond a key:value pair
+  with a simple value, JSON uses JSON objects and JSON
+  arrays. Objects can be somewhat flexible, but in most
+  uses, they act like a dictionary. Arrays list a series of
+  values.
+
+  Python, the most common language to use for
+  network automation, converts JSON objects to
+  Python dictionaries, and JSON arrays to Python
+  lists. For general conversation, many people refer to
+  the JSON structures as dictionaries and lists rather
+  than as objects and arrays.
+
+  To begin, consider this set of rules about how to
+  interpret the syntax for JSON objects and arrays:
+  { } - Object: A series of key:value pairs enclosed in a matched pair
+  of curly brackets, with an opening left curly bracket and its matching
+  right curly bracket.
+  [ ] - Array: A series of values (not key:value pairs) enclosed in a
+  matched pair of square brackets, with an opening left square bracket
+  and its matching right square bracket.
+  Key:value pairs inside objects: All key:value pairs inside an
+  object conform to the earlier rules for key:value pairs.
+  Values inside arrays: All values conform to the earlier rules for
+  formatting values (for example, double quotes around text, no
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH18.txt[6/9/2021 11:27:40 AM]
+  # CH19
+
+
+  Chapter 19. Understanding
+  Ansible, Puppet, and Chef
+
+  Configuration Monitoring and
+  Enforcement
+  With a version control system and a convention of
+  storing the configuration files in a central location, a
+  network team can do a much better job of tracking
+  changes and answering the who, what, and when of
+  knowing what changed in every deviceâ€™s configuration.
+  However, using that model then introduces other
+  challengesâ€”challenges that can be best solved by also
+  using an automated configuration management tool.
+
+
+  With this new model, engineers should make changes
+  by editing the associated configuration files in the
+  centralized repository. The configuration management
+  tool can then be directed to copy or apply the
+  configuration to the device
+
+  configuration differs from the intended ideal
+  configuration, and then either reconfigure the device or
+  notify the network engineering staff to make the
+  change. This feature might be called configuration
+  monitoring or configuration enforcement, particularly if
+  the tool automatically changes the device configuration.
+
+  Configuration Provisioning
+  Configuration provisioning refers to how to provision or
+  deploy changes to the configuration once made by
+  changing files in the configuration management system.
+  As one of the primary functions of a configuration
+  management tool, you would likely see features like
+  these:
+
+  The core function to implement configuration changes in one device
+  after someone has edited the deviceâ€™s centralized configuration file
+  The ability to choose which subset of devices to configure: all devices,
+  types with a given attribute (such as those of a particular role), or
+  just one device, based on attributes and logic
+  The ability to determine if each change was accepted or rejected, and
+  to use logic to react differently in each case depending on the result
+  For each change, the ability to revert to the original configuration if
+  even one configuration command is rejected on a device
+  The ability to validate the change now (without actually making the
+  change) to determine whether the change will work or not when
+  attempted
+  The ability to check the configuration after the process completes to
+  confirm that the configuration management toolâ€™s intended
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH19.txt[6/9/2021 11:27:41 AM]
+  configuration does match the deviceâ€™s configuration
+  The ability to use logic to choose whether to save the running-config
+  to startup-config or not
+
+
+  The ability to represent configuration files as templates and variables
+  so that devices with similar roles can use the same template but with
+  different values
+  The ability to store the logic steps in a file, scheduled to execute, so
+  that the changes can be implemented by the automation tool without
+  the engineer being present
+
+
+  Configuration Templates and Variables
+  Think about the roles filled by networking devices in an
+  enterprise. Focusing on routers for a moment, routers
+  often connect to both the WAN and one or more LANs.
+  You might have a small number of larger routers
+  connected to the WAN at large sites, with enough power
+  to handle larger packet rates. Smaller sites, like branch
+  offices, might have small routers, maybe with a single
+  WAN interface and a single LAN interface; however, you
+  might have a large number of those small branch
+  routers in the network.
+  For any set of devices in the same role, the
+  configurations are likely similar. For instance, a set of
+  branch office routers might all have the exact same
+  configuration for some IP services, like NTP or SNMP. If
+  using OSPF interface configuration, routers in the same
+  OSPF area and with identical interface IDs could have
+  identical OSPF configuration.
+
+
+
+  Ansible using the Jinja2 language for templates. The
+  template mimics the configuration
+
+  To supply the values for a device, Ansible calls for
+  defining variable files using YAML
+
+  It might seem like extra work to separate configurations
+  into a template and variables, but using templates has
+  some big advantages. In particular:
+
+  Templates increase the focus on having a standard configuration for
+  each device role, helping to avoid snowflakes (uniquely configured
+
+  New devices with an existing role can be deployed easily by simply
+  copying an existing per-device variable file and changing the values.
+  Templates allow for easier troubleshooting because troubleshooting
+  issues with one standard template should find and fix issues with all
+  devices that use the same template.
+  Tracking the file versions for the template versus the variables files
+  allows for easier troubleshooting as well. Issues with a device can be
+
+file:///Z|/Cisco/NOTES/VOL%202/CH19.txt[6/9/2021 11:27:41 AM]
+  investigated to find changes in the deviceâ€™s settings separately from
+  the standard configuration template.
+
+
+  Files That Control Configuration Automation
+  Configuration management tools also provide different
+  methods to define logic and processes that tell the tool
+  what changes to make, to which devices, and when. For
+  instance, an engineer could direct a tool to make
+  changes during a weekend change window. That same
+  logic could specify a subset of the devices. It could also
+  detail steps to verify the change before and after the
+  change is attempted, and how to notify the engineers if
+  an issue occurs.
+
+  Interestingly, you can do a lot of the logic without
+  knowing how to program. Each tool uses a language of
+  some kind that engineers use to define the action steps,
+  often a language defined by that company (a domainspecific
+  language). But they make the languages to be
+  straightforward, and they are generally mush easier to
+  learn than programming languages. Configuration
+  management tools also enable you to extend the action
+  steps beyond what can be done in the toolset by using a
+  general programming language.
+
+  Ansible, Puppet, and Chef are software packages. You
+  can purchase each tool, with variations on which
+  package. However, they all also have different free
+  options that allow you to download and learn about the
+  tools, although you might need to run a Linux guest
+  because some of the tools do not run in a Windows OS.
+
+  As for the names, most people use the words Ansible,
+  Puppet, and Chef to refer to the companies as well as
+  their primary configuration management products. All
+  three emerged as part of the transition from hardwarebased
+  servers to virtualized servers, which greatly
+  increased the number of servers and created the need
+  for software automation to create, configure, and
+  remove VMs. All three produce one or more
+  configuration management software products that have
+  become synonymous with their companies in many
+  ways. (This chapter follows that convention, for the
+  most part ignoring exact product names, and referring to
+  products and software simply as Ansible, Puppet, and
+  Chef.)
+
+  Ansible
+  To use Ansible (www.ansible.com), you need to install
+  Ansible on some computer: Mac, Linux, or a Linux VM
+  on a Windows host. You can use the free open-source
+  version or use the paid Ansible Tower server version.
+  Once it is installed, you create several text files, such as
+
+file:///Z|/Cisco/NOTES/VOL%202/CH19.txt[6/9/2021 11:27:41 AM]
+  the following:
+
+  Playbooks: These files provide actions and logic about what
+  Ansible should do.
+
+  Inventory: These files provide device hostnames along with
+  information about each device, like device roles, so Ansible can
+  perform functions for subsets of the inventory
+  Templates: Using Jinja2 language, the templates represent a
+  deviceâ€™s configuration but with variables
+
+
+  Variables: Using YAML, a file can list variables that Ansible will
+  substitute into templates
+
+
+  As far as how Ansible works for managing network
+  devices, it uses an agentless architecture. That means
+  Ansible does not rely on any code (agent) running on
+  the network device. Instead, Ansible relies on features
+  typical in network devices, namely SSH and/or
+  NETCONF, to make changes and extract information.
+  When using SSH, the Ansible control node actually
+  makes changes to the device like any other SSH user
+  would do, but doing the work with Ansible code, rather
+  than with a human.
+
+  Ansible can be described as using a push model
+  rather than a pull model (like Puppet and
+  Chef). After installing Ansible, an engineer needs to
+  create and edit all the various Ansible files, including an
+  Ansible playbook. Then the engineer runs the playbook,
+  which tells Ansible to perform the steps. Those steps
+  can include configuring one or more devices per the
+  various files (step 3), with the control node seen as
+  pushing the configuration to the device.
+
+  As with all the tools, Ansible can do both configuration
+  provisioning (configuring devices after changes are
+  made in the files) and configuration monitoring
+  (checking to find out whether the device config matches
+  the ideal configuration on the control node). However,
+  Ansibleâ€™s architecture more naturally fits with
+  configuration provisioning
+
+  To do
+  configuration monitoring, Ansible uses logic modules
+  that detect and list configuration differences, after
+  which the playbook defines what action to take
+  (reconfigure or notify).
+
+  Puppet
+
+  To use Puppet (www.puppet.com), like Ansible, begin by
+
+file:///Z|/Cisco/NOTES/VOL%202/CH19.txt[6/9/2021 11:27:41 AM]
+  installing Puppet on a Linux host. You can install it on
+  your own Linux host, but for production purposes, you
+  will normally install it on a Linux server called a Puppet
+  master. As with Ansible, you can use a free open-source
+  version with paid versions available. You can get started
+  learning Puppet without a separate server for learning
+  and testing.
+
+  Once installed, Puppet also uses several important text
+  files with different components, such as the following:
+  Manifest: This is a human-readable text file on the Puppet master,
+  using a language defined by Puppet, used to define the desired
+  configuration state of a device.
+  Resource, Class, Module: These terms refer to components of
+  the manifest, with the largest component (module) being composed
+  of smaller classes, which are in turn composed of resources.
+  Templates: Using a Puppet domain-specific language, these files
+  allow Puppet to generate manifests (and modules, classes, and
+  resources) by substituting variables into the template.
+
+  One way to think about the differences between
+  Ansibleâ€™s versus Puppetâ€™s approach is that Ansibleâ€™s
+  playbooks use an imperative language, whereas Puppet
+  uses a declarative language. For instance, with Ansible,
+  the playbook will list tasks and choices based on those
+  results, like â€œConfigure all branch routers in these
+  locations, and if errors occur for any device, do these
+  extra tasks for that device.â€ Puppet manifests instead
+  declare the end state that a device should have: â€œThis
+  branch router should have the configuration in this file
+  by the end of the process.â€
+
+  The manifest, built by the engineer, defines the end state, and Puppet has the job
+  to cause the device to have that configuration, without
+  being told the specific set of steps to take.
+
+  Puppet typically uses an agent-based architecture for
+  network device support. Some network devices enable
+  Puppet support via an on-device agentâ€”think of it as
+  another feature configurable on the device. However,
+  not every Cisco OS supports Puppet agents, so Puppet
+  solves that problem using a proxy agent running on
+  some external host (called agentless operation). The
+  external agent then uses SSH to communicate with the
+  network device,
+
+  Per Puppetâ€™s website, Puppet supports both an
+  agent-based and agentless architecture, with the
+  agentless architecture being the case of using an
+  agent external to the network device
+
+  Armed with a manifest that declares something like
+  â€œThis device should have this configuration state,â€
+  Puppet uses a pull model to make that configuration
+
+file:///Z|/Cisco/NOTES/VOL%202/CH19.txt[6/9/2021 11:27:41 AM]
+  appear in the device
+
+  Once
+  installed, these steps occur:
+  Step 1. The engineer creates and edits all the files on
+  the Puppet server.
+  Step 2. The engineer configures and enables the ondevice
+  agent or a proxy agent for each device.
+  Step 3. The agent pulls manifest details from the
+  server, which tells the agent what its
+  configuration should be.
+  Step 4. If the agent deviceâ€™s configuration should be
+  updated, the Puppet agent performs additional
+  pulls to get all required detail, with the agent
+  updating the device configuration.
+
+  Chef
+  Chef (www.chef.io), as with Ansible and Puppet, exists
+  as software packages you install and run. Chef (the
+  company) offers several products, with Chef Automate
+  being the product that most people refer to simply as
+  Chef. As with Puppet, in production you probably run
+  Chef as a server (called server-client mode), with
+  multiple Chef workstations used by the engineering
+  staff to build Chef files that are stored on the Chef
+  server. However, you can also run Chef in standalone
+  mode (called Chef Zero), which is helpful when youâ€™re
+  just getting started and learning in the lab.
+
+  Once Chef is installed, you create several text files with
+  different components, like the following:
+  Resource: The configuration objects whose state is managed by
+  Chef; for instance, a set of configuration commands for a network
+  deviceâ€”analogous to the ingredients in a recipe in a cookbook
+  Recipe: The Chef logic applied to resources to determine when,
+  how, and whether to act against the resourcesâ€”analogous to a
+  recipe in a cookbook
+  Cookbooks: A set of recipes about the same kinds of work,
+  grouped together for easier management and sharing
+  Runlist: An ordered list of recipes that should be run against a
+  given device
+
+  Chef uses an architecture similar to Puppet. For
+  network devices, each managed device (called a Chef
+  node or Chef client) runs an agent. The agent performs
+  configuration monitoring in that the client pulls recipes
+  and resources from the Chef server and then adjusts its
+  configuration to stay in sync with the details in those
+  recipes and runlists. Note however that Chef requires
+  on-device Chef client code, and many Cisco devices do
+  not support a Chef client, so you will likely see more use
+  of Ansible and Puppet for Cisco device configuration
+  management.
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH19.txt[6/9/2021 11:27:41 AM]
+  Summary of Configuration
+  Management Tools
+  All three of the configuration management tools listed
+  here have a good base of users and different strengths.
+  As for their use for managing network device
+  configuration, Ansible appears to have the most interest,
+  then Puppet, and then Chef. Ansibleâ€™s agentless
+  architecture and the use of SSH provides support for a
+  wide range of Cisco devices. Puppetâ€™s agentless model
+  also creates wide support for Cisco devices.
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH19.txt[6/9/2021 11:27:41 AM]
+  # CH20
+
+  Learning Network (https://learningnetwork.cisco.com)
+
+  Go to the CLN (https://learningnetwork.cisco.com) and search for
+  the post 34312.
+  Use this direct link to the same page:
+  https://learningnetwork.cisco.com/docs/DOC-34312?
+  dtid=osscdc000283.
+  Use https://blog.certskills.com/final-review, which links to a blog
+  post of mine that lists the above link (as well as other links useful for
+  final review).
+
+
+
+
+file:///Z|/Cisco/NOTES/VOL%202/CH20.txt[6/9/2021 11:27:41 AM]
+
