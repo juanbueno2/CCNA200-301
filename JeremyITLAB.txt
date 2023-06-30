@@ -1,0 +1,20 @@
+########################
+# JEREMY IT LAB LIST   # 
+######################## 
+
+
+
+# redo the previus Videos 
+
+#  Free CCNA | Ethernet LAN Switching (Part 1) | Day 5 | CCNA 200-301 Complete Course (DONE)
+
+# Free CCNA | Ethernet LAN Switching (Part 2) | Day 6 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Analyzing Ethernet Switching | Day 6 Lab | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | OSI Model & TCP/IP Suite | Day 3 | CCNA 200-301 Complete Course (Done) 
+
+# Free CCNA | OSI Model | Day 3 Lab | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Intro to the CLI | Day 4 | CCNA 200-301 Complete Course (Done) 
+ 
