@@ -43,8 +43,9 @@
 
 # Free CCNA | Static Routing | Day 11 (part 2) | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Configuring Static Routes | Day 11 Lab 1 | CCNA 200-301 Complete Course (Done) 
 
-
+# 
 
 
 
