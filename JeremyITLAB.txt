@@ -65,7 +65,12 @@
 
 # Free CCNA | VLANs (Part 2) | Day 17 | CCNA 200-301 Complete Course (Done) 
 
-# 
+#   Free CCNA | VLANs (Part 2) | Day 17 Lab | CCNA 200-301 Complete Course (Done) redo this lab 
+
+# Free CCNA | VLANs (Part 3) | Day 18 | CCNA 200-301 Complete Course (Done) redo this lab 
+
+ # Free CCNA | VLANs (Part 3) | Day 18 Lab | CCNA 200-301 Complete Course (Done) redo this lab  
+
 
 
 
