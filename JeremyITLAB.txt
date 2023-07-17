@@ -71,8 +71,8 @@
 
  # Free CCNA | VLANs (Part 3) | Day 18 Lab | CCNA 200-301 Complete Course (Done) redo this lab  
 
+# Free CCNA | DTP/VTP | Day 19 | CCNA 200-301 Complete Course (Done) 
 
+# Free CCNA | DTP/VTP | Day 19 Lab | CCNA 200-301 Complete Course (LAB DO IT)
 
-
-
-
+# Free CCNA | Spanning Tree Protocol (Part 1) | Day 20 | CCNA 200-301 Complete Course (Done) 
