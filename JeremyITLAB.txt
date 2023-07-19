@@ -83,9 +83,10 @@
 
 # Free CCNA | Configuring STP (PVST+) | Day 21 Lab | CCNA 200-301 Complete Course (Done)
 
-# 
+# Free CCNA | Rapid Spanning Tree Protocol | Day 22 | CCNA 200-301 Complete Course  (Done) 
 
+# Free CCNA | Rapid STP | Day 22 Lab | CCNA 200-301 Complete Course (Done) 
 
-
+# Free CCNA | EtherChannel | Day 23 | CCNA 200-301 Complete Course (Done) 
 
 
