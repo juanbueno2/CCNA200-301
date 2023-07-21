@@ -94,3 +94,9 @@
 # Free CCNA | Dynamic Routing | Day 24 | CCNA 200-301 Complete Course (Done) 
 
 # Free CCNA | Floating Static Routes | Day 24 Lab | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | RIP & EIGRP | Day 25 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Configuring EIGRP | Day 25 Lab | CCNA 200-301 Complete Course (Do it)
+
+# Free CCNA | OSPF Part 1 | Day 26 | CCNA 200-301 Complete Course (Done)
