@@ -107,9 +107,11 @@
 
 # Free CCNA | OSPF Part 3 | Day 28 | CCNA 200-301 Complete Course (Done) 
 
-# 
+# Free CCNA | Configuring OSPF (3) | Day 28 Lab | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | First Hop Redundancy Protocols | Day 29 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Configuring HSRP | Day 29 Lab | CCNA 200-301 Complete Course (Done)
 
 
 
