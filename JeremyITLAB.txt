@@ -113,9 +113,8 @@
 
 # Free CCNA | Configuring HSRP | Day 29 Lab | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | TCP & UDP | Day 30 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Wireshark Demo (TCP/UDP) | Day 30 Lab | CCNA 200-301 Complete Course (Done)
 
-
-
-
-
+# Free CCNA | IPv6 Part 1 | Day 31 | CCNA 200-301 Complete Course ( Done )
