@@ -1,0 +1,558 @@
+##########################
+#  NOTES JEREMY LAB      # 
+##########################
+
+
+# Day 14 subnetting 
+
+# for subnetting we cxan use the powers of 2 formula wich 2 is the numbers of bits borowwed 
+
+# Formula 2 power of (bits amount) -2 
+
+# DAY 15 VLSM  
+
+# VLSM is the process of creating subnets with diferent sizes FLSM is the process of creating subnets in a fixed way 
+
+# the way to create subnets with VLSM start from thge largest subnet to the smallest one 
+
+# Day 16 vlans 
+
+# lan is a single broadcast domain single broadcast domain is a group of devices that receive broadcast frame 
+
+# router wont forward broadcast frame 
+
+# switches recieve brodcast frame floaded to all of the ports except the one that received the broadcast frame 
+
+# VLANS from 1 to 1005 exist in switches by defaults can not be deleted 
+
+# day 17 part1  vlans lab 
+
+# day 17 part 2 encapsulations and trunks port 
+
+# traffic from multiple vlans can be allowed over a trunk link 
+
+# vlan tagging switches will tag all vlan over the trunk port 
+
+# ISL and 802.1q are the 2 protocol for trunking ISL is cisco propietary 802.1q is industry standard ISL is no longer used 
+
+# 802.1q tag is inserted in a field between the ethernet header the tag is 4 bytes or 32 bit 
+
+# 802.1q has a featured called the native vlan wich is vlan 1 by default 
+
+# when a switch received a untagged frame it will asume it belongs to the native vlans 
+
+# vlans can also be filter wich vlan will be allowed or not usinf the commands vlan allowed (vlan #) vlan except (all vlan except vlan #) vlan none will not allowed any vlan 
+
+# the comand to change native vlan is switchport trunk native (vlan # ) 
+# its always best practice to change vlan1 to a diferent vlan 
+
+# Router on stic (ROA) is a name given to a type of intervlan routing that use only one phisical interface and diferent subinterface 
+
+# Day 17 2 do this lab  
+
+#  DAY 18 PART 3 lAB TO CHECK ON THIS LAB DO IT 
+
+# day 18 part 3 do this lab 
+
+# day 19 dtp and vtp cisco propietary protocol 
+
+# DTP is a cisco propietary protocol that allows interfaces to negotiate trunks 
+
+# for security considaration dtp should be disabled in all interfaces 
+
+# a Swich port in dinamyc desirable will activate negotiate to form a trunk with other switches 
+
+# a switch in dynamic auto will not actively try to form a trunk but just passible 
+
+# static access measn a static port that belongs to a vlan wich doesnt change 
+
+# a switch in dynamic auto will form trunk with the other switchs if the other switch is in dynamic desirable 
+
+# a switch port in access mode will stop dtp from sending dtp frames 
+
+# VTP allows to configure vlans on a central server switch 
+
+# 3 vtp mode that switches operates server client and transparent 
+
+# server mode switches can add modified or delete vlans 
+
+# vtp advertisement are sent only on trunk ports 
+
+# vtp client cannot add modified or delete vlans they just syncronized with the highest revision # 
+
+# for switches to syncronize among devices they need to have the same domain name 
+
+# switches in transparent mode doesn not participate in the vtp domain it have its own database it just forward vtp information if they are in the same domain 
+ 
+
+# day 19 do the lab 
+
+# day 20 stp 
+
+# STP is a layer 2 protocol 
+
+# classic stp is a industry standard protocol STP prevent layer 2 loops by placing the ports in blocking state 
+
+# vtp enable hello bpdu out of avery interface avery 2 seconds 
+
+# the switch with the lowest bridge ID is elected the root bridge 
+
+# in the root bridge all ports are forwarding  
+
+# for a tigh braker the mac addres is used the lowest mac addrest will brak the tigh
+
+# all switches have 3267 as default ID 
+
+# PVST run a different stp instance per vlan one interface could be forwarding in one vlan and blocking in the other 
+
+# all interfaces in the root bridge are designated ports 
+
+# when switch boots its a root bridge it will give its position up if it receives a higher BPDU wich mean the lowest  ID
+
+# there is one root port on each switch except for the root bridge 
+
+# the lowest port ID is the root Port 
+
+# each port has a default number of 128 
+
+# Day 20 analysing STP 
+
+# the interface with the lowest root cost will become the root port 
+
+# Maximun age for hello Bpdu 20 Seconds 
+
+# Maximun Delays 15 seconds 
+
+# Day 21 (2) STP (Spanning Tree )
+
+# Blocking and forwarding are stable states 
+ 
+# Listening and learning are transitioning state 
+
+# none designated ports are in blocking states 
+
+# interfaces in the blocking states does not send traffic but they do receive BPDU 
+
+# only designated and root port enter in a forwarding state 
+
+# learning state is 15 seconds by default 
+# a interface in learning state only send and receive BPDU 
+
+# root and desiganted port in a forwarding state when stable it sends and receive normal traffic 
+
+# pvst is alder version to support ISL trunking encap PVST + is the newest Version 
+
+# the max age start at 0 and then increase by 1 
+
+# Portfast solve problems of spanning tree putting the port in forwarding state and the port doesnt have to fo through the listening and learning state 
+
+# between listening learning and frowarding the port takes 30 seconds 
+
+# Port fast on trunk ports doesnt take any effects because it has to be configure only on access ports 
+
+# BPDU Guard prevent from loops from forming 
+
+# root guard will not accept as a root bridge 
+
+# lOOP GUARD prevents loops if the interface fails in one direction 
+
+# Modern cisco swtiches run rpvst by default is modern version 
+
+# stp runs by default but it doesnt guarantee that the traffic will run for teh optimal path 
+
+# configuration needs to be done for optimal bath to elect the root bridge if we want optimal path most of the time is the a great idea to configure the core switch as root bridge 
+
+# Day 22 Rapid Spanning Tree (RSTP)  
+
+# RSTP is much faster at converging and adaptation RSTP doiens load valance very well it runs only one instance per vlan 
+
+# RSTP + is better it runs many instance per VLAN 
+
+# MSTP also is superior runs Many instances per Vlan 
+
+# RSTP use a handshake mechanism 
+
+# RSTP serve the same purpose as STP blocking ports to void Loops 
+
+# 3 primary ports role are root designated and none designated 
+
+# Uplink fast functions are built on RSTP 
+
+# Backbone fast is another feature built on RSTP 
+
+# Uplink fast and Backbone fast needs to be configure for them to work there is no need to have a knoledge about it because is not part of the CCNA but check more on there in detils 
+
+
+# Rstp distinguish between link types first is edge edge port are connected to host 
+
+# Point to point Link type are used for direct connect switch to switch the other link types is share wich most likely is never used 
+
+# Point to point link type work in full duplex mode 
+
+# Share ports are conecteed to hubs wich work half duplex  holds are old technologies are not used   anymore 
+
+# RSTP used negotiation process instead of timers it is a evolution of STP 
+
+# For RSTP there are 3 types of negotiation compared to STP they are discarding learning and forwarding 
+
+# day 22 RSTP Lab (Do it )
+
+# Day 23 Etherchannel 
+
+# Etherchannel allows you to group multiple phisicall interfaces into a single logical interfaces 
+
+# Layer 2 etherchannel its a group of phisical interfaces that operates in a single logical interfaces 
+
+# Layer 3 its a group of route ports that operate in a single logical port 
+
+# in etherchannel STP will  treat all  of the   links   as  one 
+
+# Etherchannel load balance based on flow by using diferent phisical interfaces 
+
+# Pagp is a cisco propiearetary protocol that can be used only on cisco switch 
+
+# Lacp its a industry estandard Protocol it dynamically create the channel just like pagp 
+
+# LACP is  the prefered method to use for etherchannel 
+
+# up to 8 links can be configured for etherchannel with pagp with LACP up to 16 but only 8 will be working 
+
+# Desirable mode will active try to form a channel auto will form a etherchannel if the other port is active negotiating 
+
+# instead of desirable lacp use active and passive modes 
+
+# static etherchannel is configured with on mode only work on mode 
+
+# with routed ports not layer to loops will be formed 
+
+# to configured a routed port etherchannel use no switchport command first and then assign a IP Address at the port channel interface 
+
+# on on create a static channel 
+
+# active active create a lacp etherchannel passive passive doesnt create channel 
+
+# day 23 etherchannel lab do it 
+
+# DAY 24 Dynamic Routing 
+
+# Dynamic routing involved configuring a routing protocol and the router will find the best path 
+
+# the metric in dynamic routing it is used to determine the best path to the destination 
+
+# Dinamic routing protocol can be devided in 2 main categorys IGP and EGP 
+
+# within a organization to share information IGP is used to share information Betweeen AS EGP is used 
+
+# OSPF is a IGP 
+
+# there is only one type algorythm path vector there is also one protocol used in EGP wich is BGP 
+
+# algorytm has to vector type Link State and Distance  vector 
+
+# RIP and EIGRP are distance Vector Protocol 
+
+#  OSPF and IS-IS Are Link State Protocol 
+
+# distance Vector Protocol work by sharing the routing Table 
+
+# Link state Rouitng Protocol create a maps on the network each router use the map to calculate the best route 
+
+# Link state Routing Protocol is Faster than Distance vector 
+
+# Lower Metric is considered Better 
+
+# ECMP (Ecual Cost Multipath ) 
+
+# ECMP can also used with static route for Load Balance 
+
+# RIP use the simplest matric hop count all count as 1 hop 
+
+# EIGRP use a calculation of Bandwith an delay the lowest Bandwith in the link is used 
+
+# OSPF its metric is cost in bandwith 
+
+# IS-IS also use cost 
+
+# when the metric is diferent the administrative distance is used for the best route 
+
+# the number on the left within the brackets is the AD the numbers on the right is the Metric
+
+# for static route to be less prefered than a dynamic routing protocol the AD has to be higher 
+
+# Rip and EIGRP use router by rumor 
+
+# Day 24 Floating Static route 
+
+# Day 25 RIP and EIGRP 
+
+# RIP is a industrie protocol is Distance vector Protocol it use hops count Maximun hop counting is 15 
+
+# RIP has 3 version 1 and 2 rip also have another version call evng 
+
+# by default rip exchange routing table every 30 seconds 
+
+# RIP v1 doesnt support VLSM or CIDR 
+
+# Broadcast message are delivered to all devices network multicast network just deliver messages to the same devices that join the same multicast group only 
+
+# the comand to advertise router is default-information originate 
+
+# if conections are fat ethernet or Gig ethernet it doesnt Matter RIP trat them equaly as Hope count 
+
+# EIGRP is the only protocol that does unequal cost Multipath 
+
+#the 0 in the wildcard mask means they have to match the 1 doesnt 
+
+# Day 25 EIGRP Lab do it 
+
+# succesor is the lowest rout to the best destination the one with the lowest metric 
+
+# feasible succesor is not the best route but a back up if a router feasivility is lower than the succesor feasivility it will be the best route check on this in  depth 
+
+# EIGRP dosnt do unequal cost load balance 
+
+# Day 26 OSPF Part 1 
+
+# Basic Operation of OSPF 
+
+# OSPF is a Link state routing Protocol 
+
+# OSPF use shotterst path first algorithm there are 3 version of OSPF 
+
+# OSPF V2 is use in IPV4 Networks Version 2 is Used in IPV6
+
+# Router will Flooad LSA to all areas 
+
+# LSA contains information of roiuter ID (RID) 
+
+# LSA are floaded in all of the network until all routers receive a copy 
+
+# OSPF Use areas to devide the network 
+
+# in a large network single area the SPF algorithm Take More time to calculate 
+
+# router with all interfaces connected in the same area are called internal router 
+
+# Router conected in diferent areas are called ABRS 
+
+# Routers conected to the backbone area are called backbone Router 
+
+# a intererea route are routes in diferent areas 
+
+# all areas should be contiguous 
+
+# Passive interfaces will stop sending hello Packets 
+
+# if the router does not have a loopback interfaces the highest interface will become the router ID (Check on this)
+
+# Check on ASBR 
+
+# Day 27 Part 2 OSPF 
+
+# OSPF metric is cost call is calculate it in bandwith wich is the speed of the interface 
+
+# check how ospf cost calculation is done 
+
+# there are 3 ways to change the OSPF reference bandwith (Check on this)
+
+# When routers becomes neighbors they start exchanging hello packets sending multicast packets 
+
+# OSPF has a place in the packet header 
+
+# For them to become neighbors they have to go through diferent Steps 
+
+# the init state means the hello packet was received 
+
+# the 2 ways state is the next step containing the RID if both routers meet the 2ways state they can start exchanging LSA 
+
+# THE router with the Higher RID will become the Master the router with the lower RID will become the slave 
+
+# LSA are send in LSU (Link State Update) 
+
+# the reference bandwith can be modified with the autocost referecne bandwith command 
+
+# defaults hello timers is OSPF 10 seconds and the dead timers 40 for ethernet for other conections is diferent 
+
+# day 27 OSPF LAB (Do it)
+
+# Day 28 OSPF Part 3 
+
+# Phisical hardware can have problems and fails wich means phisical interfaces will have problems but not with loopback address they are logical interfaces 
+
+# is always a good idea to configure loopback address 
+
+# there 3 main OSPF types first is broadcast then FDDI the next is point to point type wich is enabled in ppp and HDLC the last interface type in nonebroadcast 
+
+
+# broadcast are neble in thernet and fddi by default 
+
+# with nonebroadcast type routers might have to be configure manually for routers to become neighbors 
+
+# The router with highest Priority will become the OSPF DR 
+
+# the router wiht highest ID become the DR 
+
+# the command to change ospf Priority is OSPF priority Follow by the Priority number 
+
+# a router that is not DR Can be assigned to be the DR by changing the Priority 
+
+#  if a router interfaces Priority is changed to 0 the router can not become DR or BDR 
+
+# when DR goes down BDR becomes a DR and a new election is held for the BDR 
+
+# DRothers does not exchange LSA with others 
+
+# in a Serial conection  point to point conection OSPF there is not DR or BDR there is no need because they form full adjacency 
+
+#  on serial connection one side is DCE and the other is DTE  
+
+# on cisco router the default encapsulation for Serial connections is HDLC 
+
+# on cisco router you can also use PPP encapsulation 
+
+# the command to configure encapsulation PPP is encapsulation ppp
+
+# serial link does not use broadcast type because serial link does not support layer 2 
+
+# Usually router becomes neighbor with no problem the area type has to match for 2 routers to become neighbors must be in the same area 
+
+# For 2 routers to become OSPF neighbors the interface must be in the same subnet 
+
+# the OSPF must not be shutdown 
+
+# OSPF router must be unique to become Neigbors 
+
+# OSPF password the routers will become Neigbors if the password is the same and also if the password is configured and authentication is enabled 
+
+# the IP MTU setings has to match as well the default is 1500 if they dont match OSPF can become neighbors but it will not work properly 
+
+# the OSPF network type Must MAtch 
+
+# OSPF LSDB is made OF LSA there are 11 types of LSA one of them is the network LSA (Check on the others)
+
+# Type of multiaccess networj is ethernet 
+
+# Type 2 is the network LSA and is generated by the DR 
+
+# Drothers can only stablish adjacency with DR and BDR 
+
+# day 28 ospf lab ( do it )
+
+# Day 29 FHRP 
+
+# FHRP is used in case of the primary router fail the backup router will take over in a matter of seconds 
+
+# FHRP routers have to negotiate their roles they send multicast packets 
+
+# There are 3 types of FHRP one is HSRP 2 is VRRP and 3 is GLBP 
+
+# there are 2 version of HSRP it supports IPV6 and groups 
+
+ 
+# Check on Mac addres HSRP virtual MAC for Version 1 and Version 2
+
+# For VRRP instead of active and Standby a Master and backup router is elected check on this also the Virtual Mac Address is diferent Compared to HSRP check on that 
+
+#  HSRP is Cisco Propietary VRRP is open standard 
+
+# GLLP load balance multiple routers in the same Subnet 
+
+# in GLBP one AVG is elected one AVF and Multiple AVF check on this 
+
+# Day 29 HSRP Configuration (Do it ) 
+
+# Day 30 TCP UDP
+
+# Layer 4 protocol provide transparent data trasnfer to the end host transport encapsulates with a layer 4 header 
+
+# another function of layer 4 is to provide or not provide services 
+
+# one of the services is reliable data transfer another services is error recovery next id data sequence one more is flow control 
+
+# the above services are provided by TCP but not UDP 
+
+# TCP is a conection oriented protocol the 2 host establish a connection before sending data 
+
+# TCP provide Sequencing TCP provide flow control 
+
+# TCP use the 3 ways handshakes 
+
+# TCP use retransmission as well 
+
+# UDP is not conection oriented is conectionless udp does not provide reliable communication it does not stablish conection to send data it use best effort 
+
+# UDP does not provide flow control or Sequency 
+
+# Applications like video an audio UDP is prefered 
+
+# Day 30 Wirechark demo do it 
+
+# Day 31 ipv6 Part 1 
+
+# IPV6 is 128 bits  
+
+# PV6 is written hexadecimal 
+
+# the first half of the address is the network portion and the second half is the host 
+
+# Leading 0 can be remove wich mean shortening the IPV6 replaing with double colon (:) 
+
+# 0 can be shortened only once 
+
+# Typically the usual prefix is 64 bits for IPV6 
+
+# finding the ipv6 prefix of 64 is easy make the second half all 0 
+
+# Day 31 IPV6 LAB (Do it )
+
+# Day 32 IPV6 
+
+# EUI (Extended unique Identifier) 
+
+# /64 means 64 bits will be the network portion 64 bits will be the host portion the way to do it is to divide the mac address in half 
+
+# global unicast ipv6 address are internet address they can be used on the internet and they are spected to be unique 
+
+# the range start from 200: etc check on this 
+
+# Link local address use fe80 
+
+# Link local means the address is used in the same link local or same subnet wich mean is not routable to the internet one of the use is for routing protocol peering 
+
+# OSPFV3 use link local address fopr network adjacency 
+
+# they can be used for static route and NDP use link local for network discovery 
+
+# Multicast address in IPV6 unicast is used fopr one to one comunication broadcast is used one to all multicast is used one for many 
+
+# ipv6 used Multicast address of FF00:/8 for Multicast 
+
+# IPV6 does not use broadcast but there is a way to send message to all devices using multicast 
+
+# in IPV6 the all nodes multicast address can be used for Broadcast address check on this 
+
+# interface local and link local are defined they dont need to be configured 
+
+# Site local The packets can be forwarded by routers sjopuld be limited to a single location not forwarded over the LAN address FF05 
+
+# Organization local multicast could be all subnet in the organization 
+
+# Global wich use FF0E Not boundaries Provided to be routed over the network 
+
+# anycast is one to one of many or one of multiple multiple routers are configure with the IPV6 address but add the anycast word 
+
+# there is not specified range of address for anycast 
+
+# unspecified IPV6 address are all 0 
+
+# 127:1 is the loopback address for ipv6 
+
+# ipv6 enable cause of a link local address 
+
+# Site local multicast ipv6 Can be routed outside the local network 
+
+# IPV6 DAY 32 IPV6 LAB do it 
+
+# Check on inverting the 7 bits on IPV6 
+
+#        	
