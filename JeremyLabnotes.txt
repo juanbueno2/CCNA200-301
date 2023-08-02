@@ -555,4 +555,92 @@
 
 # Check on inverting the 7 bits on IPV6 
 
-#        	
+#   Day 33 Part 3 
+
+# Leading 0 Must Be removed 
+
+# When using ipv6 letters should be used lower case 
+
+# IPV6 Headers have fix side of 40 bytess chack on this 
+
+# the version field is 4 bits in size 
+
+# the trafic class field its 8 bits size is used for QOS
+
+# The flow label filed is 20 bits in zise is u8sed to cherck the flow 
+
+# the payload filed is 16 bits 
+
+# the next header field is 4 bytes 
+
+# the hop filed is 8 bits 
+
+# last 2 field is the source and destination this field is 128 bit in size 
+
+# NDP in IPV6 is the equivalent to arp fror IPV4 
+
+# Solicited multicast is much better thanh broadcast check on this 
+
+# since in ipv6 there is not arp table what use is a neighbor table 
+
+# When using SLACC router use ra and rs message and then it create the address the command slacc autoconfig does not need the prefix 
+
+# slaac is a standard funtion of ipv6 
+
+# dnd allows if other devices are using a duplicated address 
+
+# the devices use dad for network solitition and network advertisement 
+
+# ipv6 routing works the same as ipv4 routing 
+
+# 2 routing tables are separated ipv4 are enabled by default ipv6 is disabled 
+
+# if ipv6 is disabled it will send and receive traffic but will not route anything 
+# static routes is when the interface is identify in ipv6 you can use directly attached route 
+
+# a fully specified route is when the ip and the interface is specified  
+
+# always configure the AD higher than how the route was learned from for loating static route 
+
+# with ipv6 the exit interface has to be expecified because with link local it doesnt know what the next hop is 
+
+# DAY 33 PART 3 LAB IPV6 (Doit ) 
+
+# Day 34 standard ACL 
+
+# ACL can filter traffic based on source and destination also based on ports and protocols 
+
+# ACL are configured in global configuration mode ACL are made of ACE 
+
+# after the acl has been configured it must be applied to a interface otherwise it wont work interfaces are inbound or outbound 
+
+# router process the ACE in order from top to bottom 
+
+# if the packet match of the acl it will stop processing 
+
+# implicit denied if the packet does not match any entry it will deny the packet 
+
+# standar acl are bace on ip address only 
+# there are 2 types of standard acl name and numbered 
+
+# there are also extended acl wich based on protocols and more granular 
+
+# standard acl match packet s only based on source ip address it doesnt check the destination 
+
+# numbered acl use numbered like 1 2 etc 
+
+# standard acl can use 1 and 99 and 1300 to 1999
+
+# 0.0.0.0 255.255.255.255. is the wilcard that match the any word 
+
+# a remark is the description of the acl 
+
+# show access list command display all kind of access list 
+
+# show ip access list show only ip access list 
+
+# standard acl should be applied to as close as the destination as possible if you dont that you might block more traffic than spected
+
+# named acl are still standard acl but they are identified with a name 
+
+# 
