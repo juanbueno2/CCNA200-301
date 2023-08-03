@@ -639,7 +639,49 @@
 
 # show ip access list show only ip access list 
 
-# standard acl should be applied to as close as the destination as possible if you dont that you might block more traffic than spected
+# standard acl should be applied to as close as the destination as possible if you dont that you might block more traffic than spected 
+
+# Day 34 standard ACL LAB (Do it) 
+
+# Day 35 extended ACL 
+
+# ip access list resequence will help to edit ACL 
+
+# extended ACL is the same as standard ACL just you can named or numbered they are more precise and more complex 
+
+# extended acl should be apply as close to the source as posible the oposite of extandard ACL 
+
+# Day 35 extended ACL lab do it 
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # named acl are still standard acl but they are identified with a name 
 
