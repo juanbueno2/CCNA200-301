@@ -129,7 +129,34 @@
 
 # Free CCNA | Configuring IPv6 (Part 3) | Day 33 Lab | CCNA 200-301 Complete Course (Done)
 
-# Free CCNA | Standard ACLs | Day 34 | CCNA 200-301 Complete Course (Done)
+# Free CCNA | Standard ACLs | Day 34 | CCNA 200-301 Complete Course (Done) 
+
+# Free CCNA | Standard ACLs | Day 34 Lab | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Extended ACLs | Day 35 | CCNA 200-301 Complete Course (Done) 
+
+# Free CCNA | Extended ACLs | Day 35 Lab | CCNA 200-301 Complete Course (Done)
+
+# 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
