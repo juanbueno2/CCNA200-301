@@ -137,10 +137,11 @@
 
 # Free CCNA | Extended ACLs | Day 35 Lab | CCNA 200-301 Complete Course (Done)
 
-# 
+# Free CCNA | CDP & LLDP | Day 36 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | CDP & LLDP | Day 36 Lab | CCNA 200-301 Complete Course (Do it)
 
-
+# Free CCNA | NTP | Day 37 | CCNA 200-301 Complete Course (Done) 
 
 
 
