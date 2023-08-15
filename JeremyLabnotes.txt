@@ -653,7 +653,62 @@
 
 # Day 35 extended ACL lab do it 
 
-# 
+# Day 36 Laye 2 discovery protocol cdp and lldp 
+
+# cdp is a cisco propieretary protoccol is enabled my default 
+
+# cdp use multicast message is not send to multiple devices messages are sent every 60 seconds only directly connected devices can become neigbors 
+
+# show cdp traffic commands will show how many messages has been sent or received 
+
+# cdp run or no cdp run to enable or disable it globally 
+
+# LLDP is industry standard is disabled by default LLDP messages are periodically sent to multicast address 
+
+# only directly connected devices can become neighbors 
+
+# to enable globally use lldp run to disable use no lldp run 
+
+# to enable transmission use lldp transmit but it wan receive it will discard to enable receive use lldp receive command
+
+# the command lldp reinit will allow reinitilization timer 
+
+# show lldp neighbor table is the command to show neighbor tables 
+
+# Day 36 CCDP and LDP Lab Do it 
+
+# Day 37 NTP 
+
+# Why time is important all devices have a internal clock to see it you can use show clock command
+
+# the clock detail command will show the time source 
+
+# the asterisk means the time is not authoritative 
+
+# clock summer time is the command to configure summer time in cisco devices 
+
+# ntp allows automatically time synchronisation to a NTP server 
+
+# NTP client request time from NTP server NTP server can be client to the distance for a reference clock  is stratum 
+
+# stratum 15 is the maximun anything above that is considered not relialable 
+
+# NTP servers can be client and symetric mode as well 
+
+# the command to configure NTP server is NTP server followed by the ip of the server 
+
+# you can add prefered command to make the serve rthe prefered NTP server 
+
+# NTP use the only ETC time
+
+# command to configure a NTP master server is NTP Master 
+
+# clock read calendar command will adjust the software clock to read hardware device 
+
+# Day 37 ntp LAB (Do it)
+
+
+
 
 
 
