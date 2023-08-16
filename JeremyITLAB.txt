@@ -143,6 +143,11 @@
 
 # Free CCNA | NTP | Day 37 | CCNA 200-301 Complete Course (Done) 
 
+# Free CCNA | DNS | Day 38 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | DNS | Day 38 Lab | CCNA 200-301 Complete Course (Do it)
+
+# Free CCNA | DHCP | Day 39 | CCNA 200-301 Complete Course (Done)
 
 
 
