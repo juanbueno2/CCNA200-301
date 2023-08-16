@@ -706,6 +706,26 @@
 # clock read calendar command will adjust the software clock to read hardware device 
 
 # Day 37 ntp LAB (Do it)
+# Day 38 DNS 
+# DNS is used to resolved human readable name converting from iP address to domain name 
+# Cisco router can act as DNS Server and Client 
+
+# Devices will save queries in DNS Cache 
+
+# Cname is a canonical record that map fron a name to another name 
+
+# Day 38 DNS Lab (Do it)
+
+# Day 39 DHCP 
+
+# DHCP ack messages can be multicast or broadcast check on this 
+
+# DHCP DORA check on this 
+
+# Boradcast message doesnt leave local network for this a DHCP Relay can be configure in this case a router acting as DHCP Realy 
+
+# Day 39 DHCP Lab (Do it)
+
 
 
 
