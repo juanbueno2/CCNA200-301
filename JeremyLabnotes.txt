@@ -727,37 +727,56 @@
 # Day 39 DHCP Lab (Do it)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # named acl are still standard acl but they are identified with a name 
 
+# Day 40 SNMP 
+
+# SNMP industry standard framework protocol 
+
+# SNMP can be used to monitor network router and switches 
+
+# NMS is a network server monitor that can be used to monitor Network devices 
+
+# SNMP object ID are organized in a hierarchical way 
+
+# snmp v3 is more secure that support encryption 
+
+# there are 2 type of SNMP messages TRap and inform trap messages is a notification sent from the agent to the manager 
+
+# snmp USE udp ther is not tcp retansmission 
+
+# the inform message is like trap messages but with inform response 
+
+# snmp message listen to message in port 161 and snmp managers listen to message to port 162 
+
+# SNMMP V1 and V2 there is not encryption messages are sent in plain texzt 
+
+# SNMP manager is the software that interact with SNMP Manager 
+
+# SNMP Trap are messages sent by the manage device 
+
+# Day 40 SNMP Lab do it 
+
+# Day 41 syslog 
+
+# Log messages can be shown in real time when it happens and it can be stored as well 
+
+# login to the vty line is disabled no message will be displayed 
+
+# the next location of the message is the buffer 
+
+# Having a central server for syslog server is better for syslog analisys 
+
+# the command is login console follow by the level number 
+
+# check on syslog loggin configuration 
+
+# for message to be display you have to use the command terminal monitor syslog will be display after logout the session wwill be finish 
+
+# to prevent that you should use the login syschronys if the tipyng is interrupted by the message 
+
+# Make sure you know the severity levels 
+
 # 
+
+
