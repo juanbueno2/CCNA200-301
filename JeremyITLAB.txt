@@ -149,6 +149,12 @@
 
 # Free CCNA | DHCP | Day 39 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | SNMP | Day 40 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | SNMP | Day 40 Lab | CCNA 200-301 Complete Course (Do it) 
+
+# Free CCNA | Syslog | Day 41 | CCNA 200-301 Complete Course (Done)
+
 
 
 
