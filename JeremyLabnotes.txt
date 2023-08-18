@@ -777,6 +777,61 @@
 
 # Make sure you know the severity levels 
 
+# Day 42 ssh 
+
+# Layer 2 switch does not route packets but you can connect to them using ssh via SVI 
+
+# to configure console line you can use configure console 0 only one user at the time can access
+
+# login local tells the user to use one of the password configure in the device 
+
+# Layer 2 devices only porpuse is to forward packets
+
+# Transport input telnet allow only telnet transport input ssh allows only ssh transport input all allows all conection 
+
+# Day 42 SSH LAB Do it 
+
+# Day 43 FTP TFTP 
+
+# The most common use for FTP and TFTP is to upload a OS image to the device also it can be 
+
+# TFTP use UDP 69 
+
+# SNMP use UDP does not use TCP 
+
 # 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
