@@ -155,8 +155,13 @@
 
 # Free CCNA | Syslog | Day 41 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | SSH | Day 42 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | SSH | Day 42 Lab | CCNA 200-301 Complete Course (Doit)
 
+# Free CCNA | FTP & TFTP | Day 43 | CCNA 200-301 Complete Course (Done)
+
+# 
 
 
 
