@@ -799,6 +799,36 @@
 
 # SNMP use UDP does not use TCP 
 
+# Day 44 NAT 
+
+# Nat isn used to translate the source or a destination IP address 
+
+# Before migrating everything to IPV6 one of the solutions is to use CIDR Private IP and NAT 
+
+# Private IP Address cannot be used over the internet is were NAT comes into Play 
+
+# Static Source NAT static Nat involve configuring one to one NAT 
+
+# Inside Local Address is the address configured in the PC inside Global is the IP configured in the router 
+
+# Outside Global is the IP configured on the other Router outside Local is the IP configured on the otherside of the Network PC 
+
+# Day 44 Static NAT LAB (DO it)
+
+# Day 45 NAT Part 2 
+
+# Dynamic NAT a NAT pool is created to translate from one Public IP to Multiple Private PAT 
+
+# if the source ip is not allowed in the ACL it doesnt mean the Packet will be dropped it means the IP will not be translated 
+
+# PAT known as NAT overload tranlate the port number using ports a single ip address can be use by using multiple internal host 
+
+# the router will use unique Ports Flows 
+
+# when doing PAT you should trnslate to the external in this case the public ip Address 
+
+# Day 45 Dinamic NAT and PAT Doit 
+
 # 
 
 
