@@ -829,7 +829,88 @@
 
 # Day 45 Dinamic NAT and PAT Doit 
 
+# Day 46 QOS 
+
+# Traditional phone operates over PSTN modern phones operates over VOIP 
+
+# another name for access port is untagged port 
+
+# trunk port carry vlans for multiple devices 
+
+# POE aaloow PSE equipment to provide power to devices this devices are switches 
+
+# PSE receive AC power and convert it to DC power 
+
+# Power policing prevents a POE to take to much power Check on this  
+
+# POE originaly was not POE it was Cisco inline Power 
+
+# Jitter will affect audio quality of the phone 
+
+# if the message are sent in a interface faster it could place the packets differently thats why they are put in a que 
+
+# if the que id full packet is drop this called tail drop 
+
+# Network Congestion Leads to network Drop 
+
+# A solution to prevent tail drop is random early detection 
+
+# WRED allows you to see wich packets are dropped 
+
+# Day 46 Voice VLAN do it 
+
+# Day 47 QOS PART 2 
+
+# Clasification gives priority Totraffic over others 
+
+# Classification is fundamental to QOS 
+
+# NBAR perform a deep packet inspection beyond TCP all the way up to layer 7 
+
+# pcp field is in the trunk is refered as COS 
+
+# in the ipv4 Header there is a byte called TOS type of service 
+
+# Standard IPP marking is Similar to ppc 
+
+# DF default forwarding is the marking for Best Effort 
+
+# EF expedited forwarding is for required low loss 
+
+# AF Asure Forwarding highest packets will be forwareded compared to low packets 
+
+# Low Latency Queing create a priority Que 
+
+# Day 47 QOS LAB DO it 
+
 # 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
