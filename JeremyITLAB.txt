@@ -169,12 +169,15 @@
 
 # Free CCNA | Dynamic NAT | Day 45 Lab | CCNA 200-301 Complete Course (Do it)
 
+# Free CCNA | QoS (Part 1) | Day 46 | CCNA 200-301 Complete Course (Done) 
 
+# Free CCNA | Voice VLANs | Day 46 Lab | CCNA 200-301 Complete Course (Doit )
 
+# Free CCNA | QoS (Part 2) | Day 47 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | QoS | Day 47 Lab | CCNA 200-301 Complete Course (Do it)
 
-
-
+# 
 
 
 
