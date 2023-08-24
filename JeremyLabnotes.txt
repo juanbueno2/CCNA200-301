@@ -883,7 +883,59 @@
 
 # Day 47 QOS LAB DO it 
 
+# Day 48 Security Fundamental 
+
+# CIA Triad confidentiality Integrity and Availibility 
+
+#  One common DOS atack is the tcp Sync Flood 
+
+# Techniques Mitigation involved acroos all devices Firewalls Computers Routers and switchs 
+
+# In a ddos Atack the Attacker sends multyple sync packets to infect with Malware 
+
+# In a reflection attack the attacker spoofed the address to a reflector 
+
+# a amplification attack is when the amount of traffic that is sent is small 
+
+
+ # Man in the Middle attack the attacker place himself in the middle between the source ans destination 
+
+# AAA is a framework that stands for authentication authorization and account it will monitor network users to have access to resources 
+
+# Authentication the process of verifying a users identity 
+
+# Autherization is granting the user the proper access and permission 
+
+# Accounting is the process of recopnrding users activity on the system 
+
+# ISE is cisco AAA Server 
+
+# Radius is a standard protocol and use port 1812 and 1813 
+
+# Tacas + is a cisco propietary protocol 
+
+# Users awareness Programs this are design to make user aware of potential risk 
+
+# Day 48 Kali Linux LAB Do it 
+
+# Day 49 port security 
+
+# port security allows mac address 
+
+# Port security is a feature of cisco switches it allows what mac addres are entering
+
+# if a frame with a unautorized states enter the switch it will take a action one of the common one is to place the interface in a error disable state traffic will not longer sent or receive on that interface 
+
+# port security is benefitial when controlling wich mac address is allowed and how many mac address is allowed 
+
+# Secure up means the port is enabled and up 
+
+# if you configue the aging time it means its absolute what it means is it will start counting and when the time expired it will remove themac address from the violation 
+
+# Day 49 port security LAB Do it 
+
 # 
+
 
 
 
