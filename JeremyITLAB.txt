@@ -177,13 +177,15 @@
 
 # Free CCNA | QoS | Day 47 Lab | CCNA 200-301 Complete Course (Do it)
 
+# Free CCNA | Security Fundamentals | Day 48 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Kali Linux Demo | Day 48 Lab | CCNA 200-301 Complete Course (Doit)
+
+# Free CCNA | Port Security | Day 49 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Port Security | Day 49 Lab | CCNA 200-301 Complete Course (Doit)
+
 # 
-
-
-
-
-
-
 
 
 
