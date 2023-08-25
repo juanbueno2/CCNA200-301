@@ -185,7 +185,37 @@
 
 # Free CCNA | Port Security | Day 49 Lab | CCNA 200-301 Complete Course (Doit)
 
+#  Free CCNA | DHCP Snooping | Day 50 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | DHCP Snooping | Day 50 Lab | CCNA 200-301 Complete Course (Doit)
+
+# Free CCNA | Dynamic ARP Inspection | Day 51 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Dynamic ARP Inspection | Day 51 Lab | CCNA 200-301 Complete Course (Done)
+
 # 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
