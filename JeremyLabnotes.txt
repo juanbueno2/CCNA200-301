@@ -934,7 +934,87 @@
 
 # Day 49 port security LAB Do it 
 
+# Day 50 DHCP Snooping 
+
+# dhcp snooping is a security features for switches that filtered dhcp messages on untrusted ports 
+
+# all ports are untrusted by default is them up to us to make them trusted 
+
+# usuallly uplink ports are configured as trusted ports means from the access switch to distribution or core 
+# downlink ports are configured as untrsted ports means access switches ports were devices are connected 
+#DHCP Snooping wont inspenct any messages in trusted ports the switch will forward them as normal 
+
+# DHCP starvation in this type of attack the attacker use spoofed MAC address the purpose is to get the DHCP table full  
+
+# DHCP poisoning can perfomr a man in the middle attack 
+
+# message receive on trsted port will not be drop 
+
+# when messages are received in untrusted port if the packets match forward it if it dont discard it 
+
+# when DHCP is enabled the DHCP will create new DHCP binding table 
+
+# DHCP snooping needs to be enabled globally and then in each VLAN 
+
+# rate Limiting DHCP Snopping can limit rate in wich the packets enters a interface 
+
+# if the rate crossed the configure limit the interface will go into error disable  mode 
+
+# dhcp rate limiting can be usefull DHCP exostion attack 
+
+# Day 50 DHCP Snooping lab do it 
+
+# Day 51 Dynamic arp inspection 
+
+# arp is used to learn mac address to a known ip address device it consist in 2 message send an reply 
+
+# DAI is a feature of switchs to filter arp messages in untrusted ports it only filters arp messages  
+
+# just like port security uplink are trusted ports and download links are untrusted 
+
+# arp poisoning involved a attacker manypulating arp tables this is where DAI inspection comes 
+
+# DAI operation are usually reliant on DHCP Snooping 
+
+# DAI only have to be enabled per VLAN 
+
+# DAI can be configured base on IP source mac and destination mac 
+
+# day 51 DAI lab do it 
+
 # 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
