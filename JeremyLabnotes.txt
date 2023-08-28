@@ -982,6 +982,105 @@
 
 # day 51 DAI lab do it 
 
+# Day 52 Lan Architectures 
+
+# all PC connected to a central devices is a star topology 
+
+# full mesh is when each devices are connected to each other this a full mesh topology 
+
+# Partial mesh is when devices are not all interconnected 
+
+# 2 tier design is called a colapse core design 
+
+# access layer is when devices conected too QOS marking is done in there Security policies are performed in there too distribution layer agragate connectios from the access layer 
+
+# in a tier 2 design the destribution switch is also the core switch 
+
+# Traditionally 3 tier design are core distribution and access 
+
+# spine leaf architecture is also called the CLO Design in the spine leaf architecture leaf switches ar connected to leaf switches spine switches does not connect to spine switches same thing for leaf switches 
+
+# connections from distribution to access are layer 2 connections like spanning tree connections from distribution to cor eare layer 3 connections
+
+# SOHO network have only one devices and does not need complicated Architecture 
+
+# for small network there is not need to have dedicated devices for LAN or wireless one devices do everything 
+
+# Day 52 HSRP and STP Syncronisation LAB Doit 
+
+# Day 53 wan architecture 
+
+# wan extend networks over geographical area like cities 
+
+# hub and spoke the central site is called the hub the branches connected are called the spoke traffic can be control wich one can enter and can not 
+
+# to send traffic between sites the conpany will create VPN 
+
+# leased line is a dedicated phisicall link between sites that use ppp or HDLC dor encapsulation 
+
+# Leased line standard beguint from T1 to T3 in europe it start from E1 to E3 
+
+# MPLS are shared networks the label switching allows VPN to separeated traffic between router 
+
+# CE mean costumer routers PE routers are provider router and the P router form connections but doesnt connect to the costumer router 
+
+# MPLS lavel use MPLS label to decide where to send the router 
+
+# when forming LAYER 3 VPN in MPLS a routing protocol can be used or a static route can be set between the CE and PE 
+
+# When using LAYER 2 VPN the connection will be transparent to the costumer 
+
+# MPLS Technology runs in the service Provider Network 
+
+# site to site vpn is a vpn between 2 devices and is used to connect 2 sites a vpn tunnel is created by encapsulating the IP Packet header and a new header 
+
+# check on the IPSEC encapsulation and deencapsulation process
+
+# IPSEC does not support broadcast or Multicast 
+
+# GRE creates tunnel like IPSEC but it does not encrypt the original packet so its not secured but it encapsulated broadcast and multicast 
+
+# DMVPN is a cisco develop product that allows you to create a full mesh VPN 
+
+# remote to site VPN use TLS 
+
+# VPN Client software like cisco anyconnect are installed on end devices then the end devices create a tunnel to the remote device 
+
+# GRE Tunnels Day 53 Lab Do it 
+
+# Day 54 Virtualization and Cloud 
+
+# Type 1 hypervisor is the hypervisor that is installed in the baremetal type 2 hypervisor is the one installed on the OS is a hosted hypervisor 
+
+# three main cloud infrastructure are software as as a service (Saas) costumer does not managed this type of service the service provider is in control of everything
+
+
+#  in platform as a service (Paas) the costumer only controls the development application the service provider control the rest 
+
+# in IaaS (Infrastructure as a service) the costumer have control of everything the service provider take control of the phisical datacenter wich is the underlying infrastructure 
+
+# 4 deployments model of cloud are the following Private cloud , community cloud , Public Cloud and Hybrid Cloud 
+
+# Day 54 Containers 
+
+# VM allows to install multiple OS and then install the Apps in it 
+
+# Containers run on containers engine and the container run in the OS in this case Linux 
+
+# kubernetes is a container orchastrator for docker we have docker swm 
+
+# Day 54 VRF 
+
+# VRF Allows you to devide one phisical router into multiple Routers 
+
+# VRF devide one router into Multiple  virtual router with its own Routing Table 
+
+# Traffic in one VRF cannot be configured to forward traffic to another VRF VRF is configured to facilitate MPLS 
+
+# VRF lite is withouth MPLS 
+
+# withouth VRF same subnets will overlap but with VRF it wont 
+
 # 
 
 
