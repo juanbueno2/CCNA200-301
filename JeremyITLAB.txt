@@ -193,14 +193,23 @@
 
 # Free CCNA | Dynamic ARP Inspection | Day 51 Lab | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | LAN Architectures | Day 52 | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | STP & FHRP Synchronization | Day 52 Lab | CCNA 200-301 Complete Course (Done) 
+
+Free CCNA | WAN Architectures | Day 53 | CCNA 200-301 Complete Course (Done)
+
+Free CCNA | GRE Tunnels | Day 53 Lab | CCNA 200-301 Complete Course (Done)
+
+# Free CCNA | Virtualization & Cloud | Day 54 (part 1) | CCNA 200-301 Complete Course (Done)
+
+# characteristic of cloud : on demand self services cloud rapid elasticity broad network Access 
+
+# Free CCNA | Containers | Day 54 (part 2) | CCNA 200-301 Complete Course (Done) 
+
+# Free CCNA | VRF | Day 54 (part 3) | CCNA 200-301 Complete Course (Done) 
+
 # 
-
-
-
-
-
-
-
 
 
 
