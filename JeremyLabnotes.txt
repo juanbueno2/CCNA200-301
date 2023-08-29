@@ -1081,18 +1081,266 @@
 
 # withouth VRF same subnets will overlap but with VRF it wont 
 
+# Day 54 Oracle Virtual Box 
+
+# Day 55 wireless Fundamentals 
+
+# RF is a electromagnetic frequency 
+
+# all devices withing range will receive frame 
+
+# CSMA/CD is used in wired connections to recover collision CSMA/CA is used in wireless to avoid collision 
+
+# wifi use 2 bands 2.4 ghz and 5 ghz 
+
+# wifi 6 has expanded to 6GHZ band 
+
+# channel bonding can be used to combined the channel 
+
+# if overlapping channels are used it will affect performance 
+# channel 1 6 and 11 doesnt overlap 
+
+# checko n the type of set like independent service set 
+
+# IBSS is wireless connection in wich 2 devices connect directly without using a AP This is are called ad-hoc
+
+# BSS client connect to each other Via AP but not directly to each other 
+
+# when you move between AP in a extended service set is called Roaming 
+
+# MBSS (Mesh Basicd Set Service) is used when is dificult to run a ethernet connection to the AP 
+
+# a MBSS in Repeater Mode can extend the range 
+
+# Day 56 wireless architecture 
+
+# Beacons are send periodically to AP to advertize BSS
+
+# there are 3 type of wireless LAN deployment Autonomous Lightwaight and cloud 
+
+# Autonomous AP does not rely on a WLC (Wireless LAN controller) they are configured individually This is fine for Small Network 
+
+# In a Wireless LAN architecture with Controller a CAPWAP tunnel is created  
+
+# WLC provide channel assigment 
+
+# In sniffer mode the AP is dedicated to capturing packets it doesn't BSS for the Client 
+
+# Cloud base architecture is between Autonomous AP and split architecture one example is Meraki 
+
+# Light weight AP Are Managed By a Centralized controller Cloud Base AP is Managed by a Central Device Like cisco Meraki 
+
+# Day 57 Wireless Security 
+
+# all client must be authenticated before they can join the SSID 
+
+# integrity ensured the message is not modified in transit for that a MIC is addedd 
+
+# Open authentication is the first standard client sends the request and the AP accepts all is not secure 
+
+# WEP is another way of authentication it provides encryption it uses RC4 wep is not secured regardless of the lenght of the Key 
+
+# EAP is a framework where other methods are based on 
+
+# in EAP used authenticator authentication server and the suplicant 
+
+# LEAP is the inproovement for for WEP is vulnerable and is not used anymore 
+
+# ELP - FAST (check on this )
+
+# EAP-TLS required the certification in the client and the server check on this 
+
+# TKIP is based on WEP but has more security Features TKIP is more Secure than WEP 
+
+# CCMP is more secure it use WPA2 it use AES for countermode 
+
+# GCMP is more secure and more efficient than CCMP it is used in wifi protected 3 
+
+# PSK is used to generate encryption KEy 
+
+# all 3 WPA use personnal and enterprise mode 
+
+# SAE protect the 4 way hadnshake using Personal Mode 
+
+# Day 58  Wireless LAN configuration 
+
+# WLC only support static LAG and the port is supposed to be configured to mode on 
+
+# High Availivility Can also be configured in WLC 
+
+# WEP authentication means after the client gets a ip it does have to type a username and password 
+
+# WEP passthrogh is the same as WEP authentication but no username and password has to be typed 
+
+# QOS Platinum should be used for voice silver is best effort by default gold for video traffic bronze is the lowest option for Background traffic 
+
+# Distribution system Ports are the ports LAG use to pass traffic 
+
+# Day 58 Wireless Lan LAB do it  
+
+# Day 59 Network automation 
+
+# Network autamation offer key adavantage like Human Errors Tshoot can be done efiancy 
+
+# Here are some tools that can be used for automation puppet SDN ansible cheff Python 
+
+# The data plane all task that involve forwarding message from one interface to the other or another destination this is what the dataplane does other name for data plane is forwarding plane  
+
+# Control plane one of the functiones of the controll plane is building routing table 
+
+# in traditional network data plane and control plane are destributed 
+
+# Managment plane controls overhead it functiones it contains Protocol that the dataplane needs 
+
+# APIC are specialized Ships for specific Purpose 
+
+# SDN is a approch to network that centralized the control plane in a controller 
+
+# The Comunication between the devices and the controller is called the SBI (South Bound Interfaces )
+
+
+# The SBI is conformed of A API and the SBI 
+
+# Here are some software of SBI openflow opencom and others 
+
+# The NBI north bound interface is what allow us to communicate with the controller 
+
+# A rest API is used in the controller to interact with the software 
+
+# SDN architecture allows the automation of the network 
+
+# SDN reduce opex (Operation expenses) and human errors 
+
+# Calculating routes its possible to be centralized in the SDN arquitecture 
+
+# Day 60 Jason XML and YAML 
+
+# Data serialization is the process of storing dat in a file 
+
+# Jason allows to represent Variables with text  Variables are containers that store Values 
+
+# Json can be used to store Data and Exchange Data 
+
+# in Json white space are insignificant they dont change the meaning of the data 
+
+# A string is a text value and sorrounded by double quotes 
+
+# A number is a numeric value is not surrounded by quotes 
+
+# A boolean is a data type that can be only true or False 
+
+# A null is the absence of data value 
+
+# objects are surrounded by double quotes a key which is  String is surrounded by double quotes as well 
+
+# The key and the value are separated by a comma 
+
+# Objects within objects is called nested objects 
+
+# an A Array is a series of values separated by comma 
+
+# XML is another data serialization data 
+
+# Like Jason white space means nothing 
+
+# the key is tagged with the value in the middle 
+
+# XML quite similar to HTML it use tagges 
+
+# YAML another serialization data language 
+
+# YAML is used by ansible 
+
+# in YAML white space is significant YAML Start with 3 Hifens --- 
+
+# Day 61 API 
+
+# Api allows programs to exchange information between them 
+
+# Allows program to interact with software and hardware api are specifically used by NBI 
+
+# HTTPS use CRUD api and http use Rest API as the communication Protocol 
+
+# A API is a software interface that allows 2 applications to communicate between them 
+
+# in SDN architecture allows applications to communicate with the hardware via NBI 
+
+# devices that comunicate between the SBI are netconf and Restconf 
+
+# CRUD refer to operation performed by rest API 
+
+# Create operation create new variables 
+
+# Update operation is used to update the variable 
+
+# Delete is used to delete the Variable 
+
+# if the client wants to communicate over HTTP it use the get verb 
+
+# the URI identifier indicates the resources is trying to access 
+
+# in the uri the scheme is the protocol in this case http then the authirity is the address wich is the entire dns example google.com and the path is the rest after the .com
+
+
+# REST api is a framework that says how the API should operate 
+
+# Client server application use calls 
+
+# Rest API exchange are stateless Server does not store information about prevoius request 
+
+# TCP is Statefull UDP is Stateless 
+
+# Rest must support cashing of data it means storing data for future use it reduce the loading in the server 
+
+# Postman is a platform for Building and using API 
+
+# NBI use Rest API to communicate with applications 
+
+# Day 62 Software Define Networking 
+
+# Software Define Access (SDA)
+
+# SDN is the approach to networking that centralizes the controll plane into a controller 
+
+# Tradiotional network use a distributed arquitecture 
+
+# the control plane of each devices use network protocols like OSPF to destribute information 
+
+# Depending on the SDN solution the entire controll plane might be centralized 
+
+# The controller can interact with network devices using the south bound Interface (SBI)
+
+# the application layer have scripts to instruct the controller 
+
+# Cisco SDA access is the cisco automated solution to automates campus LAN 
+
+# Cisco DNA is the controller at the Center of Cisco SD Access 
+
+# at the center of the architecture we have DNA Center and at the bottom we have the devices that conform the Fbric 
+
+# the underlay is the phisical underlining like phisical devices undelay is a bunch of switchs 
+
+# the overlay is the virtual phisical network built on top of the phisical network 
+
+# SDA use a protocol called VXLAN to Built tunnels fabric is the term we use of the overlay and underlay as a hole 
+
+# in the Fabric Both are necesary for the SDA to work 
+
+# To built the overlay the devices needs to be connected and reach each other 
+
+# the edge nodes connect to end host and Border nodes connect devices outside the SDAccess example connecting to wan devices 
+
+# then there is control protocol called LISP 
+
+# Cisco trustsec provide security control policy 
+
+# VXLAN provide lot of features to SDA 
+
+# DNA center is the DNS controller 
+
+# DNA Center  enable what is called intent Based Network 
+
 # 
-
-
-
-
-
-
-
-
-
-
-
 
 
 
