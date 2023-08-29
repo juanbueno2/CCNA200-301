@@ -209,18 +209,25 @@ Free CCNA | GRE Tunnels | Day 53 Lab | CCNA 200-301 Complete Course (Done)
 
 # Free CCNA | VRF | Day 54 (part 3) | CCNA 200-301 Complete Course (Done) 
 
-# 
+# Free CCNA | Oracle VirtualBox | Day 54 Lab | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Wireless Fundamentals | Day 55 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Wireless Architectures | Day 56 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Wireless Security | Day 57 | CCNA 200-301 Complete Course (Done) 
 
+# Free CCNA | Wireless Configuration | Day 58 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Wireless LANs | Day 58 Lab | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | Intro to Network Automation | Day 59 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | JSON, XML, & YAML | Day 60 | CCNA 200-301 Complete Course (Done)
 
+# Free CCNA | REST APIs | Day 61 | CCNA 200-301 Complete Course (Done)
 
-
-
+# Free CCNA | Software-Defined Networking | Day 62 | CCNA 200-301 Complete Course (Done)
 
 
 
