@@ -102,9 +102,29 @@
 # this combinations all toguether are called PDU  
 
 
+# first is the version field of the header wich represent the type of IP for example IPV4 and IPV6 the value of this IPV4 header is 4
 
+# IHL especified the lengh of the header the minimun of this field is 5 wich is 20 bytes 
 
+# next is the DSCP field stand diferentiate service is used for QOS 
 
+# Next is ACN provide signaling field wihtotuh dropping the packet next is the Total Lenght Field it is 16 bits 
+
+# Next is the identification field wich 16 bits this field knows wich packet is degragmented so it can be reasamble later 
+
+# Next is the flag field use to control and identified frangments is 3 bits in size 
+
+# Franfment Field is to position the packet 
+
+# next is the TTL field wich is 8 bits in size it is used to prevent infinite loops 
+
+# Next is the protocol field it indicates the protocol field of the encapsulated packets 
+
+# next is the checksum field it calculate the checksum of the header to avoid the errors
+
+# Next is source and destination filed they are 32 bits lenght each the source indicates the ip of the source the destination contians the ip address of the source field 
+
+# the binary value of the first field of the IPV4 header is 0100
 
 # Day 14 subnetting 
 
