@@ -99,7 +99,7 @@
 
 # combination of layer 2 trailer dat layer 4 header layer 3 header layer 2 header is calle a frame
 
-# this combinations all toguether are called PDU 
+# this combinations all toguether are called PDU  
 
 
 
