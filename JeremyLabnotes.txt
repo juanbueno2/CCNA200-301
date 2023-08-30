@@ -2,6 +2,109 @@
 #  NOTES JEREMY LAB      # 
 ##########################
 
+# Day 1 Network Devices
+
+# Computer network allows Nodes to share resources 
+
+# Server devices that provide function or services for Clients 
+
+# Switches Forward Traffic between  a LAN 
+
+# Catalyst are cisco enterprice grade 
+
+# Switches Provide conectivity between the same LAN 
+
+# Switches does not Provide conectivity between lans if it is a layer 2 switches 
+
+# Router provides Conectivity Between LANS 
+
+# Firewalls controll network entering and exiting the network it protect the endhost 
+
+# Firewalls Monitor traffic based on rules the firewalls filter traffic before it hits the network or before going to the network 
+
+# Day 2 Cable Interfaces 
+
+# 8 bits equal 1 byte 
+
+# Speed Measure Bits per second 
+
+# 10 base t is 10 m 100 base t is 100 metter 1000 base t is 100 meter 10 g base t 100 meter 
+
+# T refers to Twisted Pair cable 
+
+# UTP stand for untwisted Pair Cable 
+
+# 10 base T fast ethernet cable use 2 pair of cable or only 4 fair pair pin position at 1 and 2 switch receive dat in PIN and 1 and 2 
+
+# on the switch pin 3 and 6 is used to transmit data on the PC 3 and 6 is used to receive Dat 
+
+# on a router transmit data on pin 1 and 2 and receive in 3 and 6 
+
+# Crossover cable is used to connect switch to switch and router to Router 
+
+# Straight Through Cable is used to connect PC to a switch or Router 
+
+# AutoMDIX allows devices to detect wich pin their neighbors are on and adjust the pins 
+
+# Copper UTP Cable can be used up to 100 meter 
+
+# SFP transceiver Small form Factor Plugable 
+
+# Claddin reflects Light Core transmit Data 
+
+# in multimode fiber cable the core is wighder than single mode 
+
+# Single mode cable allows longer cable than multimode 
+
+# Standards for Fiber Cable 100 base lx speed 1gbs multimode or single mode up 550 km standard 802.3z
+# 10gbase -SR 10GBS MULTIMODE 400 KM  standard 802.ae
+# 10GBASE-LR 10GBS SINGLE MODE 10KM  standard 802.ae
+
+# 10BASE-ER 10GBS SINGLE MODE 30 KM  standard 802.ae
+
+# Day 3 TCP IP Suite OSI MODEL 
+
+# OSI model layer function are devided in 7 layers 
+
+# Layer 7 application layer is closed to the user it have interaction with software examples of layer 7 applications are http and https 
+
+# Layer 6 is the presentation Layer the presentation layer is to tranlate between the application and devices one function of the presnetaion layer  is to encrypt data 
+
+# Layer 5 is the session layer it manage dilogs it stablish and finish connection like the webserver 
+
+# Layer 4 is the tranport layer before sending it add a header before sending data transport layer provides end to end communication  
+
+# Layer 3 is the network layer provide conectivity between network host provideds logical addresing in a form of IP routers operate at layer 3 
+
+# Layer 2 is the data link layer provides node to node conectivity or data tranfer for example pc connected to a switch switches operate at layer 2 
+
+# Layer 1 is the phisical layer the phisical layer defines phisical caracteristics 
+
+# TCP/IP Suites 
+
+# Has similir structured like OSI but fewer Layers 
+
+# Layer 4 is Application Layer 
+# Layer 3 is the transport layer 
+# Layer 2 is the internet layer 
+# layer 1 is the link layer 
+
+# Day 10 IPV4 Header 
+
+# Ipv4 packet structure the fields of the ipv4 header 
+
+# combination of data and layer 4 header is called a segment 
+
+# combination of data layer 4 header layer 3 header is called Packet 
+
+# combination of layer 2 trailer dat layer 4 header layer 3 header layer 2 header is calle a frame
+
+# this combinations all toguether are called PDU 
+
+
+
+
+
 
 # Day 14 subnetting 
 
@@ -1340,7 +1443,21 @@
 
 # DNA Center  enable what is called intent Based Network 
 
-# 
+# Day 63 ansible Puppet and Cheff
+
+# Configuration Managment tools like ansible Puppet and cheff allow us to do massive configuration to devices 
+
+# Ansible is writen in Python ansible is agentless ansible use ssh to connect to devices make configuration changes get information etc ansible use a push model ansible server called the control mode palybook are the blueprint of the task and this files are written in YAML you also need the inventory file and tmeplates 
+
+# Puppet and cheff use Pull Model 
+
+# Puppet is written in Ruby puppet is agent based the server is called Puppet Master use TCP 8140 use Pull Model 
+
+# Chef like puppet is agent based use a pull Mode TCP port 1002 Chef File use DSL Wich is a propietary Languaje written in Ruby 
+
+# Puppet and chef both communicates using http 
+
+# Done !!!!!! 
 
 
 
