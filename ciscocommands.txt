@@ -1,0 +1,169 @@
+######################################################
+The followings are cisco commands for easy copy paste #
+#####################################################
+
+#######
+Router #
+#######
+
+
+en
+config t
+int ()
+
+ip address 
+ip dhcp pool ()
+network ()
+
+router  ospf 1 
+
+network () ()
+
+router rip 1 
+
+network () ()
+
+
+standard acl () ()
+
+
+
+
+
+
+########
+switch #
+########
+
+en
+config t
+int ()
+switchport access vlan ()
+
+int range ()
+channel-group ()
+
+
+#switchport mode trunk 
+
+#switchport trunk encapsulation dot1q 
+
+#spanning-tree portfast 
+
+
+#no switchport 
+
+#ip address dhcp  
+
+
+#spanning-tree portfast will change swicht from listening to forwarding 
+
+
+#the following command will be for OSPF 
+
+#ip ospf 1
+
+#network 0.0.0.0. 0.0.0.0 area #
+
+
+
+
+#Etherchannel 
+
+#show etherchannel summary displays what type of protocol is the channel on if it is L2 or L3 
+#also if the channel is in used means has been formed 
+
+
+#show etherchannel port-channel shows the ports that are members of the channel how long 
+#the channel has been active and also the Protocol if it is PAGP or LACP 
+
+#PAGP is cisco propiaretary its a layer 2 protocol 
+#LACP is open standard it could be L2 and L3 when the the ports have a IP address
+
+
+
+#CDP and lldp 
+
+#by default cdp is enabled in all of the devices LLDP is not 
+
+#to enable LLDP command is lldp enable 
+#to enable CDP is cdp run 
+#to disable CDP is no cdp run 
+#spanning-tree bpduguard enable will not receive bpdu transmission on that interface
+#spanning-tree guard command will prevent other switch to become root 
+#show interface status will show all of the interfaces that are conected and the type of connection
+#When using commands it can be filtered with Pipe | to what actually we are looking for 
+
+
+
+
+#Router ID 
+
+#if opsf is not enabled the router wont show router ID 
+
+#ospf need to be enabled to show router ID 
+
+
+#command show ip ospf it will show router ID 
+#show ip ospf neighbors will show neighbors devices 
+#show arp command will show you the interfaces connected mac addrees and devices ip as well
+
+#show ip route will show the routing table if there is any protocol it will show in there too also if there is any static route 
+
+#show ip ospf 1 will show ospf information like router ID interface
+#show ip ospf databse will show all routes on that area 
+#show ip ospf interface shows the interface shows router id Designated router and backup designated router plus intervals (Time)
+#show run will show the entire configuration for the device 
+#copy running config startup config  will copy configuration to flash 
+#standby ip (ip address) will configure HSRP 
+#standby priority (numbers)will configure the time when the router is not responding the other can take  over 
+#ip access-list command will show the 2 type of ACL extended or standard 
+#ip access-list (#) extended will allow you to apply more granular ACL 
+#the permit within extended ACL will allow you to shoose between diferent protocols 
+#
+
+ 
+
+
+################
+#     VPN      #
+################ 
+
+
+#GRE command 
+
+
+# IPSEC 
+
+
+
+
+############
+#  HSRP    # 
+############
+
+#
+
+
+
+
+####################
+#  ACCESS LIST     #
+####################
+
+# Standar from 1 to 199
+# extended from 100 199
+
+#commands 
+#ip access-list 1 permit or deny host 
+#ip acces-list 101 permit or deny protols + Source and Destination 
+
+
+##################
+#     OSPF       #
+##################
+
+# router ospf 1 
+# network point-to- point 
+
+# 
