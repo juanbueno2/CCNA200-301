@@ -1,0 +1,409 @@
+##################
+# 31 Before CCNA #
+##################
+
+
+#################
+#    OSI        # 
+#################
+
+# 7 Refers to interfaces betweeen networks and application software also includes authentication service 
+
+# 6 Defines the organization and format of data includes encryption  
+
+# 5 Entablish end to end bidirectional flows beteween end points includes managing transaction flows 
+
+# 4 Provides a vriety of services between 2 computers including connection stablishment and termination ,
+flow control error recovery segmentation of large data block into smaller 
+
+# 3 refers to logical addressing path and path determination 
+
+# 2 formats data into frame appropiate for transmission onto some phisical medium Defines rules for when the medium can be used. Defines the means by which to recognize transmission errors.
+
+# 1 Defines the electrical, optical, cabling, connectors, and procedural details required for transmitting bits, represented as some form of energy passing over a physical medium. 
+
+
+# TCP/IP Layers and Protocols
+# The TCP/IP model defines four categories of functions that must occur for communications to succeed. Most protocol models describe vendor-specific protocol stacks. However, because the TCP/IP model is an open standard, one company does not control the definition of the model.
+
+# TCP/IP 
+
+# Application  Represents data to the user and controls dialogue  examples DNS,Telnet, SMTP, POP3, IMAP, DHCP,HTTP,FTP,SNMP 
+
+# Transport Supports communication between diverse devices across diverse networks Examples TCP, UDP 
+
+# Internet Determines the best path through the network Examples IP, ARP, ICMP 
+
+# Network access Controls the hardware devices and media that make up the network Exanple Ethernet,Wireless 
+
+
+
+# Error Recovery 
+
+
+# TCP provides error recovery, also known as reliability, during data transfer sessions between two end devices that have established a connection. The Sequence and Acknowledgment fields in the TCP header track every byte of data transfer and ensure that missing bytes are retransmitted.
+
+# TCP Header 
+
+# TCP provides error recovery, but to do so, it consumes more bandwidth and uses more processing cycles than UDP.TCP and UDP rely on IP for end-to-end delivery.TCP is concerned with provid- ing services to the applications of the sending and receiving computers.To provide all these services, TCP uses a variety of fields in its header
+
+
+# Flow control 
+
+# TCP handles flow control through a process called windowing.The two end devices negotiate the window size when initially establishing the connection; then they dynamically renegotiate window size during the life of the connection, increasing its size until it reaches the maximum window size of 65,535 bytes or until errors occur.Window size is specified in the Window field of the TCP header. After sending the amount of data specified in the window size, the source must receive an acknowledgment before sending the next window size of data.
+
+# Connection Stablishment and termination 
+
+# Connection establishment is the process of initializing Sequence and Acknowledgment fields and agreeing on port numbers and window size.The three-way connection establishment phase
+
+# When data transfer is complete, a four-way termination sequence occurs.This sequence uses an additional flag, called the FIN bit 
+
+# UDP 
+
+# TCP establishes and terminates connections between endpoints, whereas UDP does not.Therefore, UDP is called a connectionless protocol. It provides no reliability, no windowing, and no reordering
+of the data. However, UDP does provide data transfer and multiplexing using port numbers, and it does so with fewer bytes of overhead and less processing than TCP. Applications that use UDP, such
+as VoIP, trade the possibility of some data loss for less delay.
+
+
+
+###########################
+# Cabling and connection  #
+############################
+
+# Use straight-through cables for the following connections:
+■ Switch to router Ethernet port
+■ Computer to switch
+■ Computer to hub
+
+
+# Use crossover cables for the following connections:
+■ Switch to switch
+■ Switch to hub
+■ Hub to hub
+■ Router to router (Ethernet ports)
+■ Computer to computer
+■ Computer to router Ethernet port
+
+
+################################
+# Hierarchical campus design   #
+################################
+
+# Hierarchical Campus Designs
+Hierarchical campus design involves dividing the network into discrete layers. Each layer provides specific functions that define its role within the overall network. By separating the various functions that exist on a network, the network design becomes modular, which facilitates scalability and performance.The hierarchical design model is divided into three layers:
+■ Access layer: Provides local and remote user access
+■ Distribution layer: Controls the flow of data between the access and core layers
+■ Core layer: Acts as the high-speed redundant backbone
+
+
+
+# For smaller networks, the core is often collapsed into the distribution layer for a two-tier design 
+
+
+
+
+
+##############
+# Routing    #
+##############
+
+
+###############
+#  Switching  #  
+###############
+
+
+
+# Switches replaced hubs as local-area network (LAN) intermediary devices because a switch can segment collision domains and provide enhanced security.
+
+
+# When choosing a switch, these are the main factors to consider:
+■ Cost: The cost is determined by the number and type of ports, network management capabilities, embedded security technologies, and optional advanced switching technologies.
+■ Interface characteristics: The number of ports must be sufficient both for now and for future expansion. Other characteristics include uplink speeds, a mixture of UTP and fiber, and modularity.
+■ Hierarchical network layer: Switches at the access layer have different requirements than switches at the distribution or core layers.
+
+
+# Access Layer Switches
+Access layer switches facilitate the connection of end devices to the network. Features of access layer switches include the following:
+■ Port security
+■ VLANs
+■ Fast Ethernet/Gigabit Ethernet
+■ Power over Ethernet (PoE)
+■ Link aggregation
+■ Quality of service (QoS)
+
+
+# Distribution Layer Switches
+Distribution layer switches receive the data from the access layer switches and forward it to the core layer switches. Features of distribution layer switches include the following:
+■ Layer 3 support
+■ High forwarding rate
+■ Gigabit Ethernet/10 Gigabit Ethernet
+■ Redundant components
+■ Security policies/access control lists
+■ Link aggregation
+■ QoS
+
+
+# Core Layer Switches
+Core layer switches make up the backbone and are responsible for handling the majority of data on a switched LAN. Features of core layer switches include the following:
+■ Layer 3 support
+■ Very high forwarding rate
+■ Gigabit Ethernet/10 Gigabit Ethernet
+■ Redundant components
+■ Link aggregation
+■ QoS
+
+
+# Switch Logic 
+
+#Ethernet switches selectively forward individual frames from a receiving port to the port where the destination node is connected. During this instant, the switch creates a full-bandwidth, logical, point-to-point connection between the two nodes.
+Switches create this logical connection based on the source and destination Media Access Control (MAC) addresses in the Ethernet header. Specifically, the primary job of a LAN switch is to receive Ethernet frames and then make a decision to either forward the frame or ignore the frame.To accomplish this, the switch performs three actions:
+Step 1.
+Step 2.
+Step 3.
+Decides when to forward a frame or when to filter (not forward) a frame, based on the destination MAC address
+Learns MAC addresses by examining the source MAC addre
+ss of each frame the switch receives
+Creates a (Layer 2) loop-free environment with other switches by using Spanning Tree Protocol (STP) 
+
+To make
+stored in
+switch decides how to forward and/or filter the frame.
+
+
+
+In addition to forwarding and filtering frames, the switch refreshes the timestamp for the source MAC address of the frame 
+
+Entries that are not refreshed eventually are removed (after the default 300 seconds in Cisco IOS).
+
+forwards the frame out all active ports (in a process known as flooding) except for the port on which the frame was received
+
+
+# Collision and broadcast Domain 
+
+A collision domain is the set of LAN interfaces whose frames could collide with each other.All shared media environments, such as those created by using hubs, are collision domains.When one host is attached to a switch port, the switch creates a dedicated connection, thereby eliminating the potential for a collision. Switches reduce collisions and improve bandwidth use on network segments because they provide full-duplex, dedicated bandwidth to each network segment.
+OuLt of the box, however, a switch cannot provide relief from broadcast traffic. A collection of con- nected switches forms one large broadcast domain. If a frame with the destination address FFFF. FFFF.FFFF crosses a switch port, that switch must flood the frame out all other active ports. Each attached device must then process the broadcast frame at least up to the network layer. Routers andVLANs are used to segment broadcast domains
+
+
+# Switch FOrwarding method 
+
+Switches use one of the following forwarding methods to switch data between network ports:
+■ Store-and-forward switching: The switch stores received frames in its buffers, analyzes each frame for information about the destination, and evaluates the data integrity using the cyclic redundancy check (CRC) in the frame trailer.The entire frame is stored, and the CRC is calculated before any of the frame is forwarded. If the CRC passes, the frame is forwarded to the destination.
+■ Cut-through switching: The switch buffers just enough of the frame to read the destination MAC address so that it can determine which port to forward the data to.When the switch determines a match between the destination MAC address and an entry in the MAC address table, the frame is forwarded out the appropriate port(s).This happens as the rest of the initial frame is still being received.The switch does not perform any error checking on the frame.
+
+■ Fragment-free mode: The switch waits for the collision window (64 bytes) to pass before forwarding the frame.This means that each frame is checked into the data field to make sure that no fragmentation has occurred. Fragment-free mode provides better error checking than cut-through, with practically no increase in latency.
+
+
+# Symetric and Asymetric 
+
+Symmetric switching provides switched connections between ports with the same bandwidth,
+such as all 100-Mbps ports or all 1000-Mbps ports.An asymmetric LAN switch provides switched connections between ports of unlike bandwidth, such as a combination of 10-Mbps, 100-Mbps, and 1000-Mbps ports.
+
+# Memory Bufering 
+
+Switches store frames for a brief time in a memory buffer.Two methods of memory buffering exist:
+■ Port-based memory: Frames are stored in queues that are linked to specific incoming ports.
+■ Shared memory: Frames are deposited into a common memory buffer that all ports on the switch share.
+
+
+# Layer 2 Layer 3 switch 
+
+A Layer 2 LAN switch performs switching and filtering based only on MAC addresses.A Layer 2 switch is completely transparent to network protocols and user applications.A Layer 3 switch func- tions similarly to a Layer 2 switch. But instead of using only the Layer 2 MAC address information for forwarding decisions, a Layer 3 switch can also use IP address information. Layer 3 switches are also capable of performing Layer 3 routing functions, reducing the need for dedicated routers on a LAN. Because Layer 3 switches have specialized switching hardware, they can typically route data as quickly as they can switch data.
+
+
+# Ethernet Overview 
+
+802.3 is the IEEE standard for Ethernet, and the two terms are commonly used interchangeably. The terms Ethernet and 802.3 both refer to a family of standards that together define the physical and data link layers of the definitive LAN technology
+
+Ethernet separates the functions of the data link layer into two distinct sublayers:
+■ Logical Link Control (LLC) sublayer: Defined in the 802.2 standard
+■ Media Access Control (MAC) sublayer: Defined in the 802.3 standard
+
+The LLC sublayer handles communication between the network layer and the MAC sublayer. In general, LLC provides a way to identify the protocol that is passed from the data link layer to the network layer. In this way, the fields of the MAC sublayer are not populated with protocol type information, as was the case in earlier Ethernet implementations.
+
+The MAC sublayer has two primary responsibilities:
+■ Data encapsulation: Included here is frame assembly before transmission, frame parsing upon reception of a frame, data link layer MAC addressing, and error detection.
+■ Media Access Control: Because Ethernet is a shared medium and all devices can transmit at any time, media access is controlled by a method called Carrier Sense Multiple Access/Collision Detect (CSMA/CD) when operating in half-duplex mode.
+
+At the physical layer, Ethernet specifies and implements encoding and decoding schemes that enable frame bits to be carried as signals across both unshielded twisted pair (UTP) copper cables and optical fiber cables. In early implementations, Ethernet used coaxial cabling.
+
+
+# Legacy Ethernet Technologies 
+
+Ethernet is best understood by first considering the two early Ethernet specifications, 10BASE-5 and 10BASE-2.With these two specifications, the network engineer installs a series of coaxial cables connecting each device on the Ethernet network
+The series of cables creates an electrical circuit, called a bus, that is shared among all devices on the Ethernet.When a computer wants to send some bits to another computer on the bus, it sends an electrical signal, and the electricity propagates to all devices on the Ethernet.
+
+
+#CSMA/CD
+
+Because Ethernet is a shared medium in which every device has the right to send at any time, it also defines a specification to ensure that only one device sends traffic at a time.The CSMA/CD algorithm defines how the Ethernet logical bus is accessed.
+CSMA/CD logic helps prevent collisions and also defines how to act when a collision does occur. The CSMA/CD algorithm works like this:
+Step 1. Step 2. Step 3.
+A device with a frame to send listens until the Ethernet is not busy. When the Ethernet is not busy, the sender(s) begin(s) sending the frame. The sender(s) listen(s) to make sure that no collision occurs.
+
+
+Step 4.
+Step 5.
+Step 6.
+If a collision occurs, the devices that were sending a frame each send a jamming signal to ensure that all stations recognize the collision.
+When the jamming is complete, each sender randomizes a timer and waits until the timer expires before trying to resend the collided frame.
+When each random timer expires, the process starts again from the beginning.
+
+
+When CSMA/CD is in effect, a device’s network interface card (NIC) operates in half-duplex mode, either sending or receiving frames. CSMA/CD is disabled when a NIC autodetects that it can operate in—or is manually configured to operate in—full-duplex mode. In full-duplex mode, a NIC can send and receive simultaneously.
+
+
+
+# UDP cabling 
+
+The three most common Ethernet standards used today—10BASE-T (Ethernet), 100BASE-TX (Fast Ethernet, or FE), and 1000BASE-T (Gigabit Ethernet, or GE)—use UTP cabling. Some key differences exist, particularly with the number of wire pairs needed in each case and the type (category) of cabling.
+The UTP cabling in popular Ethernet standards includes either two or four pairs of wires.The cable ends typically use an RJ-45 connector.The RJ-45 connector has eight specific physical locations into which the eight wires in the cable can be inserted; these are called pin positions or, simply, pins.
+The Telecommunications Industry Association (TIA) and the Electronics Industry Alliance (EIA) define standards for UTP cabling, with color coding for wires and standard pinouts on the cables.
+
+For the exam, you should be well prepared to choose which type of cable (straight-through or crossover) is needed in each part of the network. In short, devices on opposite ends of a cable that use the same pair of pins to transmit need a crossover cable. Devices that use an opposite pair of pins to transmit need a straight-through cable
+
+# Pins trasnmision 
+
+1000BASE-T requires four wire pairs because Gigabit Ethernet transmits and receives on each of the four wire pairs simultaneously.
+
+However, Gigabit Ethernet does have a concept of straight-through and crossover cables, with a minor difference in the crossover cables.The pinouts for a straight-through cable are the same—pin 1 to pin 1,pin 2 to pin 2,and so on.
+A crossover cable has the 568A standard on one end and the 568B standard on the other end.This crosses the pairs at pins 1,2 and 3,6
+
+# Benefits of using switches 
+
+A collision domain is a set of devices whose frames may collide.All devices on a 10BASE-2, 10BASE-5, or other network using a hub risk collisions between the frames that they send.Thus, devices on one of these types of Ethernet networks are in the same collision domain and use CSMA/CD to detect and resolve collisions.
+LAN switches significantly reduce, or even eliminate, the number of collisions on a LAN. Unlike a hub, a switch does not create a single shared bus. Instead, a switch does the following:
+■ It interprets the bits in the received frame so that it can typically send the frame out the one required port instead of out all other ports.
+■ If a switch needs to forward multiple frames out the same port, the switch buffers the frames in memory, sending one at a time and thereby avoiding collisions.
+In addition, switches with only one device cabled to each port of the switch allow the use of full-duplex operation. Full-duplex operation means that the NIC can send and receive concurrently, effectively doubling the bandwidth of a 100-Mbps link to 200 Mbps—100 Mbps for sending and 100 Mbps for receiving.
+These seemingly simple switch features provide significant performance improvements compared with using hubs. In particular, consider these points:
+■ If only one device is cabled to each port of a switch, no collisions can occur.
+■ Devices connected to one switch port do not share their bandwidth with devices connected to another switch port. Each has its own separate bandwidth, meaning that a switch with 100-Mbps ports has 100 Mbps of bandwidth per port.
+
+# Ethernet adressing 
+The IEEE defines the format and assignment of LAN addresses.To ensure a unique MAC address, the first half of the address identifies the manufacturer of the card.This code is called the organiza- tionally unique identifier (OUI). Each manufacturer assigns a MAC address with its own OUI as the first half of the address.The second half of the address is assigned by the manufacturer and is never used on another card or network interface with the same OU
+
+Ethernet also has group addresses, which identify more than one NIC or network interface.The IEEE defines two general categories of group addresses for Ethernet:
+■ Broadcast addresses: A broadcast address implies that all devices on the LAN should process the frame and has the value FFFF.FFFF.FFFF.
+■ Multicast addresses: A multicast address allows a subset of devices on a LAN to communi- cate.When IP multicasts over an Ethernet network, the multicast MAC addresses that IP uses follow this format: 0100.5exx.xxxx.The xx.xxxx portion is divided between IPv4 multicast (00:0000–7F.FFFF) and MPLS multicast (80:0000–8F:FFFF). Multiprotocol Label Switching (MPLS) is a CCNP topic
+
+# Ethernet Framing 
+
+The physical layer helps you get a string of bits from one device to another.The framing of the
+bits allows the receiving device to interpret the bits.The term framing refers to the definition of the fields assumed to be in the data that is received. Framing defines the meaning of the bits transmitted and received over a network.
+
+# The role of Phisical Layer 
+
+We have already discussed the most popular cabling used in LANs: UTP.To fully understand the operation of the network, you should know some additional basic concepts of the physical layer.
+The OSI physical layer accepts a complete frame from the data link layer and encodes it as a series of signals that are transmitted onto the local media.
+The delivery of frames across the local media requires the following physical layer elements:
+■ The physical media and associated connectors
+■ A representation of bits on the media
+■ Encoding of data and control information
+■ Transmitter and receiver circuitry on the network devices Data is represented on three basic forms of network media:
+■ Copper cable
+■ Fiber
+■ Wireless (IEEE 802.11)
+
+Bits are represented on the medium by changing one or more of the following characteristics of a signal:
+■ Amplitude
+■ Frequency
+■ Phase
+The nature of the actual signals representing the bits on the media depends on the signaling method in use. Some methods use one attribute of a signal to represent a single 0 and use another attribute of a signal to represent a single 1
+
+
+
+
+
+
+###########
+# Routers #
+###########
+
+# Routers
+Routers are the primary devices used to interconnect networks—LANs,WANs, and WLANs.When choosing a router, the main factors to consider are as follows:
+■ Expandability: Provides flexibility to add new modules as needs change.
+■ Media: Determines the type of interfaces the router needs to support for the various network
+connections.
+■ Operating system features: Determines the version of IOS loaded on the router. Different IOS versions support different feature sets. Features to consider include security, QoS,VoIP, and routing complexity, among others.
+
+
+■ Console ports: Two console ports for the initial configuration, using a regular RJ-45 port and a USB Type-B (mini-B USB) connector.
+■ AUX port: An RJ-45 port for remote management access.
+■ LAN interfaces: Two Gigabit Ethernet interfaces for LAN access (G0/0/0 and G0/0/1). If the RJ-45 G0/0/0 port is used, then the small form-factor pluggable (SFP) port cannot be used.WAN services would then be provided through an expansion card in the network interface module (NIM) slots.
+■ Ethernet WAN: The other G0/0/0 physical port, an SFP port that would support various Ethernet WAN connections, typically fiber. If it is used, the Gi0/0 RJ-45 port is disabled.
+■ NIM slots: Two slots that support different types of interface modules, including serial (shown in Figure 31-10), digital subscriber line (DSL), switch port, and wireless.
+
+##################
+#  Firewalls    #  
+################# 
+
+# Firewalls
+A firewall is a networking device, either hardware or software based, that controls access to the organization’s network.This controlled access is designed to protect data and resources from outside threats.
+
+# A stateful firewall allows traffic to originate from an inside, trusted network and go out to an untrusted network, such as the Internet.The firewall allows return traffic that comes back from the untrusted network to the trusted network. However, the firewall blocks traffic that originates from an untrusted network.
+
+
+############
+# IDS IPS  # 
+############ 
+
+# IDS and IPS
+Both intrusion detection systems (IDS) and intrusion prevention systems (IPS) can recognize network attacks; they differ primarily in their network placement. An IDS device receives a copy of traffic to be analyzed. An IPS device is placed inline with the traffic
+
+
+# An IDS is a passive detection system. It can detect the presence of an attack, log the information, and send an alert.
+An IPS has the same functionality as an IDS, but in addition, an IPS is an active device that continually scans the network, looking for inappropriate activity. It can shut down any potential threats.The IPS looks for any known signatures of common attacks and automatically tries to prevent those attacks.
+
+
+############
+# NGFW    # 
+###########
+
+# Although the term next-generation in relation to firewalls has been around at least since the earlier 2010s, it can be misleading. Next-generation firewalls (NGFWs) or next-generation IPSs (NGIPSs) are actually what Cisco currently sells as its Cisco Adaptative Security Appliance (ASA) and Firepower product lines
+
+# An NGFW typically has the following features:
+■ Traditional firewall: An NGFW performs traditional firewall functions, such as stateful firewall filtering, NAT/PAT, and VPN termination.
+■ Application Visibility and Control (AVC): AVC makes it possible to look deeply into the application layer data to identify the application to defend against attacks that use random port numbers.
+■ Advanced Malware Protection (AMP): AMP can block file transfers that would install malware and save copies of files for later analysis.
+■ Uniform resource locator (URL) filtering: URL filtering examines the URLs in each web request, categorizes the URLs, and either filters or rate limits the traffic based on rules. The Cisco Talos security group monitors and creates reputation scores for each domain known in the Internet, and URL filtering can use those scores in its decisions to categorize, filter, or rate limit.
+■ NGIPS: Cisco’s NGFW products can also run their NGIPS feature along with the firewall
+
+
+#
+
+
+##############
+#   SNMP     # 
+##############
+
+
+################
+#   IPV6      # 
+###############
+
+
+
+
+################
+#  Wireless    #  
+#################
+
+# WLCs can use the older Lightweight Access Point Protocol (LWAPP) or the more current Control and Provisioning of Wireless Access Points (CAPWAP).With a WLC,VLAN pooling can be used to assign IP addresses to wireless clients from a pool of IP subnets and their associated VLANs.
+
+
+
+
+
+##############
+#    WAN     # 
+##############
+
+
+
+
+###################################
+# Automation and Programbility  # 
+###################################
+
+
